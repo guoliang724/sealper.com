@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     })
 
     // Build attachment if file was uploaded
-    const attachments: nodemailer.Attachment[] = []
+    const attachments: import('nodemailer/lib/mailer').Attachment[] = []
     if (file && file.size > 0) {
       const buffer = Buffer.from(await file.arrayBuffer())
       attachments.push({
