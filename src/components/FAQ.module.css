@@ -1,0 +1,124 @@
+.section {
+  padding: var(--section-py) 0;
+  background: var(--color-bg-subtle);
+  position: relative;
+}
+
+/* Subtle grid-line texture */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245, 158, 11, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* FAQ Item */
+.item {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-muted);
+  overflow: hidden;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.itemOpen {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.15), var(--shadow-md);
+}
+
+/* Trigger button */
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.trigger:hover {
+  background: rgba(245, 158, 11, 0.04);
+}
+
+.triggerText {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.itemOpen .triggerText {
+  color: var(--color-primary);
+}
+
+/* Chevron icon */
+.icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  transition: transform var(--transition-base), background var(--transition-fast),
+              border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: var(--color-primary);
+}
+
+/* Answer body */
+.body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* border-top hidden by default */
+}
+
+.bodyOpen {
+  grid-template-rows: 1fr;
+}
+
+/* Inner wrapper prevents overflow clipping during animation */
+.body > * {
+  overflow: hidden;
+}
+
+.answer {
+  padding: 0 1.5rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+  line-height: 1.8;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}

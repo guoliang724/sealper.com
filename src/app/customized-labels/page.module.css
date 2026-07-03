@@ -1,0 +1,84 @@
+/* Customized Labels page */
+
+.benefitCard {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.benefitCard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.benefitIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-muted);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.benefitCard:hover .benefitIcon {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.benefitTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-primary-dark);
+}
+
+.benefitDesc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.72;
+}
+
+/* Steps */
+.stepCard {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+.stepCard:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.stepNumber {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.stepTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-primary-dark);
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
