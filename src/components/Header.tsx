@@ -11,7 +11,7 @@ const navItems = [
     label: 'Products',
     href: '#',
     children: [
-      { label: 'Bottles', href: '/bottles', desc: '5 & 3 Gallon PC Bottles' },
+      { label: 'Bottles', href: '/bottles', desc: '5 & 3 Gallon — North America\'s Only Seamless IBW' },
       { label: 'Caps', href: '/caps', desc: 'Non-spill & Standard Caps' },
       { label: 'Racks', href: '/racks', desc: 'Storage & Display Racks' },
       { label: 'Pumps', href: '/pumps', desc: 'Manual & USB Pumps' },
@@ -23,8 +23,8 @@ const navItems = [
     label: 'Services',
     href: '#',
     children: [
-      { label: 'Customized Labels', href: '/customized-labels', desc: 'Brand Your Bottles' },
-      { label: 'Delivery', href: '/delivery', desc: 'FCL, LTL & Parcel Shipping' },
+      { label: 'Customized Labels', href: '/customized-labels', desc: 'Brand Your Bottles in 7 Days' },
+      { label: 'Delivery', href: '/delivery', desc: 'Same-Day & 2–4 Day Canada Coverage' },
     ],
   },
   { label: 'Contact Us', href: '/contact-us' },
@@ -58,66 +58,83 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
-      <div className="container">
-        <div className={styles.inner}>
-          {/* Logo */}
-          <Link href="/" className={styles.logo} onClick={closeMobile}>
-            <span className={styles.logoMark}>S</span>
-            <span className={styles.logoText}>SEALPER</span>
-          </Link>
+      {/* ── Top Announcement Bar ── */}
+      <div className={styles.topBar}>
+        <div className="container">
+          <div className={styles.topBarInner}>
+            <span className={styles.topBarText}>
+              <span className={styles.maple}>🍁</span>
+              100% Canadian Owned &amp; Operated
+              <span className={styles.topBarDivider}>·</span>
+              Same-day delivery in Vancouver · Calgary · Edmonton · Toronto
+            </span>
+          </div>
+        </div>
+      </div>
 
-          {/* Desktop Nav */}
-          <nav className={styles.nav} aria-label="Main Navigation">
-            <ul className={styles.navList}>
-              {navItems.map((item) => (
-                <li
-                  key={item.label}
-                  className={styles.navItem}
-                  onMouseEnter={() => item.children && setActiveDropdown(item.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  {item.children ? (
-                    <>
-                      <button className={styles.navLink} aria-haspopup="true" aria-expanded={activeDropdown === item.label}>
-                        {item.label}
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" className={`${styles.chevron} ${activeDropdown === item.label ? styles.chevronOpen : ''}`}>
-                          <path d="M6 8L1.5 3h9L6 8z"/>
-                        </svg>
-                      </button>
-                      <div className={`${styles.dropdown} ${activeDropdown === item.label ? styles.dropdownOpen : ''} ${item.label === 'Products' ? styles.dropdownProducts : styles.dropdownServices}`}>
-                        <div className={styles.dropdownGrid}>
-                          {item.children.map((child) => (
-                            <Link key={child.label} href={child.href} className={styles.dropdownItem} onClick={() => setActiveDropdown(null)}>
-                              <span className={styles.dropdownItemLabel}>{child.label}</span>
-                              <span className={styles.dropdownItemDesc}>{child.desc}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <Link href={item.href} className={styles.navLink}>{item.label}</Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* CTA + Hamburger */}
-          <div className={styles.actions}>
-            <Link href="/contact-us" className={`btn btn--accent btn--sm ${styles.ctaBtn}`}>
-              Get a Quote
+      {/* ── Main Nav ── */}
+      <div className={styles.navBar}>
+        <div className="container">
+          <div className={styles.inner}>
+            {/* Logo */}
+            <Link href="/" className={styles.logo} onClick={closeMobile}>
+              <span className={styles.logoMark}>S</span>
+              <span className={styles.logoText}>SEALPER</span>
             </Link>
-            <button
-              className={styles.hamburger}
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle mobile menu"
-              aria-expanded={mobileOpen}
-            >
-              <span className={`${styles.hamburgerLine} ${mobileOpen ? styles.hamburgerLineOpen1 : ''}`} />
-              <span className={`${styles.hamburgerLine} ${mobileOpen ? styles.hamburgerLineOpen2 : ''}`} />
-              <span className={`${styles.hamburgerLine} ${mobileOpen ? styles.hamburgerLineOpen3 : ''}`} />
-            </button>
+
+            {/* Desktop Nav */}
+            <nav className={styles.nav} aria-label="Main Navigation">
+              <ul className={styles.navList}>
+                {navItems.map((item) => (
+                  <li
+                    key={item.label}
+                    className={styles.navItem}
+                    onMouseEnter={() => item.children && setActiveDropdown(item.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    {item.children ? (
+                      <>
+                        <button className={styles.navLink} aria-haspopup="true" aria-expanded={activeDropdown === item.label}>
+                          {item.label}
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" className={`${styles.chevron} ${activeDropdown === item.label ? styles.chevronOpen : ''}`}>
+                            <path d="M6 8L1.5 3h9L6 8z"/>
+                          </svg>
+                        </button>
+                        <div className={`${styles.dropdown} ${activeDropdown === item.label ? styles.dropdownOpen : ''} ${item.label === 'Products' ? styles.dropdownProducts : styles.dropdownServices}`}>
+                          <div className={styles.dropdownGrid}>
+                            {item.children.map((child) => (
+                              <Link key={child.label} href={child.href} className={styles.dropdownItem} onClick={() => setActiveDropdown(null)}>
+                                <span className={styles.dropdownItemLabel}>{child.label}</span>
+                                <span className={styles.dropdownItemDesc}>{child.desc}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <Link href={item.href} className={styles.navLink}>{item.label}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* CTA + Hamburger */}
+            <div className={styles.actions}>
+              <Link href="/contact-us" className={`btn btn--primary btn--sm ${styles.ctaBtn}`}>
+                Get a Quote
+              </Link>
+              <button
+                className={styles.hamburger}
+                onClick={() => setMobileOpen(!mobileOpen)}
+                aria-label="Toggle mobile menu"
+                aria-expanded={mobileOpen}
+              >
+                <span className={`${styles.hamburgerLine} ${mobileOpen ? styles.hamburgerLineOpen1 : ''}`} />
+                <span className={`${styles.hamburgerLine} ${mobileOpen ? styles.hamburgerLineOpen2 : ''}`} />
+                <span className={`${styles.hamburgerLine} ${mobileOpen ? styles.hamburgerLineOpen3 : ''}`} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -167,7 +184,7 @@ export default function Header() {
           ))}
         </nav>
         <div className={styles.mobileDrawerFooter}>
-          <Link href="/contact-us" className="btn btn--accent" onClick={closeMobile} style={{ width: '100%', justifyContent: 'center' }}>
+          <Link href="/contact-us" className="btn btn--primary" onClick={closeMobile} style={{ width: '100%', justifyContent: 'center' }}>
             Get a Quote
           </Link>
           <p className={styles.mobileContact}>

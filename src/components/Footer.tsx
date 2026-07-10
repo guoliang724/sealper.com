@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-
 import styles from './Footer.module.css'
 
 const productLinks = [
@@ -32,7 +31,7 @@ export default function Footer() {
               <span className={styles.logoText}>SEALPER</span>
             </div>
             <p className={styles.tagline}>
-              One Stop Solution for Your Bottled Water Packaging Supplies
+              100% Canadian Owned &amp; Operated. Your trusted source for premium water packaging supplies across Western Canada.
             </p>
             <div className={styles.contactInfo}>
               <a href="tel:4036675058" className={styles.contactItem}>
@@ -97,7 +96,7 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div className={styles.newsletter}>
-            <h3 className={styles.groupTitle}>Be in the Know</h3>
+            <h3 className={styles.groupTitle}>Stay Updated</h3>
             <p className={styles.newsletterDesc}>
               Join our mailing list for product updates, seasonal order reminders, and exclusive access to new releases.
             </p>
@@ -120,7 +119,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Sealper — All Rights Reserved.
           </p>
           <p className={styles.bottomNote}>
-          Calgary, Alberta, Canada · Proudly Serving Canada & USA
+            🍁 100% Canadian Owned · Proudly Serving Western Canada
           </p>
         </div>
       </div>

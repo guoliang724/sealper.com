@@ -70,7 +70,7 @@ const shippingBadges = [
 export default function CapsPage() {
   return (
     <>
-      <div className="page-hero" style={{ paddingTop: 'calc(72px + 4rem)' }}>
+      <div className="page-hero" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="page-hero__bg">
           <Image
             src="/images/hero_caps.png"

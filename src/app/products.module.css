@@ -1,4 +1,6 @@
-/* Shared product page styles */
+/* ════════════════════════════════════════════════
+   SHARED PRODUCT PAGE STYLES — MINIMALIST & PURE
+   ════════════════════════════════════════════════ */
 
 .productsGrid {
   display: grid;
@@ -7,50 +9,33 @@
 }
 
 .productCard {
-  background: var(--color-bg-muted);
+  background: var(--color-bg);
   border-radius: var(--radius-xl);
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border);
   overflow: hidden;
   transition: all var(--transition-base);
   display: flex;
   flex-direction: column;
   position: relative;
-}
-.productCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-base);
-  z-index: 1;
+  box-shadow: var(--shadow-xs);
 }
 .productCard:hover {
-  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(245, 158, 11, 0.2);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
-  border-color: var(--color-primary);
-}
-.productCard:hover::before {
-  transform: scaleX(1);
+  border-color: var(--color-border-strong);
 }
 
 .productImageWrap {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: var(--color-bg-elevated);
+  background: var(--color-bg-muted);
 }
 .productImageWrap img {
-  transition: transform var(--transition-slow), filter var(--transition-slow);
-  filter: brightness(0.9);
+  transition: transform var(--transition-slow);
 }
 .productCard:hover .productImageWrap img {
-  transform: scale(1.05);
-  filter: brightness(1);
+  transform: scale(1.04);
 }
 
 .productCardBody {
@@ -64,26 +49,25 @@
 .productTag {
   display: inline-flex;
   align-items: center;
-  padding: 0.22rem 0.65rem;
-  border-radius: var(--radius-sm);
-  background: rgba(245, 158, 11, 0.1);
+  padding: 0.22rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--navy-100);
   color: var(--color-primary);
-  border: 1px solid rgba(245, 158, 11, 0.28);
+  border: 1px solid var(--navy-200);
   font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
 }
 
 .productName {
   font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.35rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
   color: var(--color-text-primary);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .productDesc {
@@ -96,7 +80,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  border-top: 1px solid var(--color-border-strong);
+  border-top: 1px solid var(--color-border);
   padding-top: var(--space-4);
   margin-top: auto;
 }
@@ -112,8 +96,8 @@
   content: '';
   width: 6px;
   height: 6px;
-  border-radius: 1px;
-  background: var(--color-primary);
+  border-radius: 50%;
+  background: var(--color-accent);
   flex-shrink: 0;
 }
 
@@ -131,15 +115,15 @@
   text-align: center;
   padding: 1.5rem var(--space-4);
   border-radius: var(--radius-xl);
-  border: 1px solid var(--color-border-strong);
-  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
   gap: var(--space-2);
   transition: all var(--transition-fast);
+  box-shadow: var(--shadow-xs);
 }
 .infoBadge:hover {
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-md), 0 0 0 1px rgba(245, 158, 11, 0.15);
-  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-navy);
   transform: translateY(-2px);
 }
 
@@ -147,26 +131,26 @@
   width: 44px;
   height: 44px;
   border-radius: var(--radius-md);
-  background: rgba(34, 211, 238, 0.08);
+  background: var(--teal-100);
   color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid rgba(34, 211, 238, 0.2);
-  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  border: 1px solid rgba(8, 145, 178, 0.2);
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 .infoBadge:hover .infoBadgeIcon {
-  background: rgba(245, 158, 11, 0.12);
-  color: var(--color-primary);
-  border-color: rgba(245, 158, 11, 0.3);
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
 }
 
 .infoBadgeText {
   font-size: 0.78rem;
-  font-weight: 800;
-  font-family: var(--font-heading);
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-family: var(--font-body);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-body);
   line-height: 1.35;
@@ -176,45 +160,33 @@
   color: var(--color-primary);
 }
 
-/* CTA strip */
+/* ── CTA Strip ── */
 .pageCtaStrip {
-  background: linear-gradient(135deg, #1a0e00 0%, #2d1600 40%, #1a0e00 100%);
+  background: linear-gradient(135deg, #0A1628 0%, #1B3A6B 60%, #0E7490 100%);
   padding: var(--section-py) 0;
   text-align: center;
-  color: var(--color-text-primary);
+  color: var(--color-text-inverse);
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(245, 158, 11, 0.2);
 }
 .pageCtaStrip::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-}
-.pageCtaStrip::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -50%;
+  right: -10%;
   width: 500px;
-  height: 250px;
+  height: 500px;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.18) 0%, transparent 65%);
   pointer-events: none;
 }
 
 .pageCtaTitle {
   font-family: var(--font-heading);
   font-size: clamp(1.875rem, 4vw, 2.75rem);
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
   margin-bottom: var(--space-3);
   position: relative;
   z-index: 1;
@@ -222,7 +194,7 @@
 
 .pageCtaSubtitle {
   font-size: 1rem;
-  color: var(--color-text-muted);
+  color: rgba(255,255,255,0.75);
   margin-bottom: var(--space-8);
   position: relative;
   z-index: 1;

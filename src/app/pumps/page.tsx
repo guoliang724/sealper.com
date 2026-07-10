@@ -13,7 +13,7 @@ const pumps = [
     tag: 'Manual',
     name: 'Manual Pump',
     image: '/images/pumps_product.png',
-    desc: 'Reliable manual water pump — no batteries or power required. Includes a cleaning kit and is built from high-quality food-grade materials.',
+    desc: 'Reliable manual water pump �?no batteries or power required. Includes a cleaning kit and is built from high-quality food-grade materials.',
     specs: ['No batteries required', 'Includes cleaning kit', 'High quality construction', 'Food-grade safe materials', 'Compatible with 5-gallon bottles'],
   },
   {
@@ -28,7 +28,7 @@ const pumps = [
 export default function PumpsPage() {
   return (
     <>
-      <div className="page-hero" style={{ paddingTop: 'calc(72px + 4rem)' }}>
+      <div className="page-hero" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="page-hero__bg">
           <Image
             src="/images/hero_pumps.png"
