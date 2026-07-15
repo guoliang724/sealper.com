@@ -5,7 +5,7 @@ import styles from './page.module.css'
 import FAQ from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: '5 Gallon Water Bottles Supplier | Sealper �?100% Canadian Owned',
+  title: '5 Gallon Water Bottles Supplier | Sealper — 100% Canadian Owned',
   description: 'Sealper is a 100% Canadian-owned wholesale supplier for 5 gallon water bottles, caps, racks, and pumps. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto. Serving Western Canada.',
 }
 
@@ -17,7 +17,7 @@ const features = [
       </svg>
     ),
     title: 'FDA Approved & BPA Free',
-    desc: 'All products meet strict food-grade safety standards �?guaranteed quality and safety for every customer.',
+    desc: 'All products meet strict food-grade safety standards — guaranteed quality and safety for every customer.',
   },
   {
     icon: (
@@ -35,7 +35,7 @@ const features = [
       </svg>
     ),
     title: '100% Canadian Owned',
-    desc: 'Proudly headquartered in Calgary with 4 warehouses across Canada �?local expertise, local service.',
+    desc: 'Proudly headquartered in Calgary with 4 warehouses across Canada — local expertise, local service.',
   },
   {
     icon: (
@@ -68,7 +68,7 @@ const productCategories = [
     href: '/racks',
     image: '/images/racks_product.png',
     tag: 'Storage Solutions',
-    desc: 'Single and double-row bottle racks in 3�? tiers. Ideal for depots, warehouses, and display.',
+    desc: 'Single and double-row bottle racks in 3-5 tiers. Ideal for depots, warehouses, and display.',
   },
   {
     title: 'Pumps',
@@ -133,7 +133,7 @@ export default function HomePage() {
         <div className={styles.heroRight}>
           <Image
             src="/images/hero_home.png"
-            alt="Pristine glacial Canadian water �?Sealper wholesale water packaging"
+            alt="Pristine glacial Canadian water — Sealper wholesale water packaging"
             fill
             priority
             style={{ objectFit: 'cover' }}
@@ -170,7 +170,7 @@ export default function HomePage() {
             <h2 className="section-header__title">Built on Trust, Quality &amp; Local Service</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              We are more than just suppliers �?we are your Canadian neighbours and strategic partners in bottled water packaging.
+              We are more than just suppliers — we are your Canadian neighbours and strategic partners in bottled water packaging.
             </p>
           </div>
           <div className="grid grid--4">
@@ -193,7 +193,7 @@ export default function HomePage() {
             <h2 className="section-header__title">Complete Packaging Solutions</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              From bottles to dispensing accessories �?everything your water business needs under one roof.
+              From bottles to dispensing accessories — everything your water business needs under one roof.
             </p>
           </div>
           <div className="grid grid--4">
@@ -242,7 +242,7 @@ export default function HomePage() {
               <p className={styles.aboutStripText}>
                 Headquartered in Calgary, Alberta, Sealper is a 100% Canadian-owned supplier for bottled water
                 packaging solutions. With warehouses in Vancouver, Calgary, Edmonton, and Toronto, we deliver
-                to your door with speed and care �?same day within city, 2�? days across Western Canada.
+                to your door with speed and care — same day within city, 2-4 days across Western Canada.
               </p>
               <div className={styles.aboutHighlights}>
                 {[

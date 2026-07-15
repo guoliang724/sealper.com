@@ -65,8 +65,8 @@ export default function Header() {
             <span className={styles.topBarText}>
               <span className={styles.maple}>🍁</span>
               100% Canadian Owned &amp; Operated
-              <span className={styles.topBarDivider}>·</span>
-              Same-day delivery in Vancouver · Calgary · Edmonton · Toronto
+              <span className={`${styles.topBarDivider} ${styles.topBarDelivery}`}>·</span>
+              <span className={styles.topBarDelivery}>Same-day delivery in Vancouver · Calgary · Edmonton · Toronto</span>
             </span>
           </div>
         </div>

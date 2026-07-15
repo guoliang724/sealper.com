@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'About Us �?100% Canadian Owned',
+  title: 'About Us — 100% Canadian Owned',
   description: 'Sealper is a 100% Canadian-owned wholesale supplier headquartered in Calgary, Alberta. With 4 warehouses across Canada, we deliver water packaging supplies to Western Canada with same-day options.',
 }
 
@@ -25,7 +25,7 @@ const pillars = [
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
       </svg>
     ),
-    content: 'We are more than just suppliers �?we are partners. We offer water purification equipment, blow molding machinery, filling equipment, and complete production lines.',
+    content: 'We are more than just suppliers — we are partners. We offer water purification equipment, blow molding machinery, filling equipment, and complete production lines.',
   },
   {
     title: 'Our Reputation',
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <span className="page-hero__eyebrow">About SEALPER</span>
           <h1 className="page-hero__title">100% Canadian Owned &amp; Western Canada Focused</h1>
           <p className="page-hero__subtitle">
-            Locally owned and operated �?proudly serving Western Canada from our 4 Canadian warehouses.
+            Locally owned and operated — proudly serving Western Canada from our 4 Canadian warehouses.
           </p>
         </div>
       </div>
@@ -86,21 +86,22 @@ export default function AboutPage() {
             <div className={styles.storyContent}>
               <span className="section-header__eyebrow" style={{ textAlign: 'left', display: 'block' }}>Our Story</span>
               <h2 className="heading-md" style={{ marginBottom: '1rem' }}>
-                A Decade of Excellence �?Built Right Here in Canada
+                A Decade of Excellence — Built Right Here in Canada
               </h2>
               <div className="divider divider--left" />
               <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
                 Sealper is a 100% Canadian-owned supplier of bottled water packaging materials,
-                headquartered in Calgary, Alberta. With four warehouses �?in Vancouver, Calgary, Edmonton,
-                and Toronto �?we deliver to your door with speed and care.
+                headquartered in Calgary, Alberta. With four warehouses — in Vancouver, Calgary, Edmonton,
+                and Toronto — we deliver to your door with speed and care.
               </p>
               <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
                 Our product line includes North America's only seamless IBW 5-gallon water bottles,
                 premium non-spill caps, storage racks, manual and USB pumps, cradles, water coolers,
-                and fully customized labels �?ready in 7 days.
+                and fully customized labels — ready in 7 days.
               </p>
               <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
-                We are a fast-growing, locally focused company that puts Canadian businesses first �?                providing same-day delivery in major cities and 2�? day coverage across Western Canada.
+                We are a fast-growing, locally focused company that puts Canadian businesses first —
+                providing same-day delivery in major cities and 2-4 day coverage across Western Canada.
               </p>
               <Link href="/contact-us" className="btn btn--primary" style={{ marginTop: '2rem', display: 'inline-flex' }}>
                 Get in Touch
@@ -138,7 +139,7 @@ export default function AboutPage() {
             <h2 className="section-header__title">4 Warehouses Across Canada</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              Strategically positioned across Canada �?so your order ships fast, from a city near you.
+              Strategically positioned across Canada — so your order ships fast, from a city near you.
             </p>
           </div>
           <div className="grid grid--4">

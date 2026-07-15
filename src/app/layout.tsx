@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: '5 Gallon Water Bottles Supplier | Sealper �?100% Canadian Owned',
+    default: '5 Gallon Water Bottles Supplier | Sealper — 100% Canadian Owned',
     template: '%s | Sealper',
   },
   description: 'Sealper is a 100% Canadian-owned wholesale supplier for 5 gallon water bottles, caps, racks, and pumps. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto. Serving Western Canada.',

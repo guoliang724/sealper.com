@@ -4,8 +4,8 @@ import styles from '../products.module.css'
 import dStyles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Delivery �?Same-Day & 2�? Day Western Canada Coverage',
-  description: 'Sealper offers same-day delivery in Vancouver, Calgary, Edmonton, and Toronto. Fast 2�? day coverage across Western Canada. FCL, LTL, and parcel shipping options.',
+  title: 'Delivery — Same-Day & 2-4 Day Western Canada Coverage',
+  description: 'Sealper offers same-day delivery in Vancouver, Calgary, Edmonton, and Toronto. Fast 2-4 day coverage across Western Canada. FCL, LTL, and parcel shipping options.',
 }
 
 const warehouses = [
@@ -24,7 +24,7 @@ const services = [
         <path d="M21 8l-2-4H5L3 8M3 8h18M3 8v10a1 1 0 001 1h16a1 1 0 001-1V8"/><path d="M8 12h8"/>
       </svg>
     ),
-    desc: 'Optimal for large volume orders. A full 20ft or 40ft container is dedicated exclusively to your shipment �?maximum efficiency and lowest per-unit cost for large-scale Canadian operations.',
+    desc: 'Optimal for large volume orders. A full 20ft or 40ft container is dedicated exclusively to your shipment — maximum efficiency and lowest per-unit cost for large-scale Canadian operations.',
     features: ['Dedicated container space', '20ft and 40ft options', 'Best rate for large orders', 'Direct port-to-port shipping', 'Ideal for distributors & wholesalers'],
   },
   {
@@ -46,8 +46,8 @@ const services = [
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
       </svg>
     ),
-    desc: 'Fast door-to-door delivery via trusted Canadian couriers. Ideal for smaller orders and samples. 2�? business days across Western Canada.',
-    features: ['2�? business day delivery', 'Trusted Canadian courier partners', 'Door-to-door delivery', 'Real-time tracking', 'Ideal for smaller orders & samples'],
+    desc: 'Fast door-to-door delivery via trusted Canadian couriers. Ideal for smaller orders and samples. 2-4 business days across Western Canada.',
+    features: ['2-4 business day delivery', 'Trusted Canadian courier partners', 'Door-to-door delivery', 'Real-time tracking', 'Ideal for smaller orders & samples'],
   },
 ]
 
@@ -61,7 +61,7 @@ export default function DeliveryPage() {
           <h1 className="page-hero__title">Fast, Reliable Delivery<br />Across Western Canada</h1>
           <p className="page-hero__subtitle">
             Four Canadian warehouses. Same-day delivery in major cities.
-            2�? business days across BC, AB, SK &amp; MB.
+            2-4 business days across BC, AB, SK &amp; MB.
           </p>
         </div>
       </div>
@@ -71,8 +71,8 @@ export default function DeliveryPage() {
         <div className="container">
           <div className={dStyles.sameDayCard}>
             <div className={dStyles.sameDayLeft}>
-              <span className={dStyles.sameDayEyebrow}>�?Same-Day Delivery</span>
-              <h2 className={dStyles.sameDayTitle}>Order Before Noon �?Delivered Today</h2>
+              <span className={dStyles.sameDayEyebrow}>&#9889; Same-Day Delivery</span>
+              <h2 className={dStyles.sameDayTitle}>Order Before Noon — Delivered Today</h2>
               <p className={dStyles.sameDayDesc}>
                 Place your order by noon local time and receive it the same business day.
                 Available in all four of our warehouse cities.
@@ -94,15 +94,15 @@ export default function DeliveryPage() {
         </div>
       </section>
 
-      {/* ── 2�? Day Western Canada ── */}
+      {/* ── 2-4 Day Western Canada ── */}
       <section className="section section--subtle">
         <div className="container">
           <div className="section-header">
             <span className="section-header__eyebrow">Full Coverage</span>
-            <h2 className="section-header__title">2�? Days Across Western Canada</h2>
+            <h2 className="section-header__title">2-4 Days Across Western Canada</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              Our strategically located warehouses ensure fast, reliable delivery to every corner of Western Canada �?British Columbia, Alberta, Saskatchewan, and Manitoba.
+              Our strategically located warehouses ensure fast, reliable delivery to every corner of Western Canada — British Columbia, Alberta, Saskatchewan, and Manitoba.
             </p>
           </div>
           <div className="grid grid--3">

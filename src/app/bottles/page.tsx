@@ -5,7 +5,7 @@ import styles from '../products.module.css'
 import bottleStyles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: "Water Bottles �?North America's Only Seamless IBW Bottle | Sealper",
+  title: "Water Bottles — North America's Only Seamless IBW Bottle | Sealper",
   description: "Sealper's 5 gallon water bottles are North America's only seamless injection-blow-molded (IBW) bottles. Drop tested, cold tested, leak tested. FDA approved, BPA free. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto.",
 }
 
@@ -21,7 +21,7 @@ const bottles = [
     tag: 'Compact & Portable',
     name: '3 Gallon PC Bottles',
     image: '/images/bottles_product.png',
-    desc: 'Narrow and tall design �?clean, clear, and incredibly easy to carry and store. Ideal for smaller offices, camping, and household use.',
+    desc: 'Narrow and tall design — clean, clear, and incredibly easy to carry and store. Ideal for smaller offices, camping, and household use.',
     specs: ['Narrow & tall design', 'Lightweight & easy to handle', 'Crystal clear visibility', 'FDA Approved & BPA Free', 'Easy to clean'],
   },
   {
@@ -41,7 +41,7 @@ const differentiators = [
       </svg>
     ),
     title: 'Seamless IBW Process',
-    desc: 'Injection-blow-molded in a single operation �?zero welding seams, zero weak points. Unlike conventional bottles assembled from multiple parts, our IBW process creates a monolithic structure with uniform wall thickness throughout.',
+    desc: 'Injection-blow-molded in a single operation — zero welding seams, zero weak points. Unlike conventional bottles assembled from multiple parts, our IBW process creates a monolithic structure with uniform wall thickness throughout.',
   },
   {
     icon: (
@@ -50,7 +50,7 @@ const differentiators = [
       </svg>
     ),
     title: 'Anti-Skid Orange Peel Bottom',
-    desc: 'The unique embossed orange-peel texture on the base provides exceptional grip on wet surfaces �?a critical safety feature for water dispensing environments. Prevents accidental tipping with or without a rack.',
+    desc: 'The unique embossed orange-peel texture on the base provides exceptional grip on wet surfaces — a critical safety feature for water dispensing environments. Prevents accidental tipping with or without a rack.',
   },
   {
     icon: (
@@ -68,7 +68,7 @@ const videoTests = [
     id: 'drop',
     label: 'Drop Test',
     icon: '⬇️',
-    claim: 'Dropped from 1.5m �?zero cracks',
+    claim: 'Dropped from 1.5m — zero cracks',
     desc: 'The seamless IBW structure absorbs impact forces evenly. No seam lines to split, no weak points to crack.',
     src: '/videos/drop-test.mp4',
     poster: '/images/bottles_product.png',
@@ -77,8 +77,8 @@ const videoTests = [
     id: 'cold',
     label: 'Cold Test',
     icon: '🧊',
-    claim: 'Withstands �?0°C without brittleness',
-    desc: 'High-grade polycarbonate retains flexibility at sub-zero temperatures �?ideal for cold-chain storage and winter delivery.',
+    claim: 'Withstands -20°C without brittleness',
+    desc: 'High-grade polycarbonate retains flexibility at sub-zero temperatures — ideal for cold-chain storage and winter delivery.',
     src: '/videos/cold-test.mp4',
     poster: '/images/bottles_product.png',
   },
@@ -86,7 +86,7 @@ const videoTests = [
     id: 'leak',
     label: 'Leak Test',
     icon: '💧',
-    claim: 'Inverted for 24 hours �?zero leakage',
+    claim: 'Inverted for 24 hours — zero leakage',
     desc: 'Seamless sidewalls combined with our premium non-spill cap system guarantee a perfect seal under full static load.',
     src: '/videos/leak-test.mp4',
     poster: '/images/bottles_product.png',
@@ -116,7 +116,7 @@ export default function BottlesPage() {
           </h1>
           <p className="page-hero__subtitle">
             Injection-blow-molded in a single operation. Zero seams. Zero weak points.
-            Drop tested, cold tested, leak tested �?and backed by a Canadian team.
+            Drop tested, cold tested, leak tested — and backed by a Canadian team.
           </p>
         </div>
       </div>
@@ -130,7 +130,7 @@ export default function BottlesPage() {
             <div className="divider" />
             <p className="section-header__subtitle">
               Every other 5-gallon bottle on the North American market is assembled from separately molded parts.
-              Ours is formed in a single seamless process �?a fundamental difference in strength and reliability.
+              Ours is formed in a single seamless process — a fundamental difference in strength and reliability.
             </p>
           </div>
           <div className="grid grid--3">
@@ -153,7 +153,7 @@ export default function BottlesPage() {
             <h2 className="section-header__title">See the Tests for Yourself</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              We don't just claim durability �?we prove it on camera. Watch our three core performance tests.
+              We don't just claim durability — we prove it on camera. Watch our three core performance tests.
             </p>
           </div>
           <div className="grid grid--3">

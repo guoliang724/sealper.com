@@ -4,7 +4,7 @@ import styles from '../products.module.css'
 import clStyles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Customized Labels �?Ready in 7 Days',
+  title: 'Customized Labels — Ready in 7 Days',
   description: 'Sealper custom label services for water bottles and caps. From design submission to delivery in just 7 days. Brand your bottled water products with professional full-colour waterproof labels.',
 }
 
@@ -27,7 +27,7 @@ const benefits = [
   {
     icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
     title: 'Fast 7-Day Turnaround',
-    desc: 'From design submission to delivery in just 7 business days. Rush 3-day orders available �?contact us for details.',
+    desc: 'From design submission to delivery in just 7 business days. Rush 3-day orders available — contact us for details.',
   },
   {
     icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>,
@@ -45,7 +45,7 @@ const steps = [
   { step: '01', title: 'Submit Your Design', desc: 'Send us your artwork or let our team help with design.' },
   { step: '02', title: 'Review & Approve', desc: 'We send a proof for your review and approval within 24 hours.' },
   { step: '03', title: 'Production', desc: 'Labels are printed with high-quality, durable waterproof materials.' },
-  { step: '04', title: 'Delivery �?Day 7', desc: 'Labels delivered to you or applied before shipping. Total process: 7 business days.' },
+  { step: '04', title: 'Delivery — Day 7', desc: 'Labels delivered to you or applied before shipping. Total process: 7 business days.' },
 ]
 
 export default function CustomizedLabelsPage() {

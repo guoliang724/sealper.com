@@ -66,7 +66,7 @@ export default function ContactPageClient() {
           <span className="page-hero__eyebrow">Get In Touch</span>
           <h1 className="page-hero__title">Contact Us</h1>
           <p className="page-hero__subtitle">
-            Drop us a line! Whether you are in Canada, the United States, or elsewhere �?we are here to help.
+            Drop us a line! Whether you have questions about our products, pricing, or delivery — we are here to help.
           </p>
         </div>
       </div>
@@ -126,7 +126,7 @@ export default function ContactPageClient() {
                     </svg>
                   </div>
                   <h3>Message Sent!</h3>
-                  <p>Thank you for reaching out. Our team will get back to you within 1�? business days.</p>
+                  <p>Thank you for reaching out. Our team will get back to you within 1-2 business days.</p>
                   <button className="btn btn--primary" onClick={() => { setSubmitted(false); setFormState({ company: '', name: '', email: '', message: '' }) }}>
                     Send Another Message
                   </button>
@@ -147,7 +147,7 @@ export default function ContactPageClient() {
                   </div>
                   <div className="form-group">
                     <label className="form-label" htmlFor="message">Message <span style={{ color: 'var(--color-accent-dark)' }}>*</span></label>
-                    <textarea id="message" name="message" className="form-textarea" placeholder="Tell us about your requirements �?products, quantities, and delivery location..." value={formState.message} onChange={handleChange} required />
+                    <textarea id="message" name="message" className="form-textarea" placeholder="Tell us about your requirements — products, quantities, and delivery location..." value={formState.message} onChange={handleChange} required />
                   </div>
                   <button type="submit" id="contact-submit-btn" className="btn btn--primary btn--lg" style={{ width: '100%', justifyContent: 'center' }}>
                     Send Message
