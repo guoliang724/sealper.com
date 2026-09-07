@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import styles from './Header.module.css'
@@ -78,8 +79,7 @@ export default function Header() {
           <div className={styles.inner}>
             {/* Logo */}
             <Link href="/" className={styles.logo} onClick={closeMobile}>
-              <span className={styles.logoMark}>S</span>
-              <span className={styles.logoText}>SEALPER</span>
+              <Image src="/images/logo_sealper_mark.png" alt="Sealper" width={520} height={125} className={styles.logoImage} priority />
             </Link>
 
             {/* Desktop Nav */}
@@ -144,8 +144,7 @@ export default function Header() {
       <div className={`${styles.mobileDrawer} ${mobileOpen ? styles.mobileDrawerOpen : ''}`} aria-hidden={!mobileOpen}>
         <div className={styles.mobileDrawerHeader}>
           <Link href="/" className={styles.logo} onClick={closeMobile}>
-            <span className={styles.logoMark}>S</span>
-            <span className={styles.logoText}>SEALPER</span>
+            <Image src="/images/logo_sealper_mark.png" alt="Sealper" width={520} height={125} className={styles.logoImage} />
           </Link>
           <button className={styles.mobileClose} onClick={closeMobile} aria-label="Close menu">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">

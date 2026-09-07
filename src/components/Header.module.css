@@ -82,28 +82,10 @@
   flex-shrink: 0;
 }
 
-.logoMark {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: #1B3A6B;
-  color: #FFFFFF;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: -0.02em;
+.logoImage {
+  height: 30px;
+  width: auto;
   flex-shrink: 0;
-}
-
-.logoText {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: #111827;
 }
 
 /* ── Desktop Nav ── */

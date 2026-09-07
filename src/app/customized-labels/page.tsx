@@ -4,40 +4,40 @@ import styles from '../products.module.css'
 import clStyles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Customized Labels — Ready in 7 Days',
-  description: 'Sealper custom label services for water bottles and caps. From design submission to delivery in just 7 days. Brand your bottled water products with professional full-colour waterproof labels.',
+  title: 'Custom Branding for Water Bottles & Caps — Ready in 7 Days',
+  description: 'Sealper custom branding for water bottles and caps — waterproof adhesive labels, direct screen printing, and custom cap branding. Fast 7-day delivery, 3-day rush available, flexible order quantities.',
 }
 
 const benefits = [
   {
-    icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>,
-    title: 'Full Color Printing',
-    desc: 'Vibrant, professional full-color printing to make your brand stand out on every bottle.',
+    icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>,
+    title: 'Custom Cap Branding',
+    desc: 'Customized printed logos or cap labels to ensure complete brand consistency across your products.',
   },
   {
     icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>,
-    title: 'Custom Sizing',
-    desc: 'Labels tailored to fit perfectly on 3-gallon and 5-gallon bottles, as well as caps.',
+    title: 'Custom Adhesive Labels',
+    desc: 'Vibrant, full-color waterproof labels tailored to fit 3-gallon and 5-gallon water bottles perfectly.',
   },
   {
-    icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>,
-    title: 'Waterproof Materials',
-    desc: 'Durable, waterproof label materials that maintain their quality even when bottles are refrigerated or wet.',
+    icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"/><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"/><circle cx="6.5" cy="12.5" r="0.5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>,
+    title: 'Direct Screen Printing',
+    desc: 'Premium direct-to-bottle silk-screen printing for a sleek, permanent, and high-end finish.',
   },
   {
     icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
-    title: 'Fast 7-Day Turnaround',
-    desc: 'From design submission to delivery in just 7 business days. Rush 3-day orders available — contact us for details.',
-  },
-  {
-    icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>,
-    title: 'Cap Labels Available',
-    desc: 'Customized labels available for our cap products to complete the branded look.',
+    title: 'Fast Turnaround & Rush Option',
+    desc: 'Standard delivery in 7 business days, with 3-day rush processing available upon request.',
   },
   {
     icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>,
-    title: 'Minimum Order Flexibility',
-    desc: 'Flexible minimum order quantities for small businesses and large enterprises alike.',
+    title: 'Flexible Order Quantities',
+    desc: 'Low minimum order quantities to support small businesses and large enterprises alike.',
+  },
+  {
+    icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>,
+    title: 'Durable Waterproof Materials',
+    desc: 'All labels and inks maintain top visual quality even when wet or refrigerated.',
   },
 ]
 
@@ -54,9 +54,9 @@ export default function CustomizedLabelsPage() {
       <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Services / Customized Labels</span>
-          <h1 className="page-hero__title">Custom Labels<br />Ready in 7 Days</h1>
+          <h1 className="page-hero__title">Custom Branding for<br />Water Bottles &amp; Caps</h1>
           <p className="page-hero__subtitle">
-            From design submission to delivery in 7 business days. Waterproof, full-colour, branded labels for every bottle and cap.
+            From waterproof adhesive labels to direct screen printing, showcase your brand on every bottle and cap with fast 7-day delivery.
           </p>
         </div>
       </div>

@@ -5,17 +5,39 @@ import styles from '../products.module.css'
 import bottleStyles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: "Water Bottles — North America's Only Seamless IBW Bottle | Sealper",
-  description: "Sealper's 5 gallon water bottles are North America's only seamless injection-blow-molded (IBW) bottles. Drop tested, cold tested, leak tested. FDA approved, BPA free. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto.",
+  title: 'Premium Canadian-Made Water Bottles — PET & PC Series | Sealper',
+  description: "Choose Sealper's Canadian-made 100% BPA-Free PET Series for top-tier purity and full EU/NA compliance, or our imported PC Series engineered for high-temperature commercial refilling. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto.",
 }
 
 const bottles = [
   {
-    tag: 'Most Popular',
+    tag: 'Flagship — BPA Free',
+    name: '5 Gallon PET Bottles',
+    image: '/images/bottle_pet_product.jpg',
+    detailHref: '/bottles/pet-series',
+    desc: 'Canadian-made, 100% BPA-free PET built for top-tier purity, fast local delivery, and full EU/North American compliance.',
+    specs: [
+      '100% BPA-Free, meets EU 2024/3190 standards',
+      'Ergonomic external handle, non-slip and effortless',
+      'Ultra-clear blue, easy water quality inspection',
+      'High toughness, lightweight and shatter-resistant',
+      'Ideal for homes, premium offices, and EU/NA markets',
+    ],
+  },
+  {
+    tag: 'High-Temperature Duty',
     name: '5 Gallon PC Bottles',
-    image: '/images/bottles_product.png',
-    desc: 'Premium polycarbonate 5-gallon bottle with anti-skid orange peel bottom for maximum stability. Perfect for home and office water dispensers.',
-    specs: ['Weight: 840g', 'Anti-skid embossed bottom pattern', 'Crystal clear polycarbonate', 'FDA Approved & BPA Free', 'Compatible with standard dispensers'],
+    image: '/images/bottle_pc_product.jpg',
+    detailHref: '/bottles/pc-series',
+    desc: 'Imported polycarbonate engineered for rugged durability and specialized high-temperature commercial refilling.',
+    specs: [
+      '840g heavy-duty PC for maximum rigidity',
+      'FDA compliant, ideal for non-EU markets',
+      'Seamless molded handle',
+      'Classic aqua blue, frosted or clear finish',
+      'Ultra-rigid, heat-resistant for high-temp refills',
+      'Built for commercial refill stations and hot-wash uses',
+    ],
   },
   {
     tag: 'Compact & Portable',
@@ -37,59 +59,31 @@ const differentiators = [
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/>
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
       </svg>
     ),
-    title: 'Seamless IBW Process',
-    desc: 'Injection-blow-molded in a single operation — zero welding seams, zero weak points. Unlike conventional bottles assembled from multiple parts, our IBW process creates a monolithic structure with uniform wall thickness throughout.',
+    title: '100% Ultra-Pure BPA-Free Material',
+    desc: 'Zero chemical migration. Crafted from food-grade PET, eliminating BPA and endocrine disruptors. Fully compliant with strict EU and North American safety standards.',
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        <path d="M9.5 3h5v3.5h-5z"/>
+        <path d="M8 6.5h8a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8.5a2 2 0 0 1 2-2z"/>
+        <path d="M18 10h1.5a2.5 2.5 0 0 1 0 5H18"/>
       </svg>
     ),
-    title: 'Anti-Skid Orange Peel Bottom',
-    desc: 'The unique embossed orange-peel texture on the base provides exceptional grip on wet surfaces — a critical safety feature for water dispensing environments. Prevents accidental tipping with or without a rack.',
+    title: 'Heavy-Duty Reinforced Ergonomic Handle',
+    desc: 'Eliminates the slippery, hard-to-carry hassles of traditional jugs. Specially engineered for 5-gallon loads with a slip-free grip.',
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+        <path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 6-3 12M15 3l-3 6 3 12"/>
       </svg>
     ),
-    title: '100% Food-Grade Safety',
-    desc: 'FDA approved and BPA free polycarbonate. Every batch is quality-controlled at our Canadian distribution centres. Crystal-clear material lets you inspect water quality at a glance.',
-  },
-]
-
-const videoTests = [
-  {
-    id: 'drop',
-    label: 'Drop Test',
-    icon: '⬇️',
-    claim: 'Dropped from 1.5m — zero cracks',
-    desc: 'The seamless IBW structure absorbs impact forces evenly. No seam lines to split, no weak points to crack.',
-    src: '/videos/drop-test.mp4',
-    poster: '/images/bottles_product.png',
-  },
-  {
-    id: 'cold',
-    label: 'Cold Test',
-    icon: '🧊',
-    claim: 'Withstands -20°C without brittleness',
-    desc: 'High-grade polycarbonate retains flexibility at sub-zero temperatures — ideal for cold-chain storage and winter delivery.',
-    src: '/videos/cold-test.mp4',
-    poster: '/images/bottles_product.png',
-  },
-  {
-    id: 'leak',
-    label: 'Leak Test',
-    icon: '💧',
-    claim: 'Inverted for 24 hours — zero leakage',
-    desc: 'Seamless sidewalls combined with our premium non-spill cap system guarantee a perfect seal under full static load.',
-    src: '/videos/leak-test.mp4',
-    poster: '/images/bottles_product.png',
+    title: 'Crystal-Clear Shatter-Resistant Structure',
+    desc: 'Combines glass-like transparency with superior impact resistance. Reinforced ribs absorb drops to prevent cracking, keeping water high-clarity and visible.',
   },
 ]
 
@@ -111,12 +105,12 @@ export default function BottlesPage() {
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Products / Bottles</span>
           <h1 className="page-hero__title">
-            North America's Only<br />
-            <em>Seamless</em> IBW Water Bottle
+            Premium Canadian-Made Water Bottles:<br />
+            Engineered for Every Market Need
           </h1>
           <p className="page-hero__subtitle">
-            Injection-blow-molded in a single operation. Zero seams. Zero weak points.
-            Drop tested, cold tested, leak tested — and backed by a Canadian team.
+            Choose our Canadian-made 100% BPA-Free PET Series for top-tier purity, fast local delivery, and total compliance —
+            or our Imported PC Series engineered for specialized high-temperature commercial refilling.
           </p>
         </div>
       </div>
@@ -126,11 +120,11 @@ export default function BottlesPage() {
         <div className="container">
           <div className="section-header">
             <span className="section-header__eyebrow">The Sealper Difference</span>
-            <h2 className="section-header__title">Why Our Bottles Stand Alone</h2>
+            <h2 className="section-header__title">Built for Performance, Engineered for Safety</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              Every other 5-gallon bottle on the North American market is assembled from separately molded parts.
-              Ours is formed in a single seamless process — a fundamental difference in strength and reliability.
+              From precision Canadian-manufactured PET to robust imported PC, our water bottles are built to solve your
+              daily operational challenges — offering zero leakage, effortless handling, and trusted quality.
             </p>
           </div>
           <div className="grid grid--3">
@@ -145,44 +139,78 @@ export default function BottlesPage() {
         </div>
       </section>
 
-      {/* ── Test Evidence Videos ── */}
-      <section className={`section section--subtle ${bottleStyles.videoSection}`}>
+      {/* ── Manufacturing Quality ── */}
+      <section className="section section--subtle">
         <div className="container">
           <div className="section-header">
-            <span className="section-header__eyebrow">Verified Performance</span>
-            <h2 className="section-header__title">See the Tests for Yourself</h2>
+            <span className="section-header__eyebrow">Manufacturing Quality</span>
+            <h2 className="section-header__title">Clean Air Behind Every Bottle</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              We don't just claim durability — we prove it on camera. Watch our three core performance tests.
+              Our blow molding line runs on a high-performance 3-stage Walker Filtration system, conditioning
+              the compressed air that shapes every Sealper bottle — cleaner, drier, and oil-free.
             </p>
           </div>
-          <div className="grid grid--3">
-            {videoTests.map((test) => (
-              <div key={test.id} className={bottleStyles.videoCard}>
-                <div className={bottleStyles.videoWrap}>
-                  <video
-                    className={bottleStyles.video}
-                    poster={test.poster}
-                    controls
-                    preload="none"
-                    playsInline
-                    aria-label={`${test.label} video`}
-                  >
-                    <source src={test.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className={bottleStyles.videoBadge}>{test.icon} {test.label}</div>
-                </div>
-                <div className={bottleStyles.videoBody}>
-                  <p className={bottleStyles.videoClaim}>{test.claim}</p>
-                  <p className={bottleStyles.videoDesc}>{test.desc}</p>
-                </div>
-              </div>
-            ))}
+          <figure className={bottleStyles.infographic}>
+            <Image
+              src="/images/filtration_infographic.jpg"
+              alt="Advanced air filtration for our blow molding process: a 3-stage Walker Filtration system — 1.0 micron particulate filtration, 0.01 micron oil removal filtration, and .003 PPM oil vapour removal filtration. Features high efficiency push-on filter elements, externally accessible float operated auto-drains with manual overrides and plastic drain shields, differential pressure indicators, and die cast powder coated aluminum housings."
+              width={1448}
+              height={1086}
+              sizes="(max-width: 1024px) 100vw, 1000px"
+              className={bottleStyles.infographicImage}
+            />
+          </figure>
+        </div>
+      </section>
+
+      {/* ── Compliance & Regulatory Notice ── */}
+      <section className={bottleStyles.complianceSection}>
+        <div className="container">
+          <div className={bottleStyles.complianceHeader}>
+            <span className={bottleStyles.complianceEyebrow}>Compliance &amp; Regulatory Notice</span>
+            <h2 className={bottleStyles.complianceHeading}>Choosing the Right Material for Your Market</h2>
+            <div className={bottleStyles.complianceRule} />
           </div>
-          <p className={bottleStyles.videoNote}>
-            Videos are filmed under controlled conditions. Results reflect the standard IBW manufacturing process applied to all Sealper bottles.
-          </p>
+          <div className={bottleStyles.complianceCard}>
+            <div className={bottleStyles.complianceCol}>
+              <p className={bottleStyles.complianceText}>
+                To help our partners stay ahead of changing safety trends, please note that international markets
+                (such as EU Regulation 2024/3190) are banning BPA in food-contact packaging.
+              </p>
+              <ul className={bottleStyles.complianceList}>
+                <li>
+                  <strong>For Future-Proof &amp; Pure Safety Needs:</strong> We recommend our PET Series — 100% BPA-Free
+                  with high toughness and zero chemical migration.
+                </li>
+                <li>
+                  <strong>For High-Temperature Commercial Washing:</strong> Our PC Series remains fully FDA-compliant,
+                  engineered for rugged durability and automated hot-wash lines.
+                </li>
+              </ul>
+            </div>
+            <div className={bottleStyles.complianceCol}>
+              <h3 className={bottleStyles.sourcesTitle}>Official Regulatory Sources:</h3>
+              <a
+                href="https://eur-lex.europa.eu/eli/reg/2024/3190/oj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={bottleStyles.sourceLink}
+              >
+                🔗 EU Law Portal (EUR-Lex)
+                <span className={bottleStyles.sourceLinkDesc}>Commission Regulation (EU) 2024/3190 Text</span>
+              </a>
+              <a
+                href="https://www.efsa.europa.eu/en/topics/topic/bisphenol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={bottleStyles.sourceLink}
+              >
+                🔗 EFSA (European Food Safety Authority)
+                <span className={bottleStyles.sourceLinkDesc}>BPA Safety Assessment &amp; Guidelines</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -198,7 +226,13 @@ export default function BottlesPage() {
             {bottles.map((b) => (
               <div key={b.name} className={styles.productCard}>
                 <div className={styles.productImageWrap}>
-                  <Image src={b.image} alt={b.name} fill style={{ objectFit: 'cover' }} />
+                  {b.detailHref ? (
+                    <Link href={b.detailHref} aria-label={`View ${b.name} details`}>
+                      <Image src={b.image} alt={b.name} fill style={{ objectFit: 'cover' }} />
+                    </Link>
+                  ) : (
+                    <Image src={b.image} alt={b.name} fill style={{ objectFit: 'cover' }} />
+                  )}
                 </div>
                 <div className={styles.productCardBody}>
                   <span className={styles.productTag}>{b.tag}</span>
@@ -209,6 +243,14 @@ export default function BottlesPage() {
                       <div key={s} className={styles.productSpec}>{s}</div>
                     ))}
                   </div>
+                  {b.detailHref && (
+                    <Link href={b.detailHref} className={bottleStyles.detailLink}>
+                      View Material Details
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                      </svg>
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

@@ -5,9 +5,15 @@ import styles from './page.module.css'
 import FAQ from '@/components/FAQ'
 
 export const metadata: Metadata = {
-  title: '5 Gallon Water Bottles Supplier | Sealper — 100% Canadian Owned',
-  description: 'Sealper is a 100% Canadian-owned wholesale supplier for 5 gallon water bottles, caps, racks, and pumps. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto. Serving Western Canada.',
+  title: 'Premier BPA-Free Water Packaging Experts in Western Canada | Sealper',
+  description: 'Sealper is your local, single-source supplier for Canadian-manufactured 5-gallon bottles, caps, racks, and pumps. Fast, reliable fulfillment from local warehouses in Vancouver, Calgary, Edmonton & Toronto.',
 }
+
+const heroBadges = [
+  { src: '/images/badge_canadian_made.png', alt: 'Canadian Manufactured — Local Production', width: 310, height: 356 },
+  { src: '/images/badge_bpa_free.png', alt: '100% BPA Free — Safe Materials', width: 243, height: 347 },
+  { src: '/images/badge_warehouse.png', alt: 'Local Warehouse — Distribution Network', width: 248, height: 337 },
+]
 
 const features = [
   {
@@ -95,13 +101,24 @@ export default function HomePage() {
           <div className={styles.heroContent}>
             <span className="badge badge--primary">🍁 100% Canadian Owned</span>
             <h1 className={styles.heroTitle}>
-              Western Canada's
-              <span className={styles.heroTitleAccent}> Premier</span>
-              <br />Water Packaging Supplier
+              <span className={styles.heroTitleAccent}>Premier</span> BPA-Free Water Packaging Experts
+              <br />in Western Canada
             </h1>
+            <div className={styles.heroBadgeRow}>
+              {heroBadges.map((b) => (
+                <Image
+                  key={b.src}
+                  src={b.src}
+                  alt={b.alt}
+                  width={b.width}
+                  height={b.height}
+                  className={styles.heroBadgeImage}
+                />
+              ))}
+            </div>
             <p className={styles.heroSubtitle}>
-              One stop solution for 5 gallon bottles, caps, racks, pumps, and complete packaging supplies.
-              Same-day delivery in Vancouver, Calgary, Edmonton &amp; Toronto.
+              Your local, single-source supplier for Canadian-manufactured 5-gallon bottles, caps, racks, and pumps.
+              Benefit from fast, reliable fulfillment across our network of local warehouses: Vancouver, Calgary, Edmonton &amp; Toronto.
             </p>
             <div className={styles.heroCtas}>
               <Link href="/bottles" className="btn btn--primary btn--lg">
@@ -114,37 +131,18 @@ export default function HomePage() {
                 Get a Quote
               </Link>
             </div>
-            <div className={styles.heroTrustRow}>
-              <span className={styles.heroTrustItem}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                FDA Approved
-              </span>
-              <span className={styles.heroTrustItem}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                BPA Free
-              </span>
-              <span className={styles.heroTrustItem}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                4 Canadian Warehouses
-              </span>
-            </div>
           </div>
         </div>
         <div className={styles.heroRight}>
           <Image
-            src="/images/hero_home.png"
-            alt="Pristine glacial Canadian water — Sealper wholesale water packaging"
+            src="/images/hero_home.jpg"
+            alt="Sealper 5-gallon water bottles against the Canadian Rockies"
             fill
             priority
-            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            style={{ objectFit: 'cover', objectPosition: 'center 72%' }}
           />
           <div className={styles.heroRightOverlay} />
-          <div className={styles.heroWarehouses}>
-            <span className={styles.heroWarehouseLabel}>Warehouse Locations</span>
-            {['Vancouver', 'Calgary', 'Edmonton', 'Toronto'].map((city) => (
-              <span key={city} className={styles.heroWarehouseCity}>{city}</span>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -262,7 +260,7 @@ export default function HomePage() {
             </div>
             <div className={styles.aboutStripImage}>
               <Image
-                src="/images/about_banner.png"
+                src="/images/about_facility.jpg"
                 alt="Sealper Canadian warehouse and logistics"
                 fill
                 style={{ objectFit: 'cover', borderRadius: '16px' }}

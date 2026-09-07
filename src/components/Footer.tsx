@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Footer.module.css'
 
@@ -27,8 +28,7 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <span className={styles.logoMark}>S</span>
-              <span className={styles.logoText}>SEALPER</span>
+              <Image src="/images/logo_sealper.png" alt="Sealper" width={160} height={100} className={styles.logoImage} />
             </div>
             <p className={styles.tagline}>
               100% Canadian Owned &amp; Operated. Your trusted source for premium water packaging supplies across Western Canada.

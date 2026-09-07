@@ -5,7 +5,7 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'About Us — 100% Canadian Owned',
-  description: 'Sealper is a 100% Canadian-owned wholesale supplier headquartered in Calgary, Alberta. With 4 warehouses across Canada, we deliver water packaging supplies to Western Canada with same-day options.',
+  description: 'Sealper is a 100% Canadian-owned wholesale supplier headquartered in Calgary, Alberta. With 4 strategically located warehouses, we deliver water packaging supplies to businesses across Canada with same-day options.',
 }
 
 const pillars = [
@@ -63,9 +63,9 @@ export default function AboutPage() {
         <div className="page-hero__overlay" />
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">About SEALPER</span>
-          <h1 className="page-hero__title">100% Canadian Owned &amp; Western Canada Focused</h1>
+          <h1 className="page-hero__title">100% Canadian Owned &amp; Nationwide Focused</h1>
           <p className="page-hero__subtitle">
-            Locally owned and operated — proudly serving Western Canada from our 4 Canadian warehouses.
+            Locally owned and operated — proudly serving businesses across Canada from our 4 strategically located warehouses.
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
           <div className={styles.storyGrid}>
             <div className={styles.storyImage}>
               <Image
-                src="/images/about_banner.png"
+                src="/images/about_facility.jpg"
                 alt="Sealper warehouse facility"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -108,6 +108,31 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Company Overview Poster */}
+      <section className="section section--subtle">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-header__eyebrow">Company Overview</span>
+            <h2 className="section-header__title">Canadian-Made HOD Packaging Solutions</h2>
+            <div className="divider" />
+            <p className="section-header__subtitle">
+              Premium PET bottles, caps, racks, pumps, and accessories — made in Calgary, Alberta and serving
+              water companies across Canada.
+            </p>
+          </div>
+          <figure className={styles.posterFigure}>
+            <Image
+              src="/images/hod_solutions_poster.jpg"
+              alt="Sealper: Canadian-made HOD packaging solutions — premium PET bottles, caps, racks, pumps and accessories, made in Calgary, Alberta and serving water companies across Canada. BPA-free PET, local inventory, and reliable supply, backed by local warehousing, advanced filtration, and precision labeling."
+              width={1055}
+              height={1491}
+              sizes="(max-width: 768px) 100vw, 560px"
+              className={styles.posterImage}
+            />
+          </figure>
         </div>
       </section>
 
