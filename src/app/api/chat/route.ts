@@ -37,7 +37,7 @@ export async function POST(request: Request) {
       })
     }
 
-    const recipientEmail = process.env.CONTACT_EMAIL ?? 'contact@sealper.com'
+    const recipientEmail = process.env.CONTACT_EMAIL ?? 'sealperplastics@yahoo.com'
 
     await transporter.sendMail({
       from:    `"Sealper Chat" <${process.env.SMTP_USER ?? 'noreply@sealper.com'}>`,

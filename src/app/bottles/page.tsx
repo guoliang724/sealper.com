@@ -5,53 +5,47 @@ import styles from '../products.module.css'
 import bottleStyles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Premium Canadian-Made Water Bottles — PET & PC Series | Sealper',
-  description: "Choose Sealper's Canadian-made 100% BPA-Free PET Series for top-tier purity and full EU/NA compliance, or our imported PC Series engineered for high-temperature commercial refilling. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto.",
+  title: 'Water Bottles — 5 & 3 Gallon PET and PC Bottles | Sealper',
+  description: "Sealper water bottles: Canadian-made BPA-free 5 gallon PET bottles, 5 and 3 gallon PC bottles, and 12L & 8L fridge packs. Built tough, sealed better.",
 }
 
 const bottles = [
   {
-    tag: 'Flagship — BPA Free',
-    name: '5 Gallon PET Bottles',
-    image: '/images/bottle_pet_product.jpg',
+    tag: 'Made in Canada',
+    name: '5 Gallon PET Bottle',
+    image: '/images/products/bottle-5gal-pet.png',
     detailHref: '/bottles/pet-series',
-    desc: 'Canadian-made, 100% BPA-free PET built for top-tier purity, fast local delivery, and full EU/North American compliance.',
-    specs: [
-      '100% BPA-Free, meets EU 2024/3190 standards',
-      'Ergonomic external handle, non-slip and effortless',
-      'Ultra-clear blue, easy water quality inspection',
-      'High toughness, lightweight and shatter-resistant',
-      'Ideal for homes, premium offices, and EU/NA markets',
-    ],
+    desc: 'BPA-free PET bottle manufactured in Calgary — lightweight, durable and reusable.',
+    specs: ['BPA-free', 'Made in Canada', '700 g', 'Heat-fused handle', 'Reinforced rib structure', 'Leak-resistant design'],
   },
   {
-    tag: 'High-Temperature Duty',
-    name: '5 Gallon PC Bottles',
-    image: '/images/bottle_pc_product.jpg',
+    tag: 'Heavy Duty',
+    name: '5 Gallon PC Bottle',
+    image: '/images/products/bottle-5gal-pc.png',
     detailHref: '/bottles/pc-series',
-    desc: 'Imported polycarbonate engineered for rugged durability and specialized high-temperature commercial refilling.',
-    specs: [
-      '840g heavy-duty PC for maximum rigidity',
-      'FDA compliant, ideal for non-EU markets',
-      'Seamless molded handle',
-      'Classic aqua blue, frosted or clear finish',
-      'Ultra-rigid, heat-resistant for high-temp refills',
-      'Built for commercial refill stations and hot-wash uses',
-    ],
+    desc: 'Strong polycarbonate bottle built for reliable repeated use.',
+    specs: ['Strong and durable', 'Wide-grip handle', '800 g', 'Seamless neck', 'Recessed base', 'Wear-resistant contact surface'],
   },
   {
-    tag: 'Compact & Portable',
-    name: '3 Gallon PC Bottles',
-    image: '/images/bottles_product.png',
-    desc: 'Narrow and tall design — clean, clear, and incredibly easy to carry and store. Ideal for smaller offices, camping, and household use.',
-    specs: ['Narrow & tall design', 'Lightweight & easy to handle', 'Crystal clear visibility', 'FDA Approved & BPA Free', 'Easy to clean'],
+    tag: 'Compact',
+    name: '3 Gallon PC Bottle',
+    image: '/images/products/bottle-3gal-pc.png',
+    desc: 'A lighter 3 gallon size with the same strong PC build.',
+    specs: ['Strong and durable', 'Wide-grip handle', 'Seamless neck', 'Recessed base', 'Wear-resistant contact surface', 'Lightweight and reusable'],
   },
   {
-    tag: 'Versatile',
-    name: 'Fridge Pack Camping Jugs',
-    image: '/images/bottles_product.png',
-    desc: 'The most durable and versatile camping and fridge jug. Easy to carry, clean, and store. Designed for outdoor adventures and emergency readiness.',
-    specs: ['Most durable design', 'Versatile multi-use application', 'Easy carry & clean', 'Compact for refrigerator storage', 'Suitable for outdoor use'],
+    tag: 'Fridge Pack',
+    name: '12L Fridge Pack',
+    image: '/images/products/fridge-pack-12l.png',
+    desc: 'Space-saving jug with an easy-pour tap for the fridge, office or campsite.',
+    specs: ['38 × 16 × 26 cm', 'Space-saving design', 'Easy-pour tap', 'Durable & reusable', 'Ideal for refrigerator storage', 'Great for home, office & camping'],
+  },
+  {
+    tag: 'Fridge Pack',
+    name: '8L Fridge Pack',
+    image: '/images/products/fridge-pack-8l.png',
+    desc: 'Compact everyday jug with an easy-pour tap that fits easily in the fridge.',
+    specs: ['31 × 18 × 24 cm', 'Compact & convenient', 'Easy-pour tap', 'Reusable design', 'Fits easily in the refrigerator', 'Ideal for everyday use'],
   },
 ]
 
@@ -91,41 +85,62 @@ export default function BottlesPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <div className="page-hero" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
-        <div className="page-hero__bg">
-          <Image
-            src="/images/hero_bottles.png"
-            alt="Sealper seamless IBW water bottles"
-            fill
-            priority
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-        <div className="page-hero__overlay" />
+      <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Products / Bottles</span>
-          <h1 className="page-hero__title">
-            Premium Canadian-Made Water Bottles:<br />
-            Engineered for Every Market Need
-          </h1>
+          <h1 className="page-hero__title">SEALPER <em>Bottles</em></h1>
           <p className="page-hero__subtitle">
-            Choose our Canadian-made 100% BPA-Free PET Series for top-tier purity, fast local delivery, and total compliance —
-            or our Imported PC Series engineered for specialized high-temperature commercial refilling.
+            5 &amp; 3 gallon PET and PC bottles, plus 12L and 8L fridge packs. Built tough, sealed better.
           </p>
         </div>
       </div>
 
-      {/* ── Why Our Bottle is Different ── */}
+      {/* ── Product Lineup ── */}
       <section className="section">
+        <div className="container">
+          <div className={styles.productsGrid}>
+            {bottles.map((b) => (
+              <div key={b.name} className={styles.productCard}>
+                <div className={styles.productImageWrap}>
+                  {b.detailHref ? (
+                    <Link href={b.detailHref} aria-label={`View ${b.name} details`}>
+                      <Image src={b.image} alt={b.name} fill sizes="(max-width: 768px) 100vw, 400px" />
+                    </Link>
+                  ) : (
+                    <Image src={b.image} alt={b.name} fill sizes="(max-width: 768px) 100vw, 400px" />
+                  )}
+                </div>
+                <div className={styles.productCardBody}>
+                  <span className={styles.productTag}>{b.tag}</span>
+                  <h2 className={styles.productName}>{b.name}</h2>
+                  <p className={styles.productDesc}>{b.desc}</p>
+                  <div className={styles.productSpecs}>
+                    {b.specs.map((s) => (
+                      <div key={s} className={styles.productSpec}>{s}</div>
+                    ))}
+                  </div>
+                  {b.detailHref && (
+                    <Link href={b.detailHref} className={bottleStyles.detailLink}>
+                      View Material Details
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                      </svg>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Our Bottle is Different ── */}
+      <section className="section section--subtle">
         <div className="container">
           <div className="section-header">
             <span className="section-header__eyebrow">The Sealper Difference</span>
             <h2 className="section-header__title">Built for Performance, Engineered for Safety</h2>
             <div className="divider" />
-            <p className="section-header__subtitle">
-              From precision Canadian-manufactured PET to robust imported PC, our water bottles are built to solve your
-              daily operational challenges — offering zero leakage, effortless handling, and trusted quality.
-            </p>
           </div>
           <div className="grid grid--3">
             {differentiators.map((d) => (
@@ -140,25 +155,26 @@ export default function BottlesPage() {
       </section>
 
       {/* ── Manufacturing Quality ── */}
-      <section className="section section--subtle">
+      <section className="section">
         <div className="container">
           <div className="section-header">
             <span className="section-header__eyebrow">Manufacturing Quality</span>
             <h2 className="section-header__title">Clean Air Behind Every Bottle</h2>
             <div className="divider" />
             <p className="section-header__subtitle">
-              Our blow molding line runs on a high-performance 3-stage Walker Filtration system, conditioning
-              the compressed air that shapes every Sealper bottle — cleaner, drier, and oil-free.
+              A 3-stage Walker Filtration system and a German-manufactured compressed air system deliver cleaner,
+              drier air for consistent PET bottle production.
             </p>
           </div>
           <figure className={bottleStyles.infographic}>
             <Image
-              src="/images/filtration_infographic.jpg"
-              alt="Advanced air filtration for our blow molding process: a 3-stage Walker Filtration system — 1.0 micron particulate filtration, 0.01 micron oil removal filtration, and .003 PPM oil vapour removal filtration. Features high efficiency push-on filter elements, externally accessible float operated auto-drains with manual overrides and plastic drain shields, differential pressure indicators, and die cast powder coated aluminum housings."
-              width={1448}
-              height={1086}
-              sizes="(max-width: 1024px) 100vw, 1000px"
+              src="/images/air-filtration.jpg"
+              alt="Advanced air filtration for stable, safe blow molding: a 3-stage Walker Filtration system — 1.0 micron particulate filtration, 0.01 micron oil removal filtration, and .003 PPM oil vapour removal filtration — with a German-manufactured compressed air system and CRN-registered pressure vessels."
+              width={950}
+              height={1342}
+              sizes="(max-width: 768px) 100vw, 640px"
               className={bottleStyles.infographicImage}
+              style={{ maxWidth: '640px' }}
             />
           </figure>
         </div>
@@ -210,50 +226,6 @@ export default function BottlesPage() {
                 <span className={bottleStyles.sourceLinkDesc}>BPA Safety Assessment &amp; Guidelines</span>
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Product Lineup ── */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-header__eyebrow">Product Lineup</span>
-            <h2 className="section-header__title">Choose Your Size</h2>
-            <div className="divider" />
-          </div>
-          <div className={styles.productsGrid}>
-            {bottles.map((b) => (
-              <div key={b.name} className={styles.productCard}>
-                <div className={styles.productImageWrap}>
-                  {b.detailHref ? (
-                    <Link href={b.detailHref} aria-label={`View ${b.name} details`}>
-                      <Image src={b.image} alt={b.name} fill style={{ objectFit: 'cover' }} />
-                    </Link>
-                  ) : (
-                    <Image src={b.image} alt={b.name} fill style={{ objectFit: 'cover' }} />
-                  )}
-                </div>
-                <div className={styles.productCardBody}>
-                  <span className={styles.productTag}>{b.tag}</span>
-                  <h2 className={styles.productName}>{b.name}</h2>
-                  <p className={styles.productDesc}>{b.desc}</p>
-                  <div className={styles.productSpecs}>
-                    {b.specs.map((s) => (
-                      <div key={s} className={styles.productSpec}>{s}</div>
-                    ))}
-                  </div>
-                  {b.detailHref && (
-                    <Link href={b.detailHref} className={bottleStyles.detailLink}>
-                      View Material Details
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-                      </svg>
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

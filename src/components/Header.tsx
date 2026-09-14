@@ -12,12 +12,10 @@ const navItems = [
     label: 'Products',
     href: '#',
     children: [
-      { label: 'Bottles', href: '/bottles', desc: '5 & 3 Gallon — North America\'s Only Seamless IBW' },
+      { label: 'Bottles', href: '/bottles', desc: '5 & 3 Gallon PC & PET' },
       { label: 'Caps', href: '/caps', desc: 'Non-spill & Standard Caps' },
-      { label: 'Racks', href: '/racks', desc: 'Storage & Display Racks' },
-      { label: 'Pumps', href: '/pumps', desc: 'Manual & USB Pumps' },
-      { label: 'Cradles', href: '/cradles', desc: 'Folding & Table Cradles' },
-      { label: 'Water Coolers', href: '/water-coolers', desc: 'Dispensers & Coolers' },
+      { label: 'Storage Racks', href: '/racks', desc: 'Storage & Display Racks' },
+      { label: 'Accessories', href: '/accessories', desc: 'Pumps, Cradles & Coolers' },
     ],
   },
   {
@@ -79,7 +77,7 @@ export default function Header() {
           <div className={styles.inner}>
             {/* Logo */}
             <Link href="/" className={styles.logo} onClick={closeMobile}>
-              <Image src="/images/logo_sealper_mark.png" alt="Sealper" width={520} height={125} className={styles.logoImage} priority />
+              <Image src="/images/logo-sealper-mark.png" alt="Sealper" width={1376} height={319} className={styles.logoImage} priority />
             </Link>
 
             {/* Desktop Nav */}
@@ -144,7 +142,7 @@ export default function Header() {
       <div className={`${styles.mobileDrawer} ${mobileOpen ? styles.mobileDrawerOpen : ''}`} aria-hidden={!mobileOpen}>
         <div className={styles.mobileDrawerHeader}>
           <Link href="/" className={styles.logo} onClick={closeMobile}>
-            <Image src="/images/logo_sealper_mark.png" alt="Sealper" width={520} height={125} className={styles.logoImage} />
+            <Image src="/images/logo-sealper-mark.png" alt="Sealper" width={1376} height={319} className={styles.logoImage} />
           </Link>
           <button className={styles.mobileClose} onClick={closeMobile} aria-label="Close menu">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
@@ -188,7 +186,7 @@ export default function Header() {
           </Link>
           <p className={styles.mobileContact}>
             <a href="tel:4036675058">403-667-5058</a> &nbsp;|&nbsp;
-            <a href="mailto:contact@sealper.com">contact@sealper.com</a>
+            <a href="mailto:sealperplastics@yahoo.com">sealperplastics@yahoo.com</a>
           </p>
         </div>
       </div>

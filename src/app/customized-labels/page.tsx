@@ -54,7 +54,7 @@ export default function CustomizedLabelsPage() {
       <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Services / Customized Labels</span>
-          <h1 className="page-hero__title">Custom Branding for<br />Water Bottles &amp; Caps</h1>
+          <h1 className="page-hero__title">Custom Branding for<br /><em>Water Bottles &amp; Caps</em></h1>
           <p className="page-hero__subtitle">
             From waterproof adhesive labels to direct screen printing, showcase your brand on every bottle and cap with fast 7-day delivery.
           </p>
@@ -109,7 +109,7 @@ export default function CustomizedLabelsPage() {
           <p className={styles.pageCtaSubtitle}>Contact us to discuss your label design and requirements.</p>
           <div className={styles.pageCtaBtns}>
             <Link href="/contact-us" className="btn btn--accent btn--lg">Start Your Order</Link>
-            <a href="mailto:contact@sealper.com" className="btn btn--outline-white btn--lg">contact@sealper.com</a>
+            <a href="mailto:sealperplastics@yahoo.com" className="btn btn--outline-white btn--lg">sealperplastics@yahoo.com</a>
           </div>
         </div>
       </div>

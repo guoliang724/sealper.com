@@ -112,7 +112,7 @@ export default function ChatWidget() {
         pushBot(`⚠️ ${data.error ?? 'Something went wrong — please try again.'}`)
       }
     } catch {
-      pushBot('⚠️ Could not reach our server. Please email contact@sealper.com or call 403-667-5058.')
+      pushBot('⚠️ Could not reach our server. Please email sealperplastics@yahoo.com or call 403-667-5058.')
     } finally {
       setSending(false)
     }

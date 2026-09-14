@@ -5,57 +5,56 @@ import styles from '../products.module.css'
 
 export const metadata: Metadata = {
   title: 'Bottle Caps',
-  description: 'Sealper premium non-spill and standard water bottle caps. FDA Approved, BPA Free. 500 caps per box, ready to ship in 2-4 business days.',
+  description: 'Sealper non-spill, one piece and TriPierce caps for 5-gallon water bottles. TPE liner, no foam liner, 500 pcs loose pack, 4 colors in stock. Custom labeled caps from one pallet.',
 }
+
+const colors = [
+  { name: 'Blue', hex: '#2563EB' },
+  { name: 'Green', hex: '#16A34A' },
+  { name: 'Red', hex: '#DC2626' },
+  { name: 'White', hex: '#FFFFFF' },
+]
 
 const caps = [
   {
-    tag: 'Premium',
-    name: 'Premium Non-Spill Caps',
-    image: '/images/caps_product.png',
-    desc: 'Top-of-the-line non-spill cap with double sealing ring technology. Easy to put on and peel off. Customized labels available.',
-    specs: ['Weight: 13g', 'Double sealing ring', 'Easily put on & peel off', 'FDA Approved & BPA Free', 'Customized label available'],
+    tag: 'Spill-Free',
+    name: 'Non-Spill Cap',
+    image: '/images/products/cap-non-spill.png',
+    desc: 'Easy-peel label and perforation for a clean, spill-free open.',
+    specs: ['Premium 13g weight', 'TPE liner — no foam liner', 'Cleaner, more hygienic & eco-friendly', 'Easy-peel label & easy-tear perforation', 'Spill free during handling', 'Secure & leak-resistant seal', '500 pcs loose pack'],
   },
   {
-    tag: 'Standard',
-    name: 'Standard One-Piece Caps',
-    image: '/images/caps_product.png',
-    desc: 'Reliable one-piece cap with long skirt design and floater-free engineering. Perfect for standard water bottle operations.',
-    specs: ['Weight: 13g', 'Long skirt design', 'Floater free', 'Double sealing ring', 'FDA Approved & BPA Free'],
+    tag: 'One Piece',
+    name: 'One Piece Cap',
+    image: '/images/products/cap-one-piece.png',
+    desc: 'One-piece design that never drops plugs into the bottle or water.',
+    specs: ['Premium 12g weight', 'TPE liner — no foam liner', 'Cleaner, more hygienic & eco-friendly', 'Easy-tear design', 'No plugs into bottle and water', 'Strong, reliable seal', '500 pcs loose pack'],
   },
   {
-    tag: 'Economical',
-    name: 'Basic Lightweight Caps',
-    image: '/images/caps_product.png',
-    desc: 'Cost-effective lightweight option with single sealing ring and floater-free design. Great for high-volume operations.',
-    specs: ['Weight: 8g', 'Single sealing ring', 'Floater free', 'FDA Approved & BPA Free', 'Economical choice'],
+    tag: 'Tri-Pierce',
+    name: 'Sealper TriPierce Cap',
+    image: '/images/products/cap-tripierce.png',
+    desc: 'Three-way clean-pierce design for fast, clean dispensing.',
+    specs: ['Premium 12g weight', 'TPE liner — no foam liner', 'Three-way clean-pierce design', 'Easy-tear design', 'No plugs into bottle and water', 'Strong, reliable seal', '500 pcs loose pack'],
   },
 ]
 
 const shippingBadges = [
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>,
-    text: '500 Caps Per Box',
-  },
-  {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>,
-    text: '36 Boxes Per Pallet',
+    text: '500 Pcs Loose Pack',
   },
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r="0.5"/><circle cx="17.5" cy="10.5" r="0.5"/><circle cx="8.5" cy="7.5" r="0.5"/><circle cx="6.5" cy="12.5" r="0.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>,
     text: '4 Colors In Stock',
   },
   {
-    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
-    text: '2-4 Business Day Delivery',
-  },
-  {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
-    text: 'FDA Approved & BPA Free',
+    text: 'TPE Liner — No Foam',
   },
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>,
-    text: 'Customized Label Available',
+    text: 'Custom Labels from 1 Pallet',
   },
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
@@ -67,27 +66,21 @@ const shippingBadges = [
   },
 ]
 
+const labelPoints = [
+  'Local Canadian private-label service — no overseas production or long lead times',
+  'Custom labeled caps start from just one pallet, with no large-volume commitment',
+  'Local inventory for quick reorders and consistent brand presentation',
+]
+
 export default function CapsPage() {
   return (
     <>
-      <div className="page-hero" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
-        <div className="page-hero__bg">
-          <Image
-            src="/images/hero_caps.png"
-            alt="Caps background"
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-        <div className="page-hero__overlay" />
+      <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Products / Caps</span>
-          <h1 className="page-hero__title">SEALPER Caps</h1>
+          <h1 className="page-hero__title">SEALPER <em>Caps</em></h1>
           <p className="page-hero__subtitle">
-            Premium, standard, and economical water bottle cap options. All FDA Approved and BPA Free.
-            Ready to ship in 2-4 business days.
+            Non-spill, one piece and TriPierce caps with TPE liners. Designed smart, sealed better.
           </p>
         </div>
       </div>
@@ -98,12 +91,25 @@ export default function CapsPage() {
             {caps.map((c) => (
               <div key={c.name} className={styles.productCard}>
                 <div className={styles.productImageWrap}>
-                  <Image src={c.image} alt={c.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                  <Image src={c.image} alt={c.name} fill sizes="(max-width: 768px) 100vw, 400px" />
                 </div>
                 <div className={styles.productCardBody}>
                   <span className={styles.productTag}>{c.tag}</span>
                   <h2 className={styles.productName}>{c.name}</h2>
                   <p className={styles.productDesc}>{c.desc}</p>
+                  <div className={styles.colorRow}>
+                    <span className={styles.colorLabel}>Colors in stock</span>
+                    {colors.map((color) => (
+                      <span
+                        key={color.name}
+                        role="img"
+                        aria-label={color.name}
+                        title={color.name}
+                        className={styles.swatch}
+                        style={{ background: color.hex }}
+                      />
+                    ))}
+                  </div>
                   <div className={styles.productSpecs}>
                     {c.specs.map((s) => <div key={s} className={styles.productSpec}>{s}</div>)}
                   </div>
@@ -114,11 +120,37 @@ export default function CapsPage() {
         </div>
       </section>
 
-      {/* Shipping Info */}
+      {/* Customized Label Service */}
       <section className="section section--light">
         <div className="container">
+          <div className={styles.splitGrid}>
+            <div className={styles.splitImage}>
+              <Image
+                src="/images/cap-labeling-machine.jpg"
+                alt="Sealper cap labeling machine applying custom labels to caps"
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
+              />
+            </div>
+            <div className={styles.splitContent}>
+              <span className="section-header__eyebrow">Customized Label Service</span>
+              <h2 className="heading-md">Your Brand on Every Cap</h2>
+              <ul className="spec-list">
+                {labelPoints.map((point) => (
+                  <li key={point} className="spec-list__item">{point}</li>
+                ))}
+              </ul>
+              <Link href="/customized-labels" className="btn btn--outline">Learn About Custom Labels</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Shipping Info */}
+      <section className="section">
+        <div className="container">
           <div className="section-header">
-            <span className="section-header__eyebrow">Shipping &amp; Packaging</span>
+            <span className="section-header__eyebrow">Packaging &amp; Supply</span>
             <h2 className="section-header__title">Ready to Ship</h2>
             <div className="divider" />
           </div>

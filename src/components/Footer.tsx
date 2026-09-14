@@ -7,10 +7,8 @@ import styles from './Footer.module.css'
 const productLinks = [
   { label: 'Bottles', href: '/bottles' },
   { label: 'Caps', href: '/caps' },
-  { label: 'Racks', href: '/racks' },
-  { label: 'Pumps', href: '/pumps' },
-  { label: 'Cradles', href: '/cradles' },
-  { label: 'Water Coolers', href: '/water-coolers' },
+  { label: 'Storage Racks', href: '/racks' },
+  { label: 'Accessories', href: '/accessories' },
 ]
 
 const serviceLinks = [
@@ -28,7 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <Image src="/images/logo_sealper.png" alt="Sealper" width={160} height={100} className={styles.logoImage} />
+              <Image src="/images/logo-sealper.png" alt="Sealper Plastics & Packaging Inc." width={1365} height={471} className={styles.logoImage} />
             </div>
             <p className={styles.tagline}>
               100% Canadian Owned &amp; Operated. Your trusted source for premium water packaging supplies across Western Canada.
@@ -40,17 +38,17 @@ export default function Footer() {
                 </svg>
                 403-667-5058
               </a>
-              <a href="mailto:contact@sealper.com" className={styles.contactItem}>
+              <a href="mailto:sealperplastics@yahoo.com" className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                contact@sealper.com
+                sealperplastics@yahoo.com
               </a>
               <div className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
-                <span>4069 112 Avenue SE, Calgary,<br />Alberta T2C 0J4, Canada</span>
+                <span>Unit 10, 4900 64 Ave SE, Calgary,<br />AB T2C 4V3, Canada</span>
               </div>
             </div>
             <a

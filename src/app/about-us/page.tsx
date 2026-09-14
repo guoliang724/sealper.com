@@ -39,31 +39,27 @@ const pillars = [
 ]
 
 const offices = [
-  { label: 'Headquarters', location: 'Calgary, Alberta', detail: '4069 112 Avenue SE, Calgary, AB T2C 0J4 · Same-Day Delivery' },
+  { label: 'Headquarters', location: 'Calgary, Alberta', detail: 'Unit 10, 4900 64 Ave SE, Calgary, AB T2C 4V3 · Same-Day Delivery' },
   { label: 'Warehouse', location: 'Vancouver, BC', detail: 'Serving Lower Mainland & all of British Columbia · Same-Day Delivery' },
   { label: 'Warehouse', location: 'Edmonton, Alberta', detail: 'Serving Northern Alberta and surrounding regions · Same-Day Delivery' },
   { label: 'Warehouse', location: 'Toronto, Ontario', detail: 'Serving the GTA and Eastern Canada · Same-Day Delivery' },
+]
+
+const overview = [
+  'Canadian manufacturer and one-stop supplier for the HOD bottled water industry',
+  'BPA-free PET water bottles manufactured in Calgary, with molds developed for the North American market',
+  'Strict quality control, dependable performance and consistently high repeat-order rates',
+  'Local customized cap labeling from just one pallet — no overseas lead times or large-volume commitment',
 ]
 
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <div className="page-hero" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
-        <div className="page-hero__bg">
-          <Image
-            src="/images/hero_about.png"
-            alt="About us background"
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-        <div className="page-hero__overlay" />
+      <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">About SEALPER</span>
-          <h1 className="page-hero__title">100% Canadian Owned &amp; Nationwide Focused</h1>
+          <h1 className="page-hero__title">100% Canadian Owned &amp; <em>Nationwide Focused</em></h1>
           <p className="page-hero__subtitle">
             Locally owned and operated — proudly serving businesses across Canada from our 4 strategically located warehouses.
           </p>
@@ -76,8 +72,8 @@ export default function AboutPage() {
           <div className={styles.storyGrid}>
             <div className={styles.storyImage}>
               <Image
-                src="/images/about_facility.jpg"
-                alt="Sealper warehouse facility"
+                src="/images/warehouse.jpg"
+                alt="Sealper warehouse stocked with water packaging supplies"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{ objectFit: 'cover', borderRadius: '16px' }}
@@ -95,7 +91,7 @@ export default function AboutPage() {
                 and Toronto — we deliver to your door with speed and care.
               </p>
               <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
-                Our product line includes North America's only seamless IBW 5-gallon water bottles,
+                Our product line includes North America&apos;s only seamless IBW 5-gallon water bottles,
                 premium non-spill caps, storage racks, manual and USB pumps, cradles, water coolers,
                 and fully customized labels — ready in 7 days.
               </p>
@@ -123,16 +119,11 @@ export default function AboutPage() {
               water companies across Canada.
             </p>
           </div>
-          <figure className={styles.posterFigure}>
-            <Image
-              src="/images/hod_solutions_poster.jpg"
-              alt="Sealper: Canadian-made HOD packaging solutions — premium PET bottles, caps, racks, pumps and accessories, made in Calgary, Alberta and serving water companies across Canada. BPA-free PET, local inventory, and reliable supply, backed by local warehousing, advanced filtration, and precision labeling."
-              width={1055}
-              height={1491}
-              sizes="(max-width: 768px) 100vw, 560px"
-              className={styles.posterImage}
-            />
-          </figure>
+          <ul className={`spec-list ${styles.overviewList}`}>
+            {overview.map((item) => (
+              <li key={item} className="spec-list__item">{item}</li>
+            ))}
+          </ul>
         </div>
       </section>
 

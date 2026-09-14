@@ -6,11 +6,11 @@ import bottleStyles from '../page.module.css'
 
 export const metadata: Metadata = {
   title: '5 Gallon PC Bottles — Material & Compliance Details | Sealper',
-  description: "Full material details for Sealper's imported 840g heavy-duty PC 5-gallon water bottle. FDA compliant, seamless molded handle, engineered for high-temperature commercial refilling.",
+  description: "Full material details for Sealper's imported 800g heavy-duty PC 5-gallon water bottle. FDA compliant, seamless molded handle, engineered for high-temperature commercial refilling.",
 }
 
 const pcSpecs = [
-  '840g heavy-duty PC for maximum rigidity',
+  '800g heavy-duty PC for maximum rigidity',
   'FDA compliant, ideal for non-EU markets',
   'Seamless molded handle',
   'Classic aqua blue, frosted or clear finish',
@@ -21,18 +21,14 @@ const pcSpecs = [
 export default function PcSeriesPage() {
   return (
     <>
-      <div className="page-hero" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
-        <div className="page-hero__bg">
-          <Image src="/images/hero_bottles.png" alt="Sealper PC water bottles" fill priority style={{ objectFit: 'cover' }} />
-        </div>
-        <div className="page-hero__overlay" />
+      <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <Link href="/bottles" className={bottleStyles.backLink}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
             Back to Bottles
           </Link>
           <span className="page-hero__eyebrow">Products / Bottles / PC Series</span>
-          <h1 className="page-hero__title">5 Gallon PC Bottles</h1>
+          <h1 className="page-hero__title">5 Gallon <em>PC</em> Bottles</h1>
           <p className="page-hero__subtitle">
             Imported polycarbonate engineered for rugged durability, FDA-compliant safety, and specialized high-temperature commercial refilling.
           </p>
@@ -43,7 +39,7 @@ export default function PcSeriesPage() {
         <div className="container">
           <div className={bottleStyles.detailGrid}>
             <div className={bottleStyles.detailImageWrap}>
-              <Image src="/images/bottle_pc_product.jpg" alt="5 Gallon PC Bottle" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/products/bottle-5gal-pc.png" alt="5 Gallon PC Bottle" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'contain', padding: '2rem' }} />
             </div>
             <div>
               <span className="section-header__eyebrow" style={{ textAlign: 'left', display: 'block' }}>Material &amp; Specifications</span>
@@ -80,7 +76,7 @@ export default function PcSeriesPage() {
                 <tr><td>Origin</td><td>Imported</td><td>Made in Canada</td></tr>
                 <tr><td>BPA Content</td><td>BPA-based polycarbonate</td><td>100% BPA-Free</td></tr>
                 <tr><td>EU 2024/3190 Compliance</td><td>Not for EU markets</td><td>Fully compliant</td></tr>
-                <tr><td>Weight</td><td>Approx. 840g</td><td>Approx. 700g</td></tr>
+                <tr><td>Weight</td><td>Approx. 800g</td><td>Approx. 700g</td></tr>
                 <tr><td>Best For</td><td>Commercial refill stations, hot-wash lines</td><td>Homes, premium offices, EU/NA markets</td></tr>
                 <tr><td>Temperature Tolerance</td><td className={bottleStyles.compareHighlight}>High-temperature refill &amp; wash</td><td>Standard cold-chain use</td></tr>
               </tbody>

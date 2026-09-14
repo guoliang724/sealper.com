@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: 'How do I get a quote or place an order?',
-    a: 'You can reach us by phone at 403-667-5058, by email at contact@sealper.com, through the contact form on our website, or via the chat widget in the bottom corner. Our team typically responds within one business day.',
+    a: 'You can reach us by phone at 403-667-5058, by email at sealperplastics@yahoo.com, through the contact form on our website, or via the chat widget in the bottom corner. Our team typically responds within one business day.',
   },
 ]
 

@@ -58,7 +58,7 @@ export default function DeliveryPage() {
       <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Services / Delivery</span>
-          <h1 className="page-hero__title">Fast, Reliable Delivery<br />Across Western Canada</h1>
+          <h1 className="page-hero__title">Fast, Reliable Delivery<br /><em>Across Western Canada</em></h1>
           <p className="page-hero__subtitle">
             Four Canadian warehouses. Same-day delivery in major cities.
             2-4 business days across BC, AB, SK &amp; MB.

@@ -19,14 +19,15 @@
 
 .infoPanelTitle {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  line-height: 1.3;
+  font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  line-height: 1.25;
 }
 
 .infoPanelDesc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
   line-height: 1.75;
 }
@@ -34,72 +35,106 @@
 .infoItems {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .infoItem {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-4);
-  padding: 1.25rem;
+  padding: 1rem 1.25rem;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
   text-decoration: none;
-  transition: all var(--transition-base);
-  background: var(--color-bg);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7FBFE 100%);
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 .infoItem:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-border-glow);
   box-shadow: var(--shadow-md);
-  background: var(--color-bg-subtle);
+  transform: translateX(4px);
 }
 
 .infoItemIcon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-lg);
-  background: var(--color-bg-muted);
-  color: var(--color-primary);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--gradient-aqua);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 10px 20px -10px rgba(10, 166, 230, 0.8);
 }
+.infoItemIcon svg { width: 20px; height: 20px; }
 
 .infoItemLabel {
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
-  font-family: var(--font-heading);
-  margin-bottom: var(--space-1);
+  color: var(--color-accent-dark);
+  font-family: var(--font-body);
+  margin-bottom: 2px;
 }
 
 .infoItemValue {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-text-primary);
   font-weight: 600;
 }
 
-/* Map */
+/* Map card */
 .mapEmbed {
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
   overflow: hidden;
   border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .mapPlaceholder {
-  background: linear-gradient(135deg, var(--color-bg-subtle), var(--color-bg-muted));
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
   padding: var(--space-10);
   display: flex;
   align-items: center;
   gap: var(--space-6);
 }
+/* concentric ripples around the pin */
+.mapPlaceholder::before {
+  content: '';
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(10, 166, 230, 0.35);
+  animation: ripple 3.2s ease-out infinite;
+}
 
-.mapIcon { font-size: 3rem; flex-shrink: 0; }
+.mapIcon {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--gradient-aqua);
+  color: #FFFFFF;
+  box-shadow: 0 14px 28px -12px rgba(10, 166, 230, 0.8);
+}
+.mapIcon svg { width: 30px; height: 30px; }
 
 .mapText {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
@@ -107,21 +142,36 @@
 .mapText strong {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1rem;
-  color: var(--color-primary-dark);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
 }
 .mapText span {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  color: var(--color-text-body);
 }
 
-/* Form Panel */
+/* Form Panel — glass sheet with a glow behind it */
 .formPanel {
-  background: var(--color-bg);
+  position: relative;
+  isolation: isolate;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
   border-radius: var(--radius-2xl);
   padding: var(--space-12);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xl);
+}
+.formPanel::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 10% -8% -8% 10%;
+  border-radius: 42% 58% 60% 40% / 45% 45% 55% 55%;
+  background: linear-gradient(135deg, rgba(10, 166, 230, 0.22), rgba(111, 211, 250, 0.08));
+  filter: blur(40px);
+  animation: morph 16s ease-in-out infinite alternate;
 }
 @media (max-width: 640px) {
   .formPanel { padding: var(--space-8) var(--space-6); }
@@ -129,8 +179,9 @@
 
 .formTitle {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
   font-weight: 800;
+  letter-spacing: -0.035em;
   color: var(--color-text-primary);
   margin-bottom: var(--space-8);
 }
@@ -155,14 +206,15 @@
 
 .successMessage h3 {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 800;
+  letter-spacing: -0.03em;
   color: var(--color-primary);
 }
 
 .successMessage p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
-  max-width: 300px;
+  max-width: 320px;
   line-height: 1.65;
 }

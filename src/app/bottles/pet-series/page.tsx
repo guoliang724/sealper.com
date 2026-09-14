@@ -21,18 +21,14 @@ const petSpecs = [
 export default function PetSeriesPage() {
   return (
     <>
-      <div className="page-hero" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
-        <div className="page-hero__bg">
-          <Image src="/images/hero_bottles.png" alt="Sealper PET water bottles" fill priority style={{ objectFit: 'cover' }} />
-        </div>
-        <div className="page-hero__overlay" />
+      <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <Link href="/bottles" className={bottleStyles.backLink}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
             Back to Bottles
           </Link>
           <span className="page-hero__eyebrow">Products / Bottles / PET Series</span>
-          <h1 className="page-hero__title">5 Gallon PET Bottles</h1>
+          <h1 className="page-hero__title">5 Gallon <em>PET</em> Bottles</h1>
           <p className="page-hero__subtitle">
             Canadian-made, 100% BPA-free PET engineered for top-tier purity, fast local delivery, and full EU &amp; North American compliance.
           </p>
@@ -43,7 +39,7 @@ export default function PetSeriesPage() {
         <div className="container">
           <div className={bottleStyles.detailGrid}>
             <div className={bottleStyles.detailImageWrap}>
-              <Image src="/images/bottle_pet_product.jpg" alt="5 Gallon PET Bottle" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/products/bottle-5gal-pet.png" alt="5 Gallon PET Bottle" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'contain', padding: '2rem' }} />
             </div>
             <div>
               <span className="section-header__eyebrow" style={{ textAlign: 'left', display: 'block' }}>Material &amp; Specifications</span>
@@ -80,7 +76,7 @@ export default function PetSeriesPage() {
                 <tr><td>Origin</td><td className={bottleStyles.compareHighlight}>Made in Canada</td><td>Imported</td></tr>
                 <tr><td>BPA Content</td><td className={bottleStyles.compareHighlight}>100% BPA-Free</td><td>BPA-based polycarbonate</td></tr>
                 <tr><td>EU 2024/3190 Compliance</td><td className={bottleStyles.compareHighlight}>Fully compliant</td><td>Not for EU markets</td></tr>
-                <tr><td>Weight</td><td>Approx. 700g</td><td>Approx. 840g</td></tr>
+                <tr><td>Weight</td><td>Approx. 700g</td><td>Approx. 800g</td></tr>
                 <tr><td>Best For</td><td>Homes, premium offices, EU/NA markets</td><td>Commercial refill stations, hot-wash lines</td></tr>
                 <tr><td>Temperature Tolerance</td><td>Standard cold-chain use</td><td className={bottleStyles.compareHighlight}>High-temperature refill &amp; wash</td></tr>
               </tbody>

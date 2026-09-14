@@ -21,8 +21,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Email',
-    value: 'contact@sealper.com',
-    href: 'mailto:contact@sealper.com',
+    value: 'sealperplastics@yahoo.com',
+    href: 'mailto:sealperplastics@yahoo.com',
   },
   {
     icon: (
@@ -31,8 +31,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Address',
-    value: '4069 112 Avenue SE, Calgary, Alberta T2C 0J4, Canada',
-    href: 'https://maps.google.com/?q=4069+112+Avenue+SE,+Calgary,+Alberta',
+    value: 'Unit 10, 4900 64 Ave SE, Calgary, AB T2C 4V3, Canada',
+    href: 'https://maps.google.com/?q=Unit+10,+4900+64+Ave+SE,+Calgary,+AB+T2C+4V3',
   },
   {
     icon: (
@@ -64,7 +64,7 @@ export default function ContactPageClient() {
       <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Get In Touch</span>
-          <h1 className="page-hero__title">Contact Us</h1>
+          <h1 className="page-hero__title">Contact <em>Us</em></h1>
           <p className="page-hero__subtitle">
             Drop us a line! Whether you have questions about our products, pricing, or delivery — we are here to help.
           </p>
@@ -107,8 +107,8 @@ export default function ContactPageClient() {
                   </div>
                   <div className={styles.mapText}>
                     <strong>SEALPER</strong>
-                    <span>4069 112 Avenue SE</span>
-                    <span>Calgary, Alberta T2C 0J4</span>
+                    <span>Unit 10, 4900 64 Ave SE</span>
+                    <span>Calgary, AB T2C 4V3</span>
                     <span>Canada</span>
                   </div>
                 </div>
