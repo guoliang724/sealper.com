@@ -202,28 +202,10 @@ input, textarea, select { font-family: inherit; }
 .section--primary .section-header__title   { color: var(--color-text-inverse); }
 .section--primary .section-header__subtitle { color: rgba(255, 255, 255, 0.75); }
 
-/* Dark (ocean) section — rises into the section above with a wave */
+/* Dark (ocean) section */
 .section--dark {
   background: var(--gradient-ocean);
   color: var(--color-text-inverse);
-  overflow: hidden;
-  isolation: isolate;
-  margin-top: calc(-1 * var(--wave-h));
-  padding-top: calc(var(--section-py) + var(--wave-h));
-  -webkit-mask: var(--mask-wave-top) top / 100% var(--wave-h) no-repeat, linear-gradient(#000 0 0) bottom / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
-  mask: var(--mask-wave-top) top / 100% var(--wave-h) no-repeat, linear-gradient(#000 0 0) bottom / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
-}
-.section--dark::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  right: -8%;
-  top: 10%;
-  width: 520px;
-  height: 520px;
-  border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(111, 211, 250, 0.28), rgba(111, 211, 250, 0));
-  animation: drift 18s ease-in-out infinite alternate;
 }
 .section--dark h1,
 .section--dark h2,
@@ -542,105 +524,47 @@ h1 em, h2 em, h3 em {
 }
 
 /* ============================================================
-   PAGE HERO — INNER PAGES (light mist, floating blob, wave edge)
+   PAGE HERO — INNER PAGES (flat, very light blue band)
    ============================================================ */
 .page-hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 360px;
   padding-top: calc(var(--header-h) + var(--space-16));
-  padding-bottom: calc(var(--space-16) + var(--wave-h));
-  overflow: hidden;
-  isolation: isolate;
+  padding-bottom: var(--space-16);
   color: var(--color-text-primary);
-  background: var(--gradient-hero);
-  -webkit-mask: var(--mask-wave-bottom) bottom / 100% var(--wave-h) no-repeat, linear-gradient(#000 0 0) top / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
-  mask: var(--mask-wave-bottom) bottom / 100% var(--wave-h) no-repeat, linear-gradient(#000 0 0) top / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
+  background: linear-gradient(180deg, #EEF7FD 0%, #F7FBFE 100%);
+  border-bottom: 1px solid var(--color-border);
 }
-/* soft morphing water blob */
-.page-hero::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  right: -4%;
-  top: 12%;
-  width: min(460px, 60vw);
-  aspect-ratio: 1;
-  border-radius: 42% 58% 60% 40% / 45% 45% 55% 55%;
-  background: linear-gradient(135deg, rgba(10, 166, 230, 0.38), rgba(111, 211, 250, 0.10));
-  filter: blur(36px);
-  animation: morph 16s ease-in-out infinite alternate;
-}
-/* ripple rings */
-.page-hero::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  right: 12%;
-  top: 55%;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 1px solid rgba(10, 166, 230, 0.28);
-  box-shadow: 0 0 0 36px rgba(10, 166, 230, 0.05), 0 0 0 80px rgba(10, 166, 230, 0.03);
-  transform: translateY(-50%);
-}
-@media (max-width: 768px) {
-  .page-hero::after { display: none; }
-}
-
-.page-hero__bg {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  opacity: 0.12;
-}
-
-.page-hero__overlay { display: none; }
 
 .page-hero__content {
   position: relative;
-  z-index: 2;
   width: 100%;
 }
 
-.page-hero--gradient { background: var(--gradient-hero); }
-
 .page-hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.95rem;
-  border-radius: var(--radius-full);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  -webkit-backdrop-filter: var(--glass-blur);
-  backdrop-filter: var(--glass-blur);
-  box-shadow: var(--shadow-sm);
+  display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-accent-dark);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 .page-hero__title {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 5vw, 3.9rem);
+  font-size: clamp(2.2rem, 4.6vw, 3.5rem);
   font-weight: 800;
   color: var(--color-text-primary);
   margin-bottom: var(--space-4);
-  line-height: 1.06;
-  letter-spacing: -0.04em;
-  max-width: 900px;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 860px;
 }
 .page-hero__subtitle {
   font-size: 1.1rem;
   color: var(--color-text-body);
-  max-width: 560px;
-  line-height: 1.75;
+  max-width: 620px;
+  line-height: 1.7;
 }
 
 /* ============================================================

@@ -1,310 +1,80 @@
-/* ── Differentiator Cards ── */
-.diffCard {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F7FBFE 100%);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: 2.25rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-/* a faint ripple in the corner */
-.diffCard::after {
-  content: '';
-  position: absolute;
-  right: -60px;
-  top: -60px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 1px solid rgba(10, 166, 230, 0.15);
-  box-shadow: 0 0 0 24px rgba(10, 166, 230, 0.04);
-  transition: transform var(--transition-slow);
-}
-.diffCard:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-6px);
-  border-color: var(--color-border-glow);
-}
-.diffCard:hover::after { transform: scale(1.2); }
-
-.diffIcon {
-  width: 58px;
-  height: 58px;
-  border-radius: 18px;
-  background: var(--gradient-aqua);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 24px -12px rgba(10, 166, 230, 0.8);
-}
-
-.diffTitle {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-text-primary);
-  letter-spacing: -0.02em;
-}
-
-.diffDesc {
-  font-size: 0.92rem;
-  color: var(--color-text-muted);
-  line-height: 1.75;
-}
-
-/* ── Infographic ── */
-.infographic {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.infographicImage {
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-xl);
-}
-
-/* ── Compliance Section — calm mist panel ── */
-.complianceSection {
-  background:
-    radial-gradient(40% 60% at 90% 0%, rgba(10, 166, 230, 0.14) 0%, rgba(10, 166, 230, 0) 70%),
-    linear-gradient(180deg, #EAF5FC 0%, #F5FAFE 100%);
-  padding: var(--section-py) 0 calc(var(--section-py) + var(--wave-h));
-  position: relative;
-  overflow: hidden;
-}
-
-.complianceHeader {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  margin-bottom: 2.75rem;
-}
-
-.complianceEyebrow {
-  display: inline-flex;
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.8);
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-accent-dark);
-  margin-bottom: 1rem;
-}
-
-.complianceHeading {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1.15;
-  color: var(--color-text-primary);
-}
-
-.complianceRule {
-  width: 56px;
-  height: 10px;
-  background: var(--squiggle) center / contain no-repeat;
-  margin: 1.25rem auto 0;
-}
-
-/* ── Product Detail Link ── */
-.detailLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--color-accent-dark);
-  margin-top: 0.75rem;
-  text-decoration: none;
-  transition: gap var(--transition-base), color var(--transition-fast);
-}
-.detailLink:hover { gap: 0.7rem; color: var(--color-primary); }
-
-/* ── Compliance & Regulatory Card — glass ── */
-.complianceCard {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 3rem;
-  background: var(--glass-strong);
-  border: 1px solid var(--glass-border);
-  -webkit-backdrop-filter: var(--glass-blur);
-  backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-2xl);
-  padding: 2.75rem;
-  box-shadow: var(--shadow-lg);
-}
-@media (max-width: 768px) {
-  .complianceCard { grid-template-columns: 1fr; padding: 1.75rem; gap: 2rem; }
-}
-
-.complianceCol {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.complianceText {
-  color: var(--color-text-body);
-  line-height: 1.8;
-  font-size: 0.975rem;
-}
-
-.complianceList {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.complianceList li {
-  position: relative;
-  padding-left: 1.1rem;
-  color: var(--color-text-muted);
-  line-height: 1.75;
-  font-size: 0.925rem;
-}
-.complianceList li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6rem;
-  width: 7px;
-  height: 7px;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  background: var(--gradient-aqua);
-}
-.complianceList strong { color: var(--color-text-primary); }
-
-.sourcesTitle {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.sourceLink {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
-}
-.sourceLink:hover {
-  border-color: var(--color-border-glow);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.sourceLinkDesc {
-  font-weight: 500;
-  font-size: 0.78rem;
-  color: var(--color-text-muted);
-}
-
-/* ── Detail Page: Hero Product Grid ── */
-.detailGrid {
+/* ── Lead product: 5 Gallon PET ── */
+.lead {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  gap: var(--space-16);
   align-items: center;
 }
-@media (max-width: 768px) {
-  .detailGrid { grid-template-columns: 1fr; }
-}
 
-.detailImageWrap {
-  position: relative;
-  aspect-ratio: 4 / 3;
+.leadImage {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12) var(--space-8);
   border-radius: var(--radius-2xl);
-  overflow: hidden;
-  background: radial-gradient(110% 80% at 50% 100%, #CDE8F8 0%, #EAF5FC 45%, #F7FBFE 100%);
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(180deg, #F5FAFE 0%, #E6F3FC 100%);
+}
+.leadImage img {
+  width: auto;
+  height: clamp(340px, 40vw, 500px);
+  filter: drop-shadow(0 24px 24px rgba(11, 74, 127, 0.2));
 }
 
-.backLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  text-decoration: none;
-  margin-bottom: 1.25rem;
-  margin-right: 1rem;
-  transition: gap var(--transition-base);
+.leadContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
 }
-.backLink:hover { gap: 0.7rem; color: var(--color-accent-dark); }
+.leadContent :global(.btn) { margin-top: var(--space-3); }
 
-/* ── Material Comparison Table ── */
-.compareTableWrap {
-  overflow-x: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  background: #FFFFFF;
-  box-shadow: var(--shadow-sm);
+.leadTitle {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  letter-spacing: -0.035em;
 }
 
-.compareTable {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 560px;
-}
-
-.compareTable th,
-.compareTable td {
-  padding: 1rem 1.35rem;
-  text-align: left;
-  font-size: 0.9rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.compareTable th {
-  background: linear-gradient(180deg, #EAF5FC 0%, #F5FAFE 100%);
-  font-weight: 700;
-  color: var(--color-text-primary);
-  font-size: 0.74rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.compareTable td {
+.leadText {
+  font-size: 1.1rem;
+  line-height: 1.75;
   color: var(--color-text-body);
+  max-width: 520px;
 }
 
-.compareTable tr:last-child td { border-bottom: none; }
-.compareTable tbody tr:hover td { background: #F7FBFE; }
+/* ── PC bottles ── */
+.pcGrid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.pcImage {
+  background: #FFFFFF;
+}
 
-.compareHighlight {
-  color: var(--color-accent-dark) !important;
-  font-weight: 700;
+/* ── Manufacturing ── */
+.manufacturing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.manufacturingContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 500px;
+}
+
+.manufacturingImage {
+  width: 100%;
+  max-width: 480px;
+  justify-self: center;
+  border-radius: var(--radius-xl);
+}
+
+@media (max-width: 900px) {
+  .lead,
+  .manufacturing { grid-template-columns: 1fr; gap: var(--space-10); }
+  .leadImage img { height: 320px; }
+}
+
+@media (max-width: 640px) {
+  .pcGrid { grid-template-columns: 1fr; }
 }

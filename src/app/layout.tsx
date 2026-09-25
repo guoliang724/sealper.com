@@ -21,11 +21,11 @@ const instrument = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: '5 Gallon Water Bottles Supplier | Sealper — 100% Canadian Owned',
+    default: 'BPA-Free 5 Gallon Bottles & HOD Packaging Solutions | Sealper',
     template: '%s | Sealper',
   },
-  description: 'Sealper is a 100% Canadian-owned wholesale supplier for 5 gallon water bottles, caps, racks, and pumps. Same-day delivery in Vancouver, Calgary, Edmonton & Toronto. Serving Western Canada.',
-  keywords: ['5 gallon bottles', 'water bottle caps', 'bottle racks', 'water packaging', 'wholesale', 'Calgary', 'Alberta', 'Canada', 'Canadian owned', 'same day delivery'],
+  description: 'Sealper specializes in BPA-free 5 gallon bottles manufactured in Calgary and provides complete HOD packaging solutions — caps, racks, water dispensers and accessories — for the bottled water industry.',
+  keywords: ['BPA-free 5 gallon bottles', 'PET water bottles', 'HOD packaging', 'water bottle caps', 'bottle racks', 'water dispensers', 'Calgary', 'Canada', 'Canadian owned'],
   authors: [{ name: 'Sealper' }],
   openGraph: {
     siteName: 'Sealper',

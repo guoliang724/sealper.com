@@ -61,12 +61,12 @@ export default function ContactPageClient() {
 
   return (
     <>
-      <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
+      <div className="page-hero">
         <div className="container page-hero__content">
-          <span className="page-hero__eyebrow">Get In Touch</span>
-          <h1 className="page-hero__title">Contact <em>Us</em></h1>
+          <span className="page-hero__eyebrow">Contact</span>
+          <h1 className="page-hero__title">Get a Quote</h1>
           <p className="page-hero__subtitle">
-            Drop us a line! Whether you have questions about our products, pricing, or delivery — we are here to help.
+            Tell us the products and quantities you need — we’ll reply with pricing and availability.
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function ContactPageClient() {
           <div className={styles.contactGrid}>
             {/* Contact Info */}
             <div className={styles.infoPanel}>
-              <h2 className={styles.infoPanelTitle}>One Stop Solution for Your Bottled Water Packaging Supplies</h2>
+              <h2 className={styles.infoPanelTitle}>BPA-Free 5 Gallon Bottles &amp; HOD Packaging Solutions</h2>
               <p className={styles.infoPanelDesc}>
                 Our team is ready to assist you with product inquiries, pricing, shipping logistics, and custom orders.
                 Reach out via any of the channels below.

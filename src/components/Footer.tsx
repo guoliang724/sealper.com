@@ -7,7 +7,8 @@ import styles from './Footer.module.css'
 const productLinks = [
   { label: 'Bottles', href: '/bottles' },
   { label: 'Caps', href: '/caps' },
-  { label: 'Storage Racks', href: '/racks' },
+  { label: 'Racks', href: '/racks' },
+  { label: 'Water Dispensers', href: '/water-dispensers' },
   { label: 'Accessories', href: '/accessories' },
 ]
 
@@ -15,7 +16,7 @@ const serviceLinks = [
   { label: 'Customized Labels', href: '/customized-labels' },
   { label: 'Delivery', href: '/delivery' },
   { label: 'About Us', href: '/about-us' },
-  { label: 'Contact Us', href: '/contact-us' },
+  { label: 'Contact', href: '/contact-us' },
 ]
 
 export default function Footer() {
@@ -29,7 +30,7 @@ export default function Footer() {
               <Image src="/images/logo-sealper.png" alt="Sealper Plastics & Packaging Inc." width={1365} height={471} className={styles.logoImage} />
             </div>
             <p className={styles.tagline}>
-              100% Canadian Owned &amp; Operated. Your trusted source for premium water packaging supplies across Western Canada.
+              BPA-Free 5 Gallon Bottles and complete HOD packaging solutions for the bottled water industry.
             </p>
             <div className={styles.contactInfo}>
               <a href="tel:4036675058" className={styles.contactItem}>
@@ -117,7 +118,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Sealper — All Rights Reserved.
           </p>
           <p className={styles.bottomNote}>
-            🍁 100% Canadian Owned · Proudly Serving Western Canada
+            🍁 Canadian-Owned · BPA-Free PET Bottles Manufactured in Calgary
           </p>
         </div>
       </div>

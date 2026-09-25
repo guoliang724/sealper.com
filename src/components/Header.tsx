@@ -7,26 +7,27 @@ import styles from './Header.module.css'
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about-us' },
   {
     label: 'Products',
     href: '#',
     children: [
-      { label: 'Bottles', href: '/bottles', desc: '5 & 3 Gallon PC & PET' },
-      { label: 'Caps', href: '/caps', desc: 'Non-spill & Standard Caps' },
-      { label: 'Storage Racks', href: '/racks', desc: 'Storage & Display Racks' },
-      { label: 'Accessories', href: '/accessories', desc: 'Pumps, Cradles & Coolers' },
+      { label: 'Bottles', href: '/bottles', desc: '5 & 3 Gallon PET / PC Bottles' },
+      { label: 'Caps', href: '/caps', desc: 'One-Piece & Non-Spill Caps' },
+      { label: 'Racks', href: '/racks', desc: 'Home, Office & Commercial Racks' },
+      { label: 'Water Dispensers', href: '/water-dispensers', desc: 'Top Load & Bottom Load' },
+      { label: 'Accessories', href: '/accessories', desc: 'Pumps, Cradles, Carts & Fridge Packs' },
     ],
   },
   {
     label: 'Services',
     href: '#',
     children: [
-      { label: 'Customized Labels', href: '/customized-labels', desc: 'Brand Your Bottles in 7 Days' },
-      { label: 'Delivery', href: '/delivery', desc: 'Same-Day & 2–4 Day Canada Coverage' },
+      { label: 'Customized Labels', href: '/customized-labels', desc: 'Customized Cap Labels' },
+      { label: 'Delivery', href: '/delivery', desc: 'Local, LTL & Parcel Shipping' },
     ],
   },
-  { label: 'Contact Us', href: '/contact-us' },
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Contact', href: '/contact-us' },
 ]
 
 export default function Header() {
@@ -63,9 +64,9 @@ export default function Header() {
           <div className={styles.topBarInner}>
             <span className={styles.topBarText}>
               <span className={styles.maple}>🍁</span>
-              100% Canadian Owned &amp; Operated
+              Canadian-Owned
               <span className={`${styles.topBarDivider} ${styles.topBarDelivery}`}>·</span>
-              <span className={styles.topBarDelivery}>Same-day delivery in Vancouver · Calgary · Edmonton · Toronto</span>
+              <span className={styles.topBarDelivery}>BPA-Free PET Bottles Manufactured in Calgary</span>
             </span>
           </div>
         </div>

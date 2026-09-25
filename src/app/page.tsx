@@ -2,22 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import styles from './page.module.css'
-import FAQ from '@/components/FAQ'
+import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'Premier BPA-Free Water Packaging Experts in Western Canada | Sealper',
-  description: 'Sealper is your local, single-source supplier for Canadian-manufactured 5-gallon bottles, caps, racks, and pumps. Fast, reliable fulfillment from local warehouses in Vancouver, Calgary, Edmonton & Toronto.',
-}
-
-const iconProps = {
-  width: 22,
-  height: 22,
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'currentColor',
-  strokeWidth: 1.8,
-  strokeLinecap: 'round' as const,
-  strokeLinejoin: 'round' as const,
+  title: 'BPA-Free 5 Gallon Bottles & HOD Packaging Solutions | Sealper',
+  description: 'Sealper specializes in BPA-free 5 gallon PET bottles manufactured in Calgary and provides complete HOD packaging solutions — caps, racks, water dispensers and accessories — for the bottled water industry.',
 }
 
 const ArrowIcon = () => (
@@ -26,239 +15,189 @@ const ArrowIcon = () => (
   </svg>
 )
 
-const heroPoints = ['Made in Calgary', '100% BPA-Free PET', 'Custom Cap Labels']
+const heroPoints = ['BPA-Free PET Bottles', 'Manufactured in Calgary', 'One-Stop HOD Packaging Solutions']
 
-const features = [
-  {
-    icon: <svg {...iconProps}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>,
-    title: 'FDA Approved & BPA Free',
-    desc: 'Food-grade materials you can trust.',
-  },
-  {
-    icon: <svg {...iconProps}><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>,
-    title: 'Same-Day Delivery',
-    desc: 'Order before noon in 4 major cities.',
-  },
-  {
-    icon: <svg {...iconProps}><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
-    title: '100% Canadian Owned',
-    desc: 'Headquartered in Calgary, Alberta.',
-  },
-  {
-    icon: <svg {...iconProps}><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>,
-    title: 'Custom Cap Labels',
-    desc: 'Your brand on every cap, from one pallet.',
-  },
+const featuredPoints = ['BPA-Free PET', 'Made in Calgary', 'Reinforced Structure', 'Heat-Fused Handle']
+
+const categories = [
+  { title: 'Bottles', href: '/bottles', image: '/images/products/bottle-5gal-pet.png', desc: '5 & 3 Gallon PET / PC Bottles' },
+  { title: 'Caps', href: '/caps', image: '/images/products/cap-tripierce.png', desc: 'One-Piece & Non-Spill Caps' },
+  { title: 'Racks', href: '/racks', image: '/images/products/rack-double-5-tier.png', desc: 'Home, Office & Commercial Racks' },
+  { title: 'Water Dispensers', href: '/water-dispensers', image: '/images/products/dispenser-bottom-load.png', desc: 'Top Load & Bottom Load' },
+  { title: 'Accessories', href: '/accessories', image: '/images/products/pump-manual.png', desc: 'Pumps, Cradles, Carts & Fridge Packs' },
 ]
 
-const products = [
-  { title: 'Bottles', href: '/bottles', image: '/images/products/bottle-5gal-pet.png', desc: '5 & 3 gallon PET & PC' },
-  { title: 'Caps', href: '/caps', image: '/images/products/cap-non-spill.png', desc: 'Non-spill & one piece caps' },
-  { title: 'Storage Racks', href: '/racks', image: '/images/products/rack-double-5-tier.png', desc: 'Home, office & commercial' },
-  { title: 'Accessories', href: '/accessories', image: '/images/products/pump-manual.png', desc: 'Pumps, carts & dispensers' },
+const reasons = [
+  { title: 'Canadian Manufacturing', desc: 'BPA-Free PET bottles manufactured in Calgary.' },
+  { title: 'Complete HOD Solutions', desc: 'Bottles, caps, racks, dispensers and accessories from one supplier.' },
+  { title: 'Local Stock & Service', desc: 'Canadian inventory, customized cap labels and flexible delivery options.' },
 ]
 
-const aboutFacts = [
-  'BPA-free PET bottles manufactured in Calgary',
-  'Warehouses in Vancouver, Calgary, Edmonton & Toronto',
-  'Custom labeled caps from just one pallet',
-]
-
-const steps = [
+const services = [
   {
-    title: 'Tell us what you need',
-    desc: 'Call, email, or send the contact form with the products and quantities you need.',
+    title: 'Customized Cap Labels',
+    desc: 'Put your brand on every cap, with flexible MOQ and local labeling.',
+    image: '/images/cap-labeling-machine.jpg',
+    alt: 'Cap labeling machine applying custom labels',
+    href: '/customized-labels',
   },
   {
-    title: 'Get your quote',
-    desc: 'Our team replies with pricing and availability, usually within one business day.',
-  },
-  {
-    title: 'Receive your order',
-    desc: 'Same day in Vancouver, Calgary, Edmonton & Toronto. 2–4 business days across Western Canada.',
+    title: 'Local Stock & Delivery',
+    desc: 'Products stocked in Canada, with local delivery, LTL freight and parcel shipping.',
+    image: '/images/warehouse.jpg',
+    alt: 'Sealper warehouse stocked with HOD packaging products',
+    href: '/delivery',
   },
 ]
 
 export default function HomePage() {
   return (
     <>
-      {/* ══════════════════════════ HERO ══════════════════════════ */}
+      {/* ══════════ HERO ══════════ */}
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroContent}>
-            <span className={styles.heroEyebrow}>🍁 Sealper Plastics &amp; Packaging Inc.</span>
-            <h1 className={styles.heroTitle}>
-              One-Stop Packaging for <span className={styles.heroTitleAccent}>Bottled Water</span> Businesses
-            </h1>
+            <h1 className={styles.heroTitle}>BPA-Free 5 Gallon Bottles &amp; HOD Packaging Solutions</h1>
             <p className={styles.heroSubtitle}>
-              5-gallon bottles, caps, storage racks and accessories — made and stocked in Canada. Built tough, sealed better.
+              Canadian-owned and serving the bottled water industry with 5 gallon bottles, caps, racks,
+              water dispensers and accessories.
             </p>
-            <div className={styles.heroCtas}>
-              <Link href="/contact-us" className="btn btn--primary btn--lg">
-                Get a Quote
-                <ArrowIcon />
-              </Link>
-              <Link href="#products" className="btn btn--outline btn--lg">
-                View Products
-              </Link>
-            </div>
             <ul className={styles.heroPoints}>
-              {heroPoints.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
+              {heroPoints.map((point) => <li key={point}>{point}</li>)}
             </ul>
+            <div className={styles.heroCtas}>
+              <Link href="#products" className="btn btn--primary btn--lg">View Products</Link>
+              <Link href="/contact-us" className="btn btn--outline btn--lg">Get a Quote</Link>
+            </div>
           </div>
           <div className={styles.heroVisual}>
             <Image
-              src="/images/products/bottle-5gal-pet.png"
-              alt="Sealper 5 gallon PET water bottle"
-              width={530}
-              height={1000}
+              src="/images/hero-products.png"
+              alt="Sealper BPA-free 5 gallon PET bottle with a water dispenser, bottle rack and caps"
+              width={1206}
+              height={1075}
               loading="eager"
               fetchPriority="high"
               quality={90}
-              sizes="(max-width: 900px) 160px, 260px"
-              className={styles.heroBottle}
-            />
-            <Image
-              src="/images/products/cap-non-spill.png"
-              alt="Sealper non-spill cap"
-              width={962}
-              height={565}
-              quality={90}
-              sizes="(max-width: 900px) 140px, 230px"
-              className={styles.heroCap}
+              sizes="(max-width: 900px) 92vw, 620px"
+              className={styles.heroImage}
             />
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════ FEATURES ══════════════════════════ */}
-      <section className={styles.features}>
+      {/* ══════════ FEATURED PRODUCT ══════════ */}
+      <section className={styles.featured}>
+        <div className={`container ${styles.featuredInner}`}>
+          <div className={styles.featuredImage}>
+            <Image
+              src="/images/products/bottle-5gal-pet.png"
+              alt="BPA-free 5 gallon PET bottle manufactured in Calgary"
+              width={530}
+              height={1000}
+              quality={90}
+              sizes="(max-width: 900px) 240px, 340px"
+            />
+          </div>
+          <div className={styles.featuredContent}>
+            <span className="eyebrow">Featured Product</span>
+            <h2 className={styles.featuredTitle}>BPA-Free 5 Gallon PET Bottle</h2>
+            <p className={styles.featuredText}>
+              Manufactured in Calgary, our BPA-Free PET 5 gallon bottle is designed for strength, clean
+              appearance and reliable HOD water packaging.
+            </p>
+            <ul className={styles.featuredPoints}>
+              {featuredPoints.map((point) => <li key={point}>{point}</li>)}
+            </ul>
+            <Link href="/bottles" className="btn btn--primary">
+              View Bottles
+              <ArrowIcon />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════ OUR PRODUCTS ══════════ */}
+      <section id="products" className="section">
         <div className="container">
-          <div className={styles.featureGrid}>
-            {features.map((feat) => (
-              <div key={feat.title} className={styles.featureItem}>
-                <div className={styles.featureIcon}>{feat.icon}</div>
-                <div>
-                  <h3 className={styles.featureTitle}>{feat.title}</h3>
-                  <p className={styles.featureDesc}>{feat.desc}</p>
+          <div className={styles.sectionHead}>
+            <span className="eyebrow">Our Products</span>
+            <h2 className={styles.sectionTitle}>Complete HOD Packaging</h2>
+          </div>
+          <div className={styles.categoryGrid}>
+            {categories.map((c) => (
+              <Link key={c.title} href={c.href} className={styles.category}>
+                <div className={styles.categoryImage}>
+                  <Image src={c.image} alt={c.title} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 240px" />
                 </div>
+                <h3 className={styles.categoryTitle}>{c.title}</h3>
+                <p className={styles.categoryDesc}>{c.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════ WHY SEALPER ══════════ */}
+      <section className="section section--subtle">
+        <div className="container">
+          <div className={styles.sectionHead}>
+            <span className="eyebrow">Why Sealper</span>
+            <h2 className={styles.sectionTitle}>A Focused HOD Packaging Partner</h2>
+          </div>
+          <div className={styles.reasons}>
+            {reasons.map((r) => (
+              <div key={r.title} className={styles.reason}>
+                <h3 className={styles.reasonTitle}>{r.title}</h3>
+                <p className={styles.reasonDesc}>{r.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════ PRODUCTS ══════════════════════════ */}
-      <section id="products" className={`section ${styles.products}`}>
-        <div className="container">
-          <div className={styles.sectionHead}>
-            <span className="section-header__eyebrow">Our Products</span>
-            <h2 className={styles.sectionTitle}>Everything Your Water Business <em>Needs</em></h2>
-            <p className={styles.sectionLead}>One supplier for bottles, closures, storage and dispensing.</p>
-          </div>
-          <div className={styles.productGrid}>
-            {products.map((product) => (
-              <Link key={product.title} href={product.href} className={styles.productCard}>
-                <div className={styles.productImage}>
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    sizes="(max-width: 520px) 100vw, (max-width: 1024px) 50vw, 300px"
-                  />
-                </div>
-                <div className={styles.productBody}>
-                  <div>
-                    <h3 className={styles.productTitle}>{product.title}</h3>
-                    <p className={styles.productDesc}>{product.desc}</p>
-                  </div>
-                  <span className={styles.productArrow} aria-hidden="true">
-                    <ArrowIcon />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ ABOUT ══════════════════════════ */}
-      <section className="section section--subtle">
-        <div className="container">
-          <div className={styles.about}>
-            <div className={styles.aboutImage}>
-              <Image
-                src="/images/warehouse.jpg"
-                alt="Sealper warehouse stocked with water packaging supplies"
-                fill
-                sizes="(max-width: 900px) 100vw, 50vw"
-              />
-            </div>
-            <div className={styles.aboutContent}>
-              <span className="section-header__eyebrow">Who We Are</span>
-              <h2 className={styles.sectionTitle}>Canadian Manufacturing, <em>Local</em> Service</h2>
-              <p className={styles.aboutText}>
-                Sealper Plastics &amp; Packaging Inc. is a Canadian manufacturer and one-stop supplier for the
-                bottled water industry. Stock is held close to you, so orders ship fast and arrive when you need them.
-              </p>
-              <ul className={styles.checkList}>
-                {aboutFacts.map((fact) => (
-                  <li key={fact}>{fact}</li>
-                ))}
-              </ul>
-              <Link href="/about-us" className="btn btn--outline">
-                Learn More About Us
-                <ArrowIcon />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ HOW TO ORDER ══════════════════════════ */}
+      {/* ══════════ LABELS / STOCK / DELIVERY ══════════ */}
       <section className="section">
         <div className="container">
-          <div className={styles.sectionHead}>
-            <span className="section-header__eyebrow">How to Order</span>
-            <h2 className={styles.sectionTitle}>Ordering Takes 3 <em>Simple</em> Steps</h2>
-          </div>
-          <ol className={styles.steps}>
-            {steps.map((step, i) => (
-              <li key={step.title} className={styles.step}>
-                <span className={styles.stepNumber}>{i + 1}</span>
-                <h3 className={styles.stepTitle}>{step.title}</h3>
-                <p className={styles.stepDesc}>{step.desc}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* ══════════════════════════ FAQ ══════════════════════════ */}
-      <FAQ />
-
-      {/* ══════════════════════════ CTA ══════════════════════════ */}
-      <section className={styles.ctaSection}>
-        <div className="container">
-          <div className={styles.cta}>
-            <div>
-              <h2 className={styles.ctaTitle}>Ready to Place an <em>Order?</em></h2>
-              <p className={styles.ctaSubtitle}>Tell us what you need and we&apos;ll send pricing and availability.</p>
-            </div>
-            <div className={styles.ctaBtns}>
-              <Link href="/contact-us" className={`btn btn--lg ${styles.ctaPrimary}`}>
-                Get a Quote
-                <ArrowIcon />
+          <div className={styles.services}>
+            {services.map((s) => (
+              <Link key={s.title} href={s.href} className={styles.service}>
+                <div className={styles.serviceImage}>
+                  <Image src={s.image} alt={s.alt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+                </div>
+                <h3 className={styles.serviceTitle}>{s.title}</h3>
+                <p className={styles.serviceDesc}>{s.desc}</p>
+                <span className={styles.serviceLink}>Learn more <ArrowIcon /></span>
               </Link>
-              <a href="tel:4036675058" className="btn btn--outline-white btn--lg">
-                Call 403-667-5058
-              </a>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* ══════════ ABOUT ══════════ */}
+      <section className="section section--subtle">
+        <div className={`container ${styles.about}`}>
+          <span className="eyebrow">About Sealper</span>
+          <p className={styles.aboutText}>
+            Sealper specializes in BPA-Free 5 Gallon Bottles and provides complete HOD packaging solutions
+            for the bottled water industry.
+          </p>
+          <p className={styles.aboutSub}>
+            A Canadian-owned company with BPA-Free PET bottles manufactured in Calgary, supported by a
+            complete range of HOD packaging products stocked in Canada.
+          </p>
+          <Link href="/about-us" className="btn btn--outline">
+            About Us
+            <ArrowIcon />
+          </Link>
+        </div>
+      </section>
+
+      {/* ══════════ CONTACT / GET A QUOTE ══════════ */}
+      <PageCta
+        title="Get a Quote"
+        subtitle="Tell us the products and quantities you need — we’ll reply with pricing and availability."
+      />
     </>
   )
 }

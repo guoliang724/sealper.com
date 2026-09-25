@@ -1,189 +1,85 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import styles from './page.module.css'
+import styles from '../products.module.css'
+import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'About Us — 100% Canadian Owned',
-  description: 'Sealper is a 100% Canadian-owned wholesale supplier headquartered in Calgary, Alberta. With 4 strategically located warehouses, we deliver water packaging supplies to businesses across Canada with same-day options.',
+  title: 'About Us — Canadian-Owned HOD Packaging Supplier',
+  description: 'Sealper is a Canadian-owned company focused on the HOD bottled water industry, with BPA-free PET bottles manufactured in Calgary and a complete range of HOD packaging products stocked in Canada.',
 }
 
-const pillars = [
-  {
-    title: 'Our Mission',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
-      </svg>
-    ),
-    content: 'To continuously innovate and provide the best bottled water packaging materials to meet customer and market demands. We are committed to quality, affordability, and timely delivery.',
-  },
-  {
-    title: 'Our Services',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
-    ),
-    content: 'We are more than just suppliers — we are partners. We offer water purification equipment, blow molding machinery, filling equipment, and complete production lines.',
-  },
-  {
-    title: 'Our Reputation',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-      </svg>
-    ),
-    content: 'We have earned a strong reputation in the North American market over the years, thanks to our customers\' trust in our product quality and outstanding service.',
-  },
+const facts = [
+  'Canadian-owned company',
+  'Focused on the HOD bottled water industry',
+  'BPA-Free PET bottles manufactured in Calgary',
+  'Complete packaging and accessory supply',
+  'Canadian stock and distribution network',
 ]
 
-const offices = [
-  { label: 'Headquarters', location: 'Calgary, Alberta', detail: 'Unit 10, 4900 64 Ave SE, Calgary, AB T2C 4V3 · Same-Day Delivery' },
-  { label: 'Warehouse', location: 'Vancouver, BC', detail: 'Serving Lower Mainland & all of British Columbia · Same-Day Delivery' },
-  { label: 'Warehouse', location: 'Edmonton, Alberta', detail: 'Serving Northern Alberta and surrounding regions · Same-Day Delivery' },
-  { label: 'Warehouse', location: 'Toronto, Ontario', detail: 'Serving the GTA and Eastern Canada · Same-Day Delivery' },
-]
-
-const overview = [
-  'Canadian manufacturer and one-stop supplier for the HOD bottled water industry',
-  'BPA-free PET water bottles manufactured in Calgary, with molds developed for the North American market',
-  'Strict quality control, dependable performance and consistently high repeat-order rates',
-  'Local customized cap labeling from just one pallet — no overseas lead times or large-volume commitment',
+const locations = [
+  { title: 'Calgary, AB', desc: 'Head office & PET bottle manufacturing' },
+  { title: 'Vancouver, BC', desc: 'Stock location' },
+  { title: 'Edmonton, AB', desc: 'Stock location' },
+  { title: 'Toronto, ON', desc: 'Stock location' },
 ]
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <div className="page-hero page-hero--gradient" style={{ paddingTop: 'calc(var(--header-h) + 4rem)' }}>
+      <div className="page-hero">
         <div className="container page-hero__content">
-          <span className="page-hero__eyebrow">About SEALPER</span>
-          <h1 className="page-hero__title">100% Canadian Owned &amp; <em>Nationwide Focused</em></h1>
+          <span className="page-hero__eyebrow">About Us</span>
+          <h1 className="page-hero__title">About Sealper</h1>
           <p className="page-hero__subtitle">
-            Locally owned and operated — proudly serving businesses across Canada from our 4 strategically located warehouses.
+            Sealper specializes in BPA-Free 5 Gallon Bottles and provides complete HOD packaging solutions for
+            the bottled water industry.
           </p>
         </div>
       </div>
 
-      {/* Story */}
       <section className="section">
         <div className="container">
-          <div className={styles.storyGrid}>
-            <div className={styles.storyImage}>
+          <div className={styles.splitGrid}>
+            <div className={styles.splitImage}>
               <Image
                 src="/images/warehouse.jpg"
-                alt="Sealper warehouse stocked with water packaging supplies"
+                alt="Sealper warehouse stocked with HOD packaging products"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: 'cover', borderRadius: '16px' }}
+                sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
-            <div className={styles.storyContent}>
-              <span className="section-header__eyebrow" style={{ textAlign: 'left', display: 'block' }}>Our Story</span>
-              <h2 className="heading-md" style={{ marginBottom: '1rem' }}>
-                A Decade of Excellence — Built Right Here in Canada
-              </h2>
-              <div className="divider divider--left" />
-              <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
-                Sealper is a 100% Canadian-owned supplier of bottled water packaging materials,
-                headquartered in Calgary, Alberta. With four warehouses — in Vancouver, Calgary, Edmonton,
-                and Toronto — we deliver to your door with speed and care.
+            <div className={styles.splitContent}>
+              <span className="eyebrow">Who We Are</span>
+              <h2 className={styles.splitTitle}>Canadian-Owned, HOD Focused</h2>
+              <p className={styles.splitText}>
+                BPA-Free PET bottles manufactured in Calgary, supported by a complete range of HOD packaging
+                products stocked in Canada.
               </p>
-              <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
-                Our product line includes North America&apos;s only seamless IBW 5-gallon water bottles,
-                premium non-spill caps, storage racks, manual and USB pumps, cradles, water coolers,
-                and fully customized labels — ready in 7 days.
-              </p>
-              <p style={{ marginTop: '1rem', color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
-                We are a fast-growing, locally focused company that puts Canadian businesses first —
-                providing same-day delivery in major cities and 2-4 day coverage across Western Canada.
-              </p>
-              <Link href="/contact-us" className="btn btn--primary" style={{ marginTop: '2rem', display: 'inline-flex' }}>
-                Get in Touch
-              </Link>
+              <div className={styles.productSpecs}>
+                {facts.map((f) => <div key={f} className={styles.productSpec}>{f}</div>)}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Company Overview Poster */}
       <section className="section section--subtle">
         <div className="container">
-          <div className="section-header">
-            <span className="section-header__eyebrow">Company Overview</span>
-            <h2 className="section-header__title">Canadian-Made HOD Packaging Solutions</h2>
-            <div className="divider" />
-            <p className="section-header__subtitle">
-              Premium PET bottles, caps, racks, pumps, and accessories — made in Calgary, Alberta and serving
-              water companies across Canada.
-            </p>
+          <div className={styles.groupHead}>
+            <h2 className={styles.groupTitle}>Stocked in Canada</h2>
           </div>
-          <ul className={`spec-list ${styles.overviewList}`}>
-            {overview.map((item) => (
-              <li key={item} className="spec-list__item">{item}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Pillars */}
-      <section className="section section--light">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-header__eyebrow">What Drives Us</span>
-            <h2 className="section-header__title">Mission, Services &amp; Reputation</h2>
-            <div className="divider" />
-          </div>
-          <div className="grid grid--3">
-            {pillars.map((p) => (
-              <div key={p.title} className={styles.pillarCard}>
-                <div className={styles.pillarIcon}>{p.icon}</div>
-                <h3 className={styles.pillarTitle}>{p.title}</h3>
-                <p className={styles.pillarDesc}>{p.content}</p>
+          <div className={styles.points}>
+            {locations.map((l) => (
+              <div key={l.title} className={styles.point}>
+                <h3 className={styles.pointTitle}>{l.title}</h3>
+                <p className={styles.pointDesc}>{l.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Canadian Network */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-header__eyebrow">Our Canadian Network</span>
-            <h2 className="section-header__title">4 Warehouses Across Canada</h2>
-            <div className="divider" />
-            <p className="section-header__subtitle">
-              Strategically positioned across Canada — so your order ships fast, from a city near you.
-            </p>
-          </div>
-          <div className="grid grid--4">
-            {offices.map((office, i) => (
-              <div key={i} className={styles.officeCard}>
-                <div className={styles.officeLabel}>{office.label}</div>
-                <h3 className={styles.officeLocation}>{office.location}</h3>
-                <p className={styles.officeDetail}>{office.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section section--dark" style={{ textAlign: 'center' }}>
-        <div className="container">
-          <h2 className="heading-lg" style={{ marginBottom: '1rem' }}>
-            Ready to Work With Us?
-          </h2>
-          <p style={{ fontSize: '1.05rem', maxWidth: '500px', margin: '0 auto 2rem' }}>
-            Feel free to reach out for assistance and support. We look forward to providing you with exceptional products and services.
-          </p>
-          <Link href="/contact-us" className="btn btn--accent btn--lg">
-            Contact Us Today
-          </Link>
-        </div>
-      </section>
+      <PageCta title="Work With Sealper" subtitle="Tell us about your water business and what you need." />
     </>
   )
 }

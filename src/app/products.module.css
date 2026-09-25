@@ -1,108 +1,52 @@
 /* ════════════════════════════════════════════════
-   SHARED PRODUCT PAGE STYLES — FLUID WATER
+   SHARED PRODUCT & SERVICE PAGE STYLES
+   Clean layout: large images, generous white space, few borders.
    ════════════════════════════════════════════════ */
 
 .productsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--space-8);
+  gap: var(--space-10) var(--space-8);
 }
 
 .productsGridCompact {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: var(--space-6);
+  gap: var(--space-8) var(--space-6);
+}
+
+/* Two large products side by side */
+.productsGridPair {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .productCard {
-  background: var(--color-bg);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--color-border);
-  overflow: hidden;
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
   display: flex;
   flex-direction: column;
-  position: relative;
-  box-shadow: var(--shadow-sm);
-}
-.productCard:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-8px);
-  border-color: var(--color-border-glow);
 }
 
-/* Catalog cutouts float over a soft water-pool backdrop */
+/* Product cutouts sit on a very light blue panel */
 .productImageWrap {
   position: relative;
   aspect-ratio: 4 / 3;
-  margin: 10px 10px 0;
-  border-radius: 18px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  background: radial-gradient(120% 80% at 50% 100%, #CDE8F8 0%, #EAF5FC 45%, #F7FBFE 100%);
+  background: linear-gradient(180deg, #F5FAFE 0%, #EAF5FC 100%);
 }
 .productImageWrap img {
   object-fit: contain;
-  padding: var(--space-5);
+  padding: var(--space-6);
   transition: transform var(--transition-slow);
 }
 .productCard:hover .productImageWrap img {
-  transform: translateY(-6px) scale(1.05);
-}
-
-/* Product groups (racks, accessories) */
-.group + .group { margin-top: var(--space-20); }
-
-.groupHead {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-2) var(--space-6);
-  margin-bottom: var(--space-8);
-  padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-border);
-  position: relative;
-}
-.groupHead::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 56px;
-  height: 10px;
-  background: #FFFFFF var(--squiggle) center / contain no-repeat;
-}
-
-.groupTitle {
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  letter-spacing: -0.03em;
-}
-
-.groupDesc {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
+  transform: scale(1.04);
 }
 
 .productCardBody {
-  padding: 1.5rem 1.75rem 1.75rem;
+  padding: var(--space-5) var(--space-1) 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   flex: 1;
-}
-
-.productTag {
-  display: inline-flex;
-  align-self: flex-start;
-  align-items: center;
-  padding: 0.28rem 0.8rem;
-  border-radius: var(--radius-full);
-  background: var(--navy-100);
-  color: var(--color-accent-dark);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-family: var(--font-body);
 }
 
 .productName {
@@ -114,10 +58,41 @@
   line-height: 1.2;
 }
 
+.productSubname {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-top: calc(-1 * var(--space-2));
+}
+
 .productDesc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
   line-height: 1.7;
+}
+
+.productSpecs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.productSpec {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+}
+.productSpec::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
 }
 
 /* Cap colors in stock */
@@ -128,44 +103,35 @@
 }
 
 .colorLabel {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-text-body);
   margin-right: var(--space-1);
 }
 
 .swatch {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 1px var(--color-border-strong), 0 3px 8px -3px rgba(11, 74, 127, 0.4);
+  box-shadow: 0 0 0 1px var(--color-border-strong);
 }
 
-.productSpecs {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  border-top: 1px dashed var(--color-border-strong);
-  padding-top: var(--space-4);
-  margin-top: auto;
+/* Product groups (racks) */
+.group + .group { margin-top: var(--space-20); }
+
+.groupHead {
+  margin-bottom: var(--space-8);
 }
 
-.productSpec {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: 0.84rem;
-  color: var(--color-text-body);
+.groupTitle {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2);
 }
-.productSpec::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-  background: var(--gradient-aqua);
-  flex-shrink: 0;
+
+.groupDesc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
 }
 
 /* Image + text split section */
@@ -179,13 +145,11 @@
   .splitGrid { grid-template-columns: 1fr; gap: var(--space-8); }
 }
 
-/* steady rounded frame with a glassy white mat — photos stay level and uncropped */
 .splitImage {
   position: relative;
   aspect-ratio: 4 / 3;
-  border-radius: var(--radius-2xl);
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.75), 0 0 0 11px var(--color-border), var(--shadow-xl);
 }
 .splitImage img { object-fit: cover; }
 
@@ -193,103 +157,34 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
-.splitContent :global(.section-header__eyebrow) { margin-bottom: 0; }
+.splitContent :global(.eyebrow) { margin-bottom: calc(-1 * var(--space-2)); }
 
-/* Badge grid (caps page) — glass droplets */
-.badgeGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: var(--space-4);
+.splitTitle {
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  letter-spacing: -0.03em;
 }
 
-.infoBadge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1.75rem var(--space-4);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--color-border);
-  background: linear-gradient(180deg, #FFFFFF 0%, #F5FAFE 100%);
-  gap: var(--space-3);
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-  box-shadow: var(--shadow-sm);
-}
-.infoBadge:hover {
-  border-color: var(--color-border-glow);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+.splitText {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-body);
 }
 
-.infoBadgeIcon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--gradient-aqua);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 6px rgba(10, 166, 230, 0.1), 0 10px 20px -10px rgba(10, 166, 230, 0.7);
-}
-
-.infoBadgeText {
-  font-size: 0.76rem;
-  font-weight: 700;
-  font-family: var(--font-body);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-text-primary);
-  line-height: 1.35;
-}
-
-/* ── CTA Strip — ocean rising into the section above ── */
+/* ── CTA band ── */
 .pageCtaStrip {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
   background: var(--gradient-ocean);
-  margin-top: calc(-1 * var(--wave-h));
-  padding: calc(var(--section-py) + var(--wave-h)) 0 var(--section-py);
+  padding: var(--space-20) 0;
   text-align: center;
   color: var(--color-text-inverse);
-  -webkit-mask: var(--mask-wave-top) top / 100% var(--wave-h) no-repeat, linear-gradient(#000 0 0) bottom / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
-  mask: var(--mask-wave-top) top / 100% var(--wave-h) no-repeat, linear-gradient(#000 0 0) bottom / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
-}
-.pageCtaStrip::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -30%;
-  right: -8%;
-  width: 520px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(111, 211, 250, 0.3), rgba(111, 211, 250, 0));
-  animation: drift 16s ease-in-out infinite alternate;
-}
-.pageCtaStrip::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  bottom: -70%;
-  width: 520px;
-  aspect-ratio: 1;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.03), 0 0 0 110px rgba(255, 255, 255, 0.02);
 }
 
 .pageCtaTitle {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
   color: #FFFFFF;
   margin-bottom: var(--space-3);
 }
@@ -305,4 +200,63 @@
   gap: var(--space-4);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  background: #FFFFFF;
+  color: var(--color-primary);
+  border-color: #FFFFFF;
+}
+.ctaPrimary:hover {
+  background: var(--teal-100);
+  border-color: var(--teal-100);
+  transform: translateY(-2px);
+}
+
+/* ── Text-only point columns (services pages) ── */
+.points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-10) var(--space-8);
+}
+
+.point {
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--color-accent);
+}
+
+.pointTitle {
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.pointDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ── Product videos ── */
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-xl);
+  background: #0A1A2E;
+  object-fit: cover;
+}
+
+.videoCaption {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
 }
