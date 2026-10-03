@@ -172,6 +172,13 @@
   color: var(--color-text-body);
 }
 
+.productSlogan {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--color-primary-light);
+}
+
 /* ── CTA band ── */
 .pageCtaStrip {
   background: var(--gradient-ocean);

@@ -7,7 +7,7 @@ import styles from './ChatWidget.module.css'
 const quickQuestions = [
   {
     q: 'What products do you offer?',
-    a: 'We supply 5-gallon & 3-gallon PC bottles, non-spill caps, bottle racks (3–5 tier), manual & USB pumps, folding cradles, water cooler dispensers, and custom label services. Everything your water business needs — under one roof.',
+    a: 'Our lead product is the BPA-free 5 gallon PET bottle, manufactured in Calgary. We also supply 5 & 3 gallon PC bottles, One-Piece, Tri-Pierce and Non-Spill caps, racks, water dispensers, pumps, cradles, carts, fridge packs and customized cap labels.',
   },
   {
     q: 'How do I get a quote?',
@@ -15,19 +15,19 @@ const quickQuestions = [
   },
   {
     q: 'Do you ship to the USA?',
-    a: 'Yes! We serve both Canada and the United States via FCL (Full Container Load), LTL (Less Than Truckload), and parcel shipping. Our Alberta distribution center is strategically placed for fast cross-border delivery.',
+    a: 'Yes! We serve both Canada and the United States via FCL (Full Container Load), LTL (Less-Than-Truckload), and parcel shipping from our Canadian inventory.',
   },
   {
     q: 'How long does delivery take?',
     a: 'Typically 2–4 business days within Canada. U.S. timelines vary by destination. For large FCL orders we\'ll confirm lead times during the quoting process.',
   },
   {
-    q: 'Are your products FDA approved?',
-    a: 'Yes — all our bottles and caps are FDA approved and BPA free. They meet strict food-grade safety standards and are designed for repeated commercial use.',
+    q: 'What materials are your bottles made of?',
+    a: 'Our 5 gallon PET bottle is BPA-free and manufactured in Calgary. We also offer PC bottles. For food-contact compliance documents on a specific product, send us a message and our team will provide them.',
   },
   {
     q: 'Can you do custom labels?',
-    a: 'Absolutely. Send us your artwork (logo, colors, design) and we handle the rest. Custom labels are a great way to build your brand on store shelves.',
+    a: 'Yes. Send us your artwork and we\'ll label your caps. Local labeling in Calgary starts from 1 pallet; factory-direct labeling for larger orders starts from 6 pallets.',
   },
 ]
 

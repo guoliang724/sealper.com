@@ -5,8 +5,8 @@ import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'Caps — One-Piece & Non-Spill Caps',
-  description: 'Sealper caps for 5 gallon water bottles: One-Piece Cap with Tri-Pierce design and Non-Spill Cap. TPE liner, 500 pcs loose pack, 4 colors in stock, customized cap labels.',
+  title: { absolute: '5 Gallon Water Bottle Caps Supplier Canada | Sealper' },
+  description: 'One-Piece, Tri-Pierce and Non-Spill caps for 5 gallon water bottles. TPE sealing liner, 500 pcs loose pack, 4 colours in stock and custom cap labeling.',
 }
 
 const colors = [
@@ -21,22 +21,24 @@ const caps = [
     name: 'One-Piece Cap',
     subname: 'Tri-Pierce Design',
     image: '/images/products/cap-tripierce.png',
-    desc: 'A one-piece cap that leaves no loose plug in the bottle. Its Tri-Pierce design gives a clean, easy pierce when the bottle is loaded onto a dispenser.',
-    specs: ['Tri-Pierce design', 'TPE liner — no foam liner', 'Easy-tear design', '500 pcs loose pack'],
+    alt: '5 gallon tri-pierce water bottle cap',
+    desc: 'A one-piece cap that leaves no loose plug in the bottle, designed for clean, controlled piercing when the bottle is loaded onto a dispenser.',
+    specs: ['Tri-Pierce Design', 'TPE Sealing Liner', 'No Loose Plug', 'Easy-Tear Design', '500 pcs loose pack'],
     video: '/videos/one-piece-cap.mp4',
     poster: '/videos/one-piece-cap-poster.jpg',
   },
   {
     name: 'Non-Spill Cap',
     image: '/images/products/cap-non-spill.png',
-    desc: 'Easy-peel label and tear perforation for a clean open, with a secure seal during handling.',
-    specs: ['Spill-free during handling', 'TPE liner — no foam liner', 'Easy-peel label & tear perforation', '500 pcs loose pack'],
+    alt: '5 gallon non-spill water bottle cap',
+    desc: 'A secure, leak-resistant seal designed to reduce leaks during handling, with an easy-peel label and tear perforation for a clean open.',
+    specs: ['Secure, Leak-Resistant Seal', 'TPE Sealing Liner', 'Easy-Peel Label & Tear Perforation', '500 pcs loose pack'],
     video: '/videos/non-spill-cap.mp4',
     poster: '/videos/non-spill-cap-poster.jpg',
   },
 ]
 
-const labelPoints = ['Flexible MOQ', 'Local Labeling Available', 'Fast Turnaround']
+const labelPoints = ['Local Labeling in Calgary — MOQ from 1 pallet', 'Factory-Direct Labeling — MOQ from 6 pallets']
 
 export default function CapsPage() {
   return (
@@ -45,7 +47,7 @@ export default function CapsPage() {
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Products</span>
           <h1 className="page-hero__title">Caps</h1>
-          <p className="page-hero__subtitle">One-Piece and Non-Spill caps for 5 gallon water bottles.</p>
+          <p className="page-hero__subtitle">One-Piece, Tri-Pierce and Non-Spill caps for 5 gallon water bottles.</p>
         </div>
       </div>
 
@@ -55,7 +57,7 @@ export default function CapsPage() {
             {caps.map((c) => (
               <div key={c.name} className={styles.productCard}>
                 <div className={styles.productImageWrap}>
-                  <Image src={c.image} alt={c.name} fill sizes="(max-width: 768px) 100vw, 600px" />
+                  <Image src={c.image} alt={c.alt} fill sizes="(max-width: 768px) 100vw, 600px" />
                 </div>
                 <div className={styles.productCardBody}>
                   <h2 className={styles.productName}>{c.name}</h2>
@@ -117,18 +119,18 @@ export default function CapsPage() {
             <div className={styles.splitImage}>
               <Image
                 src="/images/cap-labeling-machine.jpg"
-                alt="Cap labeling machine applying custom labels to caps"
+                alt="Cap labeling machine applying custom labels to 5 gallon water bottle caps"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
             <div className={styles.splitContent}>
-              <span className="eyebrow">Customized Cap Label Service</span>
-              <h2 className={styles.splitTitle}>Build Your Brand on Every Cap</h2>
+              <span className="eyebrow">Service</span>
+              <h2 className={styles.splitTitle}>Custom Cap Labeling</h2>
               <div className={styles.productSpecs}>
                 {labelPoints.map((p) => <div key={p} className={styles.productSpec}>{p}</div>)}
               </div>
-              <Link href="/customized-labels" className="btn btn--outline">About Customized Labels</Link>
+              <Link href="/customized-labels" className="btn btn--outline">About Custom Cap Labeling</Link>
             </div>
           </div>
         </div>

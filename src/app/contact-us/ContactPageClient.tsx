@@ -49,14 +49,33 @@ const contactInfo = [
 export default function ContactPageClient() {
   const [formState, setFormState] = useState({ company: '', name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({ ...formState, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => null)
+        throw new Error(data?.error ?? 'Failed to send message. Please try again or call us at 403-667-5058.')
+      }
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send message. Please try again or call us at 403-667-5058.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -76,7 +95,7 @@ export default function ContactPageClient() {
           <div className={styles.contactGrid}>
             {/* Contact Info */}
             <div className={styles.infoPanel}>
-              <h2 className={styles.infoPanelTitle}>BPA-Free 5 Gallon Bottles &amp; HOD Packaging Solutions</h2>
+              <h2 className={styles.infoPanelTitle}>Talk to Our Calgary Team</h2>
               <p className={styles.infoPanelDesc}>
                 Our team is ready to assist you with product inquiries, pricing, shipping logistics, and custom orders.
                 Reach out via any of the channels below.
@@ -149,8 +168,9 @@ export default function ContactPageClient() {
                     <label className="form-label" htmlFor="message">Message <span style={{ color: 'var(--color-accent-dark)' }}>*</span></label>
                     <textarea id="message" name="message" className="form-textarea" placeholder="Tell us about your requirements — products, quantities, and delivery location..." value={formState.message} onChange={handleChange} required />
                   </div>
-                  <button type="submit" id="contact-submit-btn" className="btn btn--primary btn--lg" style={{ width: '100%', justifyContent: 'center' }}>
-                    Send Message
+                  {error && <p className={styles.formError} role="alert">{error}</p>}
+                  <button type="submit" id="contact-submit-btn" className="btn btn--primary btn--lg" style={{ width: '100%', justifyContent: 'center' }} disabled={sending}>
+                    {sending ? 'Sending…' : 'Send Message'}
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                     </svg>

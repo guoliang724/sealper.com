@@ -6,24 +6,26 @@ import bottleStyles from './page.module.css'
 import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'Bottles — BPA-Free 5 Gallon PET & PC Water Bottles',
-  description: 'Sealper HOD water bottles: BPA-free 5 gallon PET bottle manufactured in Calgary, plus 5 gallon and 3 gallon PC bottles.',
+  title: { absolute: '5 Gallon PET & PC Water Bottles Canada | Sealper' },
+  description: '5 gallon BPA-free PET water bottles manufactured in Calgary, plus 3 and 5 gallon PC bottles for HOD operations across Canada.',
 }
 
-const petFeatures = ['BPA-Free PET', 'Reinforced Rib Structure', 'Heat-Fused Handle', 'Designed for HOD Water Packaging']
+const petFeatures = ['BPA-Free PET', 'Reinforced Rib Structure', 'Heat-Fused Handle', 'Designed for Commercial HOD Use']
 
 const pcBottles = [
   {
     name: '5 Gallon PC Bottle',
     image: '/images/products/bottle-5gal-pc.png',
-    desc: 'Strong polycarbonate bottle built for repeated use.',
-    specs: ['Wide-grip handle', 'Seamless neck', 'Recessed base'],
+    alt: '5 gallon polycarbonate (PC) water bottle',
+    desc: 'Reusable polycarbonate bottle designed for repeated handling in HOD operations.',
+    specs: ['ISBM Construction', 'Seamless Neck Finish', 'Wide-Grip Handle', 'Recessed Base'],
   },
   {
     name: '3 Gallon PC Bottle',
     image: '/images/products/bottle-3gal-pc.png',
-    desc: 'A lighter 3 gallon size with the same PC build.',
-    specs: ['Wide-grip handle', 'Seamless neck', 'Recessed base'],
+    alt: '3 gallon polycarbonate (PC) water bottle',
+    desc: 'Reusable 3 gallon polycarbonate bottle for HOD operations.',
+    specs: ['Seamless Neck Finish', 'Wide-Grip Handle', 'Recessed Base'],
   },
 ]
 
@@ -33,9 +35,9 @@ export default function BottlesPage() {
       <div className="page-hero">
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Products</span>
-          <h1 className="page-hero__title">HOD Water Bottles</h1>
+          <h1 className="page-hero__title">5 Gallon PET &amp; PC Water Bottles</h1>
           <p className="page-hero__subtitle">
-            BPA-Free 5 gallon PET bottles manufactured in Calgary, plus 5 and 3 gallon PC bottles.
+            BPA-free 5 gallon PET bottles manufactured in Calgary, plus 3 and 5 gallon PC bottles.
           </p>
         </div>
       </div>
@@ -47,7 +49,7 @@ export default function BottlesPage() {
             <div className={bottleStyles.leadImage}>
               <Image
                 src="/images/products/bottle-5gal-pet.png"
-                alt="Sealper BPA-free 5 gallon PET bottle"
+                alt="5 gallon BPA-free PET water bottle manufactured in Calgary"
                 width={530}
                 height={1000}
                 quality={90}
@@ -55,12 +57,13 @@ export default function BottlesPage() {
               />
             </div>
             <div className={bottleStyles.leadContent}>
-              <span className="eyebrow">Made in Calgary</span>
-              <h2 className={bottleStyles.leadTitle}>5 Gallon PET Bottle</h2>
+              <span className="eyebrow">Manufactured in Calgary</span>
+              <h2 className={bottleStyles.leadTitle}>5 Gallon BPA-Free PET Bottle</h2>
               <p className={bottleStyles.leadText}>
-                Our BPA-Free PET 5 gallon bottle is manufactured in Calgary and designed for strength, clean
-                appearance and reliable HOD water packaging.
+                Manufactured in Calgary, our BPA-free 5 gallon PET bottle features a reinforced structure and
+                heat-fused handle for commercial HOD applications.
               </p>
+              <p className={styles.productSlogan}>Built Tough. Sealed Better.</p>
               <div className={styles.productSpecs}>
                 {petFeatures.map((f) => <div key={f} className={styles.productSpec}>{f}</div>)}
               </div>
@@ -75,13 +78,13 @@ export default function BottlesPage() {
         <div className="container">
           <div className={styles.groupHead}>
             <h2 className={styles.groupTitle}>PC Bottles</h2>
-            <p className={styles.groupDesc}>5 and 3 gallon polycarbonate bottles.</p>
+            <p className={styles.groupDesc}>3 and 5 gallon polycarbonate bottles.</p>
           </div>
           <div className={`${styles.productsGrid} ${bottleStyles.pcGrid}`}>
             {pcBottles.map((b) => (
               <div key={b.name} className={styles.productCard}>
                 <div className={`${styles.productImageWrap} ${bottleStyles.pcImage}`}>
-                  <Image src={b.image} alt={b.name} fill sizes="(max-width: 768px) 100vw, 560px" />
+                  <Image src={b.image} alt={b.alt} fill sizes="(max-width: 768px) 100vw, 560px" />
                 </div>
                 <div className={styles.productCardBody}>
                   <h3 className={styles.productName}>{b.name}</h3>

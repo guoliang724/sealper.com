@@ -193,6 +193,12 @@
 }
 
 /* Success message */
+.formError {
+  font-size: 0.9rem;
+  color: #B42318;
+  line-height: 1.6;
+}
+
 .successMessage {
   text-align: center;
   padding: var(--space-8);

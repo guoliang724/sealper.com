@@ -3,8 +3,8 @@ import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'Delivery — Local Delivery, LTL Freight & Parcel Shipping',
-  description: 'Sealper delivery options from Canadian stock: local delivery, LTL (Less Than Truckload) freight, and parcel or sample shipping.',
+  title: { absolute: 'HOD Packaging Delivery Across Canada | Sealper' },
+  description: 'Sealper products are stocked in Canada and shipped by local delivery, LTL (Less-Than-Truckload) freight, parcel and sample shipping, or full container load (FCL).',
 }
 
 const options = [
@@ -14,11 +14,15 @@ const options = [
   },
   {
     title: 'LTL Freight',
-    desc: 'Less Than Truckload shipping for pallet orders to other locations across Canada.',
+    desc: 'Less-Than-Truckload shipping for pallet orders to other locations across Canada.',
   },
   {
-    title: 'Parcel / Sample Shipping',
+    title: 'Parcel & Sample Shipping',
     desc: 'Courier shipping for small orders and product samples.',
+  },
+  {
+    title: 'Full Container Load (FCL)',
+    desc: 'Full container shipments for large-volume orders.',
   },
 ]
 
@@ -27,10 +31,10 @@ export default function DeliveryPage() {
     <>
       <div className="page-hero">
         <div className="container page-hero__content">
-          <span className="page-hero__eyebrow">Services</span>
-          <h1 className="page-hero__title">Delivery</h1>
+          <span className="page-hero__eyebrow">Delivery</span>
+          <h1 className="page-hero__title">Flexible Shipping Across Canada</h1>
           <p className="page-hero__subtitle">
-            Products stocked in Canada, shipped the way that suits your order.
+            Products are stocked in Canada and shipped based on order size, destination and delivery requirements.
           </p>
         </div>
       </div>
@@ -48,7 +52,10 @@ export default function DeliveryPage() {
         </div>
       </section>
 
-      <PageCta title="Need a Shipping Quote?" subtitle="Tell us your location and order size — we’ll recommend the best option." />
+      <PageCta
+        title="Need a Shipping Quote?"
+        subtitle="Send us your postal code and order quantity and we’ll recommend the most practical shipping option for your order."
+      />
     </>
   )
 }

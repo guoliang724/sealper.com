@@ -1,5 +1,5 @@
 // Composes the homepage hero image from the product cutouts.
-// Run: node scripts/build-hero-image.mjs  →  public/images/hero-products.png
+// Run: node scripts/build-hero-image.mjs  →  public/images/hero-bottle-caps.png
 import sharp from 'sharp'
 
 const dir = 'public/images/products/'
@@ -8,8 +8,6 @@ const H = 1240
 
 // Back row first, front row last. `bottom` is where the product meets the floor.
 const layout = [
-  { file: 'dispenser-bottom-load.png', height: 860, left: 70, bottom: 1080 },
-  { file: 'rack-single-5-tier.png', height: 880, left: 1000, bottom: 1080 },
   { file: 'bottle-5gal-pet.png', height: 1000, left: 440, bottom: 1160 },
   { file: 'cap-non-spill.png', width: 300, left: 250, bottom: 1215 },
   { file: 'cap-tripierce.png', width: 290, left: 880, bottom: 1205 },
@@ -41,5 +39,5 @@ await sharp({ create: { width: W, height: H, channels: 4, background: { r: 0, g:
   .composite(layers)
   .png({ compressionLevel: 9 })
   .toBuffer()
-  .then((buf) => sharp(buf).trim().png({ compressionLevel: 9 }).toFile('public/images/hero-products.png'))
-  .then((info) => console.log('hero-products.png', info.width + 'x' + info.height, Math.round(info.size / 1024) + ' KB'))
+  .then((buf) => sharp(buf).trim().png({ compressionLevel: 9 }).toFile('public/images/hero-bottle-caps.png'))
+  .then((info) => console.log('hero-bottle-caps.png', info.width + 'x' + info.height, Math.round(info.size / 1024) + ' KB'))

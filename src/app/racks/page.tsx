@@ -4,13 +4,14 @@ import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'Racks — Home, Office & Commercial',
-  description: 'Sealper racks for 5 gallon water bottles — home & office bottle racks, commercial 40-bottle racks, 16-bottle stackable pallets, and 12 & 24 bottle display racks.',
+  title: { absolute: '5 Gallon Water Bottle Racks & Storage | Sealper' },
+  description: 'Racks for 5 gallon water bottles — home and office racks, 40-bottle commercial racks, 16-bottle stackable pallets rated to 1.5 tonnes, and 12 and 24 bottle display racks.',
 }
 
 type Rack = {
   name: string
   image: string
+  alt?: string
   specs: string[]
 }
 
@@ -26,24 +27,26 @@ const homeRacks: Rack[] = [
 
 const commercialRacks: Rack[] = [
   {
-    name: '40 Bottles Rack',
+    name: '40-Bottle Commercial Rack',
     image: '/images/products/rack-40-bottle.png',
-    specs: ['Capacity: 40 bottles', '48"W × 40"D × 65"H', 'Durable, stackable & space efficient', 'Heavy-duty reusable construction', 'Easy forklift & pallet handling'],
+    alt: 'commercial 5 gallon water bottle storage rack',
+    specs: ['Holds 40 bottles', '48"W × 40"D × 65"H', 'Stackable steel construction', 'Forklift accessible', 'Designed for warehouse and delivery operations'],
   },
   {
-    name: '16 Bottles Stackable Pallet',
+    name: '16-Bottle Stackable Pallet',
     image: '/images/products/pallet-16-bottle.png',
-    specs: ['16 bottles per layer', '1.5-tonne load capacity', 'Heavy-duty & reusable', 'Stackable, forklift ready', 'Built for commercial water operations'],
+    alt: 'stackable 16-bottle pallet for 5 gallon water bottles',
+    specs: ['16 bottles per layer', 'Rated load capacity: 1.5 tonnes', 'Stackable', 'Forklift-ready', 'Reusable construction'],
   },
   {
-    name: '24 Bottles Display Rack',
+    name: '24-Bottle Display Rack',
     image: '/images/products/rack-display-24.png',
-    specs: ['Holds up to 24 bottles', 'Heavy-duty steel construction', 'Space-saving multi-tier design', 'Stable & durable'],
+    specs: ['Holds up to 24 bottles', 'Steel construction', 'Multi-tier design'],
   },
   {
-    name: '12 Bottles Display Rack',
+    name: '12-Bottle Display Rack',
     image: '/images/products/rack-display-12.png',
-    specs: ['Holds up to 12 bottles', 'Heavy-duty steel construction', 'Space-saving multi-tier design', 'Stable & durable'],
+    specs: ['Holds up to 12 bottles', 'Steel construction', 'Multi-tier design'],
   },
 ]
 
@@ -51,7 +54,7 @@ function RackCard({ rack, sizes }: { rack: Rack; sizes: string }) {
   return (
     <div className={styles.productCard}>
       <div className={styles.productImageWrap}>
-        <Image src={rack.image} alt={rack.name} fill sizes={sizes} />
+        <Image src={rack.image} alt={rack.alt ?? `${rack.name} for 5 gallon water bottles`} fill sizes={sizes} />
       </div>
       <div className={styles.productCardBody}>
         <h3 className={styles.productName}>{rack.name}</h3>

@@ -30,7 +30,8 @@ export default function Footer() {
               <Image src="/images/logo-sealper.png" alt="Sealper Plastics & Packaging Inc." width={1365} height={471} className={styles.logoImage} />
             </div>
             <p className={styles.tagline}>
-              BPA-Free 5 Gallon Bottles and complete HOD packaging solutions for the bottled water industry.
+              Canadian-owned HOD packaging supplier with local manufacturing, Canadian inventory and global
+              production capabilities.
             </p>
             <div className={styles.contactInfo}>
               <a href="tel:4036675058" className={styles.contactItem}>
@@ -115,10 +116,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Sealper — All Rights Reserved.
+            © {new Date().getFullYear()} Sealper Plastics &amp; Packaging Inc. — All Rights Reserved.
           </p>
           <p className={styles.bottomNote}>
-            🍁 Canadian-Owned · BPA-Free PET Bottles Manufactured in Calgary
+            Locally Made. Globally Sourced. Reliably Supplied.
           </p>
         </div>
       </div>

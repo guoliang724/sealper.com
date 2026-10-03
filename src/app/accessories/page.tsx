@@ -4,40 +4,46 @@ import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'Accessories — Pumps, Cradles, Carts & Fridge Packs',
-  description: 'Sealper accessories for 3 and 5 gallon water bottles — USB / electric pump, manual pump, table stand cradle, utility cart, and 8L / 12L fridge packs.',
+  title: { absolute: '5 Gallon Water Bottle Accessories Canada | Sealper' },
+  description: 'HOD accessories for 3 and 5 gallon water bottles — USB / electric pump, manual pump, table stand cradle, utility cart, and 8L / 12L fridge packs.',
 }
 
 const accessories = [
   {
     name: 'USB / Electric Pump',
     image: '/images/products/dispenser-usb.png',
-    specs: ['USB rechargeable', '3-level quantitative dispensing', 'Fits 3 & 5 gallon bottles'],
+    alt: 'USB rechargeable electric pump for 5 gallon water bottles',
+    specs: ['USB rechargeable', 'Three preset dispensing volumes', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: 'Manual Pump',
     image: '/images/products/pump-manual.png',
-    specs: ['No power required', 'Simple & easy to use', 'Fits 3 & 5 gallon bottles'],
+    alt: 'manual pump for 5 gallon water bottles',
+    specs: ['Manual operation · No power required', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: 'Table Stand Cradle',
     image: '/images/products/cradle-table-stand.png',
-    specs: ['Elevated spigot for easy filling', 'Stable & compact', 'Fits 3 & 5 gallon bottles'],
+    alt: 'tabletop cradle stand for a 5 gallon water bottle',
+    specs: ['Elevated spigot for filling cups and jugs', 'Compact tabletop design', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: 'Utility Cart',
     image: '/images/products/utility-cart.png',
-    specs: ['Convertible design', 'Built for everyday use', 'Fits 3 & 5 gallon bottles'],
+    alt: 'convertible utility cart for moving 5 gallon water bottles',
+    specs: ['Convertible design', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: '8L Fridge Pack',
     image: '/images/products/fridge-pack-8l.png',
-    specs: ['31 × 18 × 24 cm', 'Easy-pour tap', 'Fits easily in the refrigerator'],
+    alt: '8L fridge pack water container with tap',
+    specs: ['31 × 18 × 24 cm', 'Built-in tap', 'Sized for refrigerator shelves'],
   },
   {
     name: '12L Fridge Pack',
     image: '/images/products/fridge-pack-12l.png',
-    specs: ['38 × 16 × 26 cm', 'Easy-pour tap', 'Space-saving design'],
+    alt: '12L fridge pack water container with tap',
+    specs: ['38 × 16 × 26 cm', 'Built-in tap', 'Sized for refrigerator shelves'],
   },
 ]
 
@@ -58,7 +64,7 @@ export default function AccessoriesPage() {
             {accessories.map((p) => (
               <div key={p.name} className={styles.productCard}>
                 <div className={styles.productImageWrap}>
-                  <Image src={p.image} alt={p.name} fill sizes="(max-width: 768px) 100vw, 400px" />
+                  <Image src={p.image} alt={p.alt} fill sizes="(max-width: 768px) 100vw, 400px" />
                 </div>
                 <div className={styles.productCardBody}>
                   <h2 className={styles.productName}>{p.name}</h2>

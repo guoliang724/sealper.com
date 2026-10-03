@@ -4,15 +4,21 @@ import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
 
 export const metadata: Metadata = {
-  title: 'Customized Cap Label Service',
-  description: 'Sealper customized cap labels for 5 gallon water bottle caps — flexible MOQ, local labeling in Canada and fast turnaround.',
+  title: { absolute: 'Custom Water Bottle Cap Labels Canada | Sealper' },
+  description: 'Custom cap labeling for 5 gallon water bottle caps — local labeling in Calgary from 1 pallet, or factory-direct labeling from 6 pallets for larger-volume orders.',
 }
 
-const points = [
-  { title: 'Flexible MOQ', desc: 'Order quantities that suit small and growing water businesses.' },
-  { title: 'Local Labeling Available', desc: 'Caps are labeled locally in Canada — no overseas lead times.' },
-  { title: 'Fast Turnaround', desc: 'Quick production and easy reorders from local stock.' },
-  { title: 'Build Your Brand on Every Cap', desc: 'Your logo on every bottle your customers receive.' },
+const options = [
+  {
+    title: 'Local Labeling',
+    desc: 'Custom labels applied in Calgary from stocked caps for flexible order quantities and shorter lead times.',
+    moq: 'MOQ from 1 pallet',
+  },
+  {
+    title: 'Factory-Direct Labeling',
+    desc: 'Custom-labeled caps produced through our overseas manufacturing operations for larger-volume orders.',
+    moq: 'MOQ from 6 pallets',
+  },
 ]
 
 export default function CustomizedLabelsPage() {
@@ -21,8 +27,8 @@ export default function CustomizedLabelsPage() {
       <div className="page-hero">
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Services</span>
-          <h1 className="page-hero__title">Customized Cap Label Service</h1>
-          <p className="page-hero__subtitle">Build your brand on every cap with locally applied custom labels.</p>
+          <h1 className="page-hero__title">Custom Cap Labeling</h1>
+          <p className="page-hero__subtitle">Your Brand on Every Bottle</p>
         </div>
       </div>
 
@@ -32,14 +38,14 @@ export default function CustomizedLabelsPage() {
             <div className={styles.splitImage}>
               <Image
                 src="/images/cap-labeling-machine.jpg"
-                alt="Cap labeling machine applying custom labels to caps"
+                alt="Cap labeling machine applying custom labels to 5 gallon water bottle caps"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
             <div className={styles.splitContent}>
-              <span className="eyebrow">Customized Cap Labels</span>
-              <h2 className={styles.splitTitle}>Your Brand, Every Delivery</h2>
+              <span className="eyebrow">How It Works</span>
+              <h2 className={styles.splitTitle}>Send Us Your Artwork</h2>
               <p className={styles.splitText}>
                 Send us your artwork and we&apos;ll apply your custom label to One-Piece or Non-Spill caps,
                 ready to ship with your order.
@@ -52,10 +58,11 @@ export default function CustomizedLabelsPage() {
       <section className="section section--subtle">
         <div className="container">
           <div className={styles.points}>
-            {points.map((p) => (
-              <div key={p.title} className={styles.point}>
-                <h3 className={styles.pointTitle}>{p.title}</h3>
-                <p className={styles.pointDesc}>{p.desc}</p>
+            {options.map((o) => (
+              <div key={o.title} className={styles.point}>
+                <h3 className={styles.pointTitle}>{o.title}</h3>
+                <p className={styles.productSubname}>{o.moq}</p>
+                <p className={styles.pointDesc}>{o.desc}</p>
               </div>
             ))}
           </div>
