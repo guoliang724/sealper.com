@@ -73,6 +73,12 @@
   line-height: 1.7;
 }
 
+/* pinned to the card bottom so buttons line up across a row */
+.productQuote {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
 .productSpecs {
   display: flex;
   flex-direction: column;

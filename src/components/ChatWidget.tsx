@@ -7,7 +7,7 @@ import styles from './ChatWidget.module.css'
 const quickQuestions = [
   {
     q: 'What products do you offer?',
-    a: 'Our lead product is the BPA-free 5 gallon PET bottle, manufactured in Calgary. We also supply 5 & 3 gallon PC bottles, One-Piece, Tri-Pierce and Non-Spill caps, racks, water dispensers, pumps, cradles, carts, fridge packs and customized cap labels.',
+    a: 'Our lead product is the BPA-free 5 gallon PET bottle, manufactured in Calgary. We also supply 5 & 3 gallon PC bottles, One-Piece and Non-Spill caps, racks, water dispensers, pumps, cradles, carts, fridge packs and customized cap labels.',
   },
   {
     q: 'How do I get a quote?',

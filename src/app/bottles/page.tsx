@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import styles from '../products.module.css'
 import bottleStyles from './page.module.css'
 import PageCta from '@/components/PageCta'
+import QuoteButton from '@/components/QuoteButton'
 
 export const metadata: Metadata = {
   title: { absolute: '5 Gallon PET & PC Water Bottles Canada | Sealper' },
@@ -15,14 +16,14 @@ const petFeatures = ['BPA-Free PET', 'Reinforced Rib Structure', 'Heat-Fused Han
 const pcBottles = [
   {
     name: '5 Gallon PC Bottle',
-    image: '/images/products/bottle-5gal-pc.png',
+    image: '/images/products/5-gallon-pc-water-bottle.png',
     alt: '5 gallon polycarbonate (PC) water bottle',
     desc: 'Reusable polycarbonate bottle designed for repeated handling in HOD operations.',
     specs: ['ISBM Construction', 'Seamless Neck Finish', 'Wide-Grip Handle', 'Recessed Base'],
   },
   {
     name: '3 Gallon PC Bottle',
-    image: '/images/products/bottle-3gal-pc.png',
+    image: '/images/products/3-gallon-pc-water-bottle.png',
     alt: '3 gallon polycarbonate (PC) water bottle',
     desc: 'Reusable 3 gallon polycarbonate bottle for HOD operations.',
     specs: ['Seamless Neck Finish', 'Wide-Grip Handle', 'Recessed Base'],
@@ -48,7 +49,7 @@ export default function BottlesPage() {
           <div className={bottleStyles.lead}>
             <div className={bottleStyles.leadImage}>
               <Image
-                src="/images/products/bottle-5gal-pet.png"
+                src="/images/products/5-gallon-bpa-free-pet-water-bottle.png"
                 alt="5 gallon BPA-free PET water bottle manufactured in Calgary"
                 width={530}
                 height={1000}
@@ -67,7 +68,7 @@ export default function BottlesPage() {
               <div className={styles.productSpecs}>
                 {petFeatures.map((f) => <div key={f} className={styles.productSpec}>{f}</div>)}
               </div>
-              <Link href="/contact-us" className="btn btn--primary">Get a Quote</Link>
+              <Link href={`/contact-us?product=${encodeURIComponent('5 Gallon BPA-Free PET Bottle')}`} className="btn btn--primary">Get a Quote</Link>
             </div>
           </div>
         </div>
@@ -92,6 +93,7 @@ export default function BottlesPage() {
                   <div className={styles.productSpecs}>
                     {b.specs.map((s) => <div key={s} className={styles.productSpec}>{s}</div>)}
                   </div>
+                  <QuoteButton product={b.name} />
                 </div>
               </div>
             ))}
@@ -112,7 +114,7 @@ export default function BottlesPage() {
               </p>
             </div>
             <Image
-              src="/images/air-filtration.jpg"
+              src="/images/pet-bottle-blow-molding-air-filtration.jpg"
               alt="Air filtration for blow molding: a 3-stage Walker Filtration system with a German-manufactured compressed air system and CRN-registered pressure vessels."
               width={950}
               height={1342}

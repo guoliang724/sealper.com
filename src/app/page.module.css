@@ -91,6 +91,14 @@
 @media (max-width: 640px) {
   .hero { padding-block: var(--space-10); }
   .heroSubtitle { font-size: 1rem; }
+  /* the italic serif is hard to read at phone size */
+  .heroSlogan {
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0;
+  }
 }
 
 /* ══════ FEATURED PRODUCT ══════ */
@@ -213,6 +221,7 @@
 }
 .categoryImage img {
   object-fit: contain;
+  mix-blend-mode: multiply; /* blends white-background photos into the card */
   padding: var(--space-6);
   transition: transform var(--transition-slow);
 }

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
+import QuoteButton from '@/components/QuoteButton'
 
 export const metadata: Metadata = {
   title: { absolute: '5 Gallon Water Bottle Racks & Storage | Sealper' },
@@ -16,37 +17,37 @@ type Rack = {
 }
 
 const homeRacks: Rack[] = [
-  { name: '3-Tier Single Row Rack', image: '/images/products/rack-single-3-tier.png', specs: ['Holds 3 bottles', 'Compact footprint'] },
-  { name: '4-Tier Single Row Rack', image: '/images/products/rack-single-4-tier.png', specs: ['Holds 4 bottles', 'Compact footprint'] },
-  { name: '5-Tier Single Row Rack', image: '/images/products/rack-single-5-tier.png', specs: ['Holds 5 bottles', 'Compact footprint'] },
-  { name: '3-Tier Double Row Rack', image: '/images/products/rack-double-3-tier.png', specs: ['Holds 6 bottles', '31"H × 25"W × 13"D'] },
-  { name: '4-Tier Double Row Rack', image: '/images/products/rack-double-4-tier.png', specs: ['Holds 8 bottles', '42.4"H × 24.8"W × 13.3"D'] },
-  { name: '5-Tier Double Row Rack', image: '/images/products/rack-double-5-tier.png', specs: ['Holds 10 bottles', '55"H × 25"W × 13"D'] },
-  { name: '3-Bottle Stainless Steel Rack', image: '/images/products/rack-stainless-3-bottle.png', specs: ['Holds 3 bottles', '39"H × 14"W × 12"D', 'Stainless steel finish'] },
+  { name: '3-Tier Single Row Rack', image: '/images/products/3-tier-single-row-water-bottle-rack.png', specs: ['Holds 3 bottles', 'Compact footprint'] },
+  { name: '4-Tier Single Row Rack', image: '/images/products/4-tier-single-row-water-bottle-rack.png', specs: ['Holds 4 bottles', 'Compact footprint'] },
+  { name: '5-Tier Single Row Rack', image: '/images/products/5-tier-single-row-water-bottle-rack.png', specs: ['Holds 5 bottles', 'Compact footprint'] },
+  { name: '3-Tier Double Row Rack', image: '/images/products/3-tier-double-row-water-bottle-rack.png', specs: ['Holds 6 bottles', '31"H × 25"W × 13"D'] },
+  { name: '4-Tier Double Row Rack', image: '/images/products/4-tier-double-row-water-bottle-rack.png', specs: ['Holds 8 bottles', '42.4"H × 24.8"W × 13.3"D'] },
+  { name: '5-Tier Double Row Rack', image: '/images/products/5-tier-double-row-water-bottle-rack.png', specs: ['Holds 10 bottles', '55"H × 25"W × 13"D'] },
+  { name: '3-Bottle Stainless Steel Rack', image: '/images/products/3-bottle-stainless-steel-water-bottle-rack.png', specs: ['Holds 3 bottles', '39"H × 14"W × 12"D', 'Stainless steel finish'] },
 ]
 
 const commercialRacks: Rack[] = [
   {
     name: '40-Bottle Commercial Rack',
-    image: '/images/products/rack-40-bottle.png',
+    image: '/images/products/40-bottle-commercial-water-bottle-rack.png',
     alt: 'commercial 5 gallon water bottle storage rack',
-    specs: ['Holds 40 bottles', '48"W × 40"D × 65"H', 'Stackable steel construction', 'Forklift accessible', 'Designed for warehouse and delivery operations'],
+    specs: ['Holds 40 bottles', '48"W × 40"D × 65"H', 'Stackable plastic construction', 'Forklift accessible', 'Designed for warehouse and delivery operations'],
   },
   {
     name: '16-Bottle Stackable Pallet',
-    image: '/images/products/pallet-16-bottle.png',
+    image: '/images/products/16-bottle-stackable-water-bottle-pallet.png',
     alt: 'stackable 16-bottle pallet for 5 gallon water bottles',
     specs: ['16 bottles per layer', 'Rated load capacity: 1.5 tonnes', 'Stackable', 'Forklift-ready', 'Reusable construction'],
   },
   {
     name: '24-Bottle Display Rack',
-    image: '/images/products/rack-display-24.png',
-    specs: ['Holds up to 24 bottles', 'Steel construction', 'Multi-tier design'],
+    image: '/images/products/24-bottle-water-bottle-display-rack.png',
+    specs: ['Holds up to 24 bottles', 'Plastic construction', 'Multi-tier design'],
   },
   {
     name: '12-Bottle Display Rack',
-    image: '/images/products/rack-display-12.png',
-    specs: ['Holds up to 12 bottles', 'Steel construction', 'Multi-tier design'],
+    image: '/images/products/12-bottle-water-bottle-display-rack.png',
+    specs: ['Holds up to 12 bottles', 'Plastic construction', 'Multi-tier design'],
   },
 ]
 
@@ -61,6 +62,7 @@ function RackCard({ rack, sizes }: { rack: Rack; sizes: string }) {
         <div className={styles.productSpecs}>
           {rack.specs.map((s) => <div key={s} className={styles.productSpec}>{s}</div>)}
         </div>
+        <QuoteButton product={rack.name} />
       </div>
     </div>
   )

@@ -37,7 +37,7 @@ export default function CustomizedLabelsPage() {
           <div className={styles.splitGrid}>
             <div className={styles.splitImage}>
               <Image
-                src="/images/cap-labeling-machine.jpg"
+                src="/images/custom-water-bottle-cap-labeling-machine.jpg"
                 alt="Cap labeling machine applying custom labels to 5 gallon water bottle caps"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"

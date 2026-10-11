@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description: 'Contact Sealper for pricing, product inquiries, and shipping information. Based in Calgary, Alberta, Canada. Call 403-667-5058 or email sealperplastics@yahoo.com.',
 }
 
-export default function ContactPage() {
-  return <ContactPageClient />
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  const { product } = await searchParams
+  return <ContactPageClient product={typeof product === 'string' ? product.trim().slice(0, 200) : undefined} />
 }

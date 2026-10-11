@@ -40,7 +40,7 @@ export default function AboutPage() {
           <div className={styles.splitGrid}>
             <div className={styles.splitImage}>
               <Image
-                src="/images/warehouse.jpg"
+                src="/images/sealper-calgary-warehouse-water-bottles.jpg"
                 alt="Sealper warehouse in Calgary stocked with 5 gallon bottles and HOD packaging products"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"

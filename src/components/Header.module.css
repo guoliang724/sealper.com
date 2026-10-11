@@ -33,12 +33,7 @@
 .maple { font-size: 0.9rem; }
 .topBarDivider { opacity: 0.45; }
 
-/* Hidden on mobile — keeps topbar single-line */
 .topBarDelivery { display: inline; }
-
-@media (max-width: 640px) {
-  .topBarDelivery { display: none; }
-}
 
 /* ── Main Nav Bar ── */
 .header {
@@ -365,5 +360,5 @@
 }
 
 @media (max-width: 640px) {
-  .topBarText { font-size: 0.66rem; }
+  .topBarText { font-size: 0.66rem; gap: 0.35rem; letter-spacing: 0.02em; }
 }

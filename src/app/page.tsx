@@ -18,11 +18,11 @@ const ArrowIcon = () => (
 const featuredPoints = ['BPA-Free PET', 'Reinforced Rib Structure', 'Heat-Fused Handle', 'Designed for Commercial HOD Use']
 
 const categories = [
-  { title: 'Bottles', href: '/bottles', image: '/images/products/bottle-5gal-pet.png', alt: '5 gallon BPA-free PET water bottle', desc: '3 & 5 Gallon PET / PC Bottles' },
-  { title: 'Caps', href: '/caps', image: '/images/products/cap-tripierce.png', alt: '5 gallon tri-pierce water bottle cap', desc: 'One-Piece, Tri-Pierce & Non-Spill Caps' },
-  { title: 'Racks', href: '/racks', image: '/images/products/rack-double-5-tier.png', alt: '5-tier double row 5 gallon water bottle rack', desc: 'Home, Office & Commercial Racks' },
-  { title: 'Water Dispensers', href: '/water-dispensers', image: '/images/products/dispenser-bottom-load.png', alt: 'bottom-load water dispenser', desc: 'Top-Load & Bottom-Load' },
-  { title: 'Accessories', href: '/accessories', image: '/images/products/pump-manual.png', alt: 'manual pump for 5 gallon water bottles', desc: 'Pumps, Cradles, Carts & Fridge Packs' },
+  { title: 'Bottles', href: '/bottles', image: '/images/products/5-gallon-bpa-free-pet-water-bottle.png', alt: '5 gallon BPA-free PET water bottle', desc: '3 & 5 Gallon PET / PC Bottles' },
+  { title: 'Caps', href: '/caps', image: '/images/products/5-gallon-one-piece-water-bottle-cap.png', alt: '5 gallon one-piece water bottle cap', desc: 'One-Piece & Non-Spill Caps' },
+  { title: 'Racks', href: '/racks', image: '/images/products/40-bottle-stackable-plastic-water-bottle-rack.jpg', alt: '40-bottle stackable plastic rack for 5 gallon water bottles', desc: 'Home, Office & Commercial Racks' },
+  { title: 'Water Dispensers', href: '/water-dispensers', image: '/images/products/bottom-load-water-dispenser.png', alt: 'bottom-load water dispenser', desc: 'Top-Load & Bottom-Load' },
+  { title: 'Accessories', href: '/accessories', image: '/images/products/5-gallon-water-bottle-manual-pump.png', alt: 'manual pump for 5 gallon water bottles', desc: 'Pumps, Cradles, Carts & Fridge Packs' },
 ]
 
 const reasons = [
@@ -35,14 +35,14 @@ const services = [
   {
     title: 'Custom Cap Labeling',
     desc: 'Local labeling in Calgary from 1 pallet, or factory-direct labeling for larger-volume orders.',
-    image: '/images/cap-labeling-machine.jpg',
+    image: '/images/custom-water-bottle-cap-labeling-machine.jpg',
     alt: 'Cap labeling machine applying custom labels to 5 gallon water bottle caps',
     href: '/customized-labels',
   },
   {
     title: 'Canadian Inventory & Delivery',
     desc: 'Products stocked in Canada, with local delivery, LTL freight, parcel shipping and full container loads.',
-    image: '/images/warehouse.jpg',
+    image: '/images/sealper-calgary-warehouse-water-bottles.jpg',
     alt: 'Sealper warehouse stocked with 5 gallon bottles and HOD packaging products',
     href: '/delivery',
   },
@@ -55,7 +55,7 @@ export default function HomePage() {
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>5 Gallon Water Bottles &amp; One-Stop HOD Packaging Solutions</h1>
+            <h1 className={styles.heroTitle}>One-Stop HOD Packaging Solutions</h1>
             <p className={styles.heroSlogan}>Locally Made. Globally Sourced. Reliably Supplied.</p>
             <p className={styles.heroSubtitle}>
               BPA-free PET bottles manufactured in Calgary, supported by Canadian inventory and global
@@ -68,8 +68,8 @@ export default function HomePage() {
           </div>
           <div className={styles.heroVisual}>
             <Image
-              src="/images/hero-bottle-caps.png"
-              alt="5 gallon BPA-free PET water bottle with tri-pierce and non-spill caps"
+              src="/images/5-gallon-pet-water-bottle-and-caps.png"
+              alt="5 gallon BPA-free PET water bottle with one-piece and non-spill caps"
               width={920}
               height={1075}
               loading="eager"
@@ -87,7 +87,7 @@ export default function HomePage() {
         <div className={`container ${styles.featuredInner}`}>
           <div className={styles.featuredImage}>
             <Image
-              src="/images/products/bottle-5gal-pet.png"
+              src="/images/products/5-gallon-bpa-free-pet-water-bottle.png"
               alt="5 gallon BPA-free PET water bottle manufactured in Calgary"
               width={530}
               height={1000}

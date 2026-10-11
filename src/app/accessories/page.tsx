@@ -2,6 +2,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
+import QuoteButton from '@/components/QuoteButton'
 
 export const metadata: Metadata = {
   title: { absolute: '5 Gallon Water Bottle Accessories Canada | Sealper' },
@@ -11,37 +12,37 @@ export const metadata: Metadata = {
 const accessories = [
   {
     name: 'USB / Electric Pump',
-    image: '/images/products/dispenser-usb.png',
+    image: '/images/products/usb-rechargeable-5-gallon-water-bottle-pump.png',
     alt: 'USB rechargeable electric pump for 5 gallon water bottles',
     specs: ['USB rechargeable', 'Three preset dispensing volumes', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: 'Manual Pump',
-    image: '/images/products/pump-manual.png',
+    image: '/images/products/5-gallon-water-bottle-manual-pump.png',
     alt: 'manual pump for 5 gallon water bottles',
     specs: ['Manual operation · No power required', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: 'Table Stand Cradle',
-    image: '/images/products/cradle-table-stand.png',
+    image: '/images/products/5-gallon-water-bottle-cradle-table-stand.png',
     alt: 'tabletop cradle stand for a 5 gallon water bottle',
     specs: ['Elevated spigot for filling cups and jugs', 'Compact tabletop design', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: 'Utility Cart',
-    image: '/images/products/utility-cart.png',
+    image: '/images/products/water-bottle-utility-cart.png',
     alt: 'convertible utility cart for moving 5 gallon water bottles',
     specs: ['Convertible design', 'Fits 3 & 5 gallon bottles'],
   },
   {
     name: '8L Fridge Pack',
-    image: '/images/products/fridge-pack-8l.png',
+    image: '/images/products/8l-fridge-pack-water-bottle.png',
     alt: '8L fridge pack water container with tap',
     specs: ['31 × 18 × 24 cm', 'Built-in tap', 'Sized for refrigerator shelves'],
   },
   {
     name: '12L Fridge Pack',
-    image: '/images/products/fridge-pack-12l.png',
+    image: '/images/products/12l-fridge-pack-water-bottle.png',
     alt: '12L fridge pack water container with tap',
     specs: ['38 × 16 × 26 cm', 'Built-in tap', 'Sized for refrigerator shelves'],
   },
@@ -71,6 +72,7 @@ export default function AccessoriesPage() {
                   <div className={styles.productSpecs}>
                     {p.specs.map((s) => <div key={s} className={styles.productSpec}>{s}</div>)}
                   </div>
+                  <QuoteButton product={p.name} />
                 </div>
               </div>
             ))}

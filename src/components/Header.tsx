@@ -12,7 +12,7 @@ const navItems = [
     href: '#',
     children: [
       { label: 'Bottles', href: '/bottles', desc: '5 & 3 Gallon PET / PC Bottles' },
-      { label: 'Caps', href: '/caps', desc: 'One-Piece, Tri-Pierce & Non-Spill Caps' },
+      { label: 'Caps', href: '/caps', desc: 'One-Piece & Non-Spill Caps' },
       { label: 'Racks', href: '/racks', desc: 'Home, Office & Commercial Racks' },
       { label: 'Water Dispensers', href: '/water-dispensers', desc: 'Top-Load & Bottom-Load' },
       { label: 'Accessories', href: '/accessories', desc: 'Pumps, Cradles, Carts & Fridge Packs' },

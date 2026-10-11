@@ -46,8 +46,10 @@ const contactInfo = [
   },
 ]
 
-export default function ContactPageClient() {
-  const [formState, setFormState] = useState({ company: '', name: '', email: '', message: '' })
+export default function ContactPageClient({ product }: { product?: string }) {
+  // Arriving from a product's "Get a Quote" button: start the message with that product
+  const initialMessage = product ? `I'd like a quote for: ${product}\nQuantity: \nDelivery location: ` : ''
+  const [formState, setFormState] = useState({ company: '', name: '', email: '', message: initialMessage })
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')

@@ -3,10 +3,11 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
+import QuoteButton from '@/components/QuoteButton'
 
 export const metadata: Metadata = {
   title: { absolute: '5 Gallon Water Bottle Caps Supplier Canada | Sealper' },
-  description: 'One-Piece, Tri-Pierce and Non-Spill caps for 5 gallon water bottles. TPE sealing liner, 500 pcs loose pack, 4 colours in stock and custom cap labeling.',
+  description: 'One-Piece and Non-Spill caps for 5 gallon water bottles. TPE sealing liner, 500 pcs loose pack, 4 colours in stock and custom cap labeling.',
 }
 
 const colors = [
@@ -19,17 +20,16 @@ const colors = [
 const caps = [
   {
     name: 'One-Piece Cap',
-    subname: 'Tri-Pierce Design',
-    image: '/images/products/cap-tripierce.png',
-    alt: '5 gallon tri-pierce water bottle cap',
+    image: '/images/products/5-gallon-one-piece-water-bottle-cap.png',
+    alt: '5 gallon one-piece water bottle cap',
     desc: 'A one-piece cap that leaves no loose plug in the bottle, designed for clean, controlled piercing when the bottle is loaded onto a dispenser.',
-    specs: ['Tri-Pierce Design', 'TPE Sealing Liner', 'No Loose Plug', 'Easy-Tear Design', '500 pcs loose pack'],
+    specs: ['TPE Sealing Liner', 'No Loose Plug', 'Easy-Tear Design', '500 pcs loose pack'],
     video: '/videos/one-piece-cap.mp4',
     poster: '/videos/one-piece-cap-poster.jpg',
   },
   {
     name: 'Non-Spill Cap',
-    image: '/images/products/cap-non-spill.png',
+    image: '/images/products/5-gallon-non-spill-water-bottle-cap.png',
     alt: '5 gallon non-spill water bottle cap',
     desc: 'A secure, leak-resistant seal designed to reduce leaks during handling, with an easy-peel label and tear perforation for a clean open.',
     specs: ['Secure, Leak-Resistant Seal', 'TPE Sealing Liner', 'Easy-Peel Label & Tear Perforation', '500 pcs loose pack'],
@@ -47,7 +47,7 @@ export default function CapsPage() {
         <div className="container page-hero__content">
           <span className="page-hero__eyebrow">Products</span>
           <h1 className="page-hero__title">Caps</h1>
-          <p className="page-hero__subtitle">One-Piece, Tri-Pierce and Non-Spill caps for 5 gallon water bottles.</p>
+          <p className="page-hero__subtitle">One-Piece and Non-Spill caps for 5 gallon water bottles.</p>
         </div>
       </div>
 
@@ -61,11 +61,11 @@ export default function CapsPage() {
                 </div>
                 <div className={styles.productCardBody}>
                   <h2 className={styles.productName}>{c.name}</h2>
-                  {c.subname && <p className={styles.productSubname}>{c.subname}</p>}
                   <p className={styles.productDesc}>{c.desc}</p>
                   <div className={styles.productSpecs}>
                     {c.specs.map((s) => <div key={s} className={styles.productSpec}>{s}</div>)}
                   </div>
+                  <QuoteButton product={c.name} />
                   <div className={styles.colorRow}>
                     <span className={styles.colorLabel}>Colors in stock</span>
                     {colors.map((color) => (
@@ -118,7 +118,7 @@ export default function CapsPage() {
           <div className={styles.splitGrid}>
             <div className={styles.splitImage}>
               <Image
-                src="/images/cap-labeling-machine.jpg"
+                src="/images/custom-water-bottle-cap-labeling-machine.jpg"
                 alt="Cap labeling machine applying custom labels to 5 gallon water bottle caps"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"

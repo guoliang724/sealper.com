@@ -2,6 +2,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import styles from '../products.module.css'
 import PageCta from '@/components/PageCta'
+import QuoteButton from '@/components/QuoteButton'
 
 export const metadata: Metadata = {
   title: { absolute: 'Water Dispensers & HOD Equipment Canada | Sealper' },
@@ -11,14 +12,14 @@ export const metadata: Metadata = {
 const dispensers = [
   {
     name: 'Top-Load Water Dispenser',
-    image: '/images/products/dispenser-top-load.png',
+    image: '/images/products/top-load-water-dispenser.png',
     alt: 'top-load water dispenser with lower storage cabinet',
     desc: 'A practical top-load dispenser with hot, cold and room-temperature water and built-in lower storage.',
     specs: ['Hot, cold & room-temperature water', 'Elevated dispensing height', 'Lower storage cabinet'],
   },
   {
     name: 'Bottom-Load Water Dispenser',
-    image: '/images/products/dispenser-bottom-load.png',
+    image: '/images/products/bottom-load-water-dispenser.png',
     alt: 'bottom-load water dispenser',
     desc: 'Bottom-loading design reduces the need to lift full bottles onto the top of the dispenser.',
     specs: ['Hot, cold & room-temperature water', 'Fits 3 & 5 gallon bottles', 'Stainless steel finish'],
@@ -50,6 +51,7 @@ export default function WaterDispensersPage() {
                   <div className={styles.productSpecs}>
                     {d.specs.map((s) => <div key={s} className={styles.productSpec}>{s}</div>)}
                   </div>
+                  <QuoteButton product={d.name} />
                 </div>
               </div>
             ))}
