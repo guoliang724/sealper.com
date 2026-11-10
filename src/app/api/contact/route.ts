@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     if (recipients.length === 0) {
       console.error('[/api/contact] contact_email / contact_email1 are not set')
       return Response.json(
-        { error: 'Failed to send message. Please try again or call us at 403-667-5058.' },
+        { error: 'Failed to send message. Please try again or call us at 403-667-5058.', code: 'NO_RECIPIENT' },
         { status: 500 }
       )
     }
@@ -83,8 +83,10 @@ export async function POST(request: Request) {
     return Response.json({ success: true })
   } catch (err) {
     console.error('[/api/contact] Error:', err)
+    // Short diagnostic code (e.g. EAUTH, ECONNECTION, ETIMEDOUT) — no credentials or SMTP response text.
+    const code = (err as { code?: string })?.code ?? 'UNKNOWN'
     return Response.json(
-      { error: 'Failed to send message. Please try again or call us at 403-667-5058.' },
+      { error: 'Failed to send message. Please try again or call us at 403-667-5058.', code },
       { status: 500 }
     )
   }
