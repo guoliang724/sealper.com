@@ -21,8 +21,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Email',
-    value: 'sealperplastics@yahoo.com',
-    href: 'mailto:sealperplastics@yahoo.com',
+    value: 'sealperplastics@gmail.com',
+    href: 'mailto:sealperplastics@gmail.com',
   },
   {
     icon: (

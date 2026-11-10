@@ -189,7 +189,7 @@ export default function Header() {
           </Link>
           <p className={styles.mobileContact}>
             <a href="tel:4036675058">403-667-5058</a> &nbsp;|&nbsp;
-            <a href="mailto:sealperplastics@yahoo.com">sealperplastics@yahoo.com</a>
+            <a href="mailto:sealperplastics@gmail.com">sealperplastics@gmail.com</a>
           </p>
         </div>
       </div>

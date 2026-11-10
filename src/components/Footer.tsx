@@ -40,11 +40,11 @@ export default function Footer() {
                 </svg>
                 403-667-5058
               </a>
-              <a href="mailto:sealperplastics@yahoo.com" className={styles.contactItem}>
+              <a href="mailto:sealperplastics@gmail.com" className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                sealperplastics@yahoo.com
+                sealperplastics@gmail.com
               </a>
               <div className={styles.contactItem}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
